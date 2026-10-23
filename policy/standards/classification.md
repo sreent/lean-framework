@@ -1,6 +1,6 @@
 # Data Classification Standard
 
-**Status:** Draft v0.1 · **Owner:** [TBC: governance lead, with information security and the data protection officer] · **Implements:** P-07
+**Status:** Draft v0.1 · **Owner:** [TBC: lead steward, with information security and the data protection officer] · **Implements:** P-07
 
 ## Purpose
 

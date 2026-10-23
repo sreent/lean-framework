@@ -19,8 +19,8 @@ that hold the same suppliers, customers, materials and finance structures.
 
 | Document | What it covers | Status |
 | --- | --- | --- |
-| [LEAN framework](framework.md) | Scope, roles, decision rights, agent autonomy levels, exceptions, measures | Draft v0.1 |
-| [Data governance policy](policy/data-governance-policy.md) | The 11 policy statements (P-01 to P-11) | Draft v0.1 |
+| [LEAN framework](framework.md) | Scope, roles, decision rights, agent autonomy levels, exceptions, measures | Draft v0.2 |
+| [Data governance policy](policy/data-governance-policy.md) | The 11 policy statements (P-01 to P-11) | Draft v0.2 |
 | [Data classification standard](policy/standards/classification.md) | Classification levels, handling rules, default classifications | Draft v0.1 |
 | [Master data standard](policy/standards/master-data.md) | Systems of record, requests, sensitive changes, quality, duplicates, lifecycle, domain profiles | Draft v0.1 |
 | Controls catalogue | Each rule mapped to the control that enforces it | To do |

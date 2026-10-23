@@ -1,6 +1,6 @@
 # Data Governance Policy
 
-**Status:** Draft v0.1 · **Owner:** [TBC: executive sponsor] · **Approved by:** [TBC] · **Review:** yearly
+**Status:** Draft v0.2 · **Owner:** [TBC: executive sponsor] · **Approved by:** [TBC] · **Review:** yearly
 
 ## Purpose
 
@@ -41,9 +41,10 @@ parties acting for us, and AI agents. The framework lists the domains in scope.
 - **P-09 Measured quality.** Data quality is measured against the owner's
   thresholds and published monthly for each domain. Issues are fixed in the
   system of record.
-- **P-10 Governed AI agents.** AI agents act only within their approved autonomy
-  level, under a named owner, with every action logged. Agents never approve
-  requests or exceptions, change sensitive attributes or grant access.
+- **P-10 Governed AI agents.** Every AI agent has a named agent owner and acts
+  only within the autonomy level the data owner has approved, with every action
+  logged. Agents never approve requests or exceptions, change sensitive
+  attributes or grant access.
 - **P-11 Time-limited exceptions.** Exceptions to this policy or its standards
   are approved by the relevant data owner, expire, and are recorded in the
   exception register.
@@ -51,9 +52,10 @@ parties acting for us, and AI agents. The framework lists the domains in scope.
 ## Responsibilities
 
 Roles are defined in section 5 of the framework. In short: data owners are
-accountable for their domain, data stewards run it day to day, the platform team
-builds and runs the controls, requesters raise complete and correct requests,
-and the governance lead keeps this policy current.
+accountable for their domain, including changes made by agents; data stewards
+run it day to day and supervise the agents, and the lead steward keeps this
+policy current; the platform team builds and runs the controls and the agents;
+and anyone who raises a request makes it complete and correct.
 
 ## Compliance
 
@@ -72,3 +74,4 @@ is handled under [TBC: the normal disciplinary process].
 | Version | Date | Change |
 | --- | --- | --- |
 | 0.1 | 2026-10-23 | First draft |
+| 0.2 | 2026-10-23 | P-10 and responsibilities updated for the simplified roles |

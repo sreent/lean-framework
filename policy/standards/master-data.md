@@ -1,6 +1,6 @@
 # Master Data Standard
 
-**Status:** Draft v0.1 · **Owner:** [TBC: governance lead, with the data owners] · **Implements:** P-02 to P-06, P-08, P-09
+**Status:** Draft v0.1 · **Owner:** [TBC: lead steward, with the data owners] · **Implements:** P-02 to P-06, P-08, P-09
 
 ## Purpose
 
@@ -35,7 +35,9 @@ profiles at the end hold the detail for each domain.
 - **MD-06** Every request is pre-checked for completeness, validity against
   reference data and possible duplicates before anyone approves it. An agent may
   run the pre-check at autonomy level 1.
-- **MD-07** A data steward approves routine requests. The person who raises or
+- **MD-07** A data steward approves routine requests. Where a request changes
+  fields another function relies on, such as a material's valuation data, a
+  steward from that function approves those fields. The person who raises or
   enters a request can't also approve it.
 - **MD-08** Requests are completed within [TBC: 2 business days for standard
   requests, 4 business hours for urgent ones]. Cycle times are reported monthly.
@@ -95,13 +97,16 @@ profiles at the end hold the detail for each domain.
 
 ## Domain profiles
 
-These are defaults to confirm with each data owner. [TBC]
+These are defaults to confirm with each data owner. [TBC] "Functions consulted"
+are those that rely on some of the domain's fields; their stewards approve
+changes to those fields (MD-07).
 
 ### Supplier
 
 | Item | Default |
 | --- | --- |
 | Data owner | Head of Procurement |
+| Functions consulted | Finance (bank details, payment terms and methods, reconciliation account) |
 | System of record | SAP: business partner (supplier role) or vendor master. A procurement platform or supplier portal that collects onboarding data raises create requests under MD-03. |
 | Critical attributes | Legal name, address, tax ID, bank details, payment terms, payment methods, reconciliation account, purchasing organisation data |
 | Mandatory checks | VAT number valid (e.g. EU VIES); IBAN check digits and bank key valid; address validated; payment terms from the approved list |
@@ -114,6 +119,7 @@ These are defaults to confirm with each data owner. [TBC]
 | Item | Default |
 | --- | --- |
 | Data owner | Head of Order-to-Cash or Sales Operations |
+| Functions consulted | Finance and credit management (credit limit, payment terms, reconciliation account); Logistics (shipping data) |
 | System of record | SAP for legal, financial and logistics attributes; CRM for sales contacts and segmentation |
 | Critical attributes | Legal name; addresses for each partner function (sold-to, ship-to, bill-to, payer); tax ID; payment terms; credit limit; sales area data |
 | Mandatory checks | Address validated; tax ID valid; each sold-to has a bill-to and a payer; credit limit set where credit management applies; sales area data exists for each sales area used |
@@ -125,7 +131,8 @@ These are defaults to confirm with each data owner. [TBC]
 
 | Item | Default |
 | --- | --- |
-| Data owner | Head of Supply Chain. Attribute group owners: Finance (accounting and costing views), Procurement (purchasing view), Sales (sales views), Engineering (technical attributes) |
+| Data owner | Head of Supply Chain |
+| Functions consulted | Finance (accounting and costing views), Procurement (purchasing view), Sales (sales views), Engineering (technical attributes) |
 | System of record | SAP material master; PLM for engineering attributes; PIM or e-commerce for marketing content |
 | Critical attributes | Material type, base unit of measure and conversions, description, material group, valuation class, plant planning (MRP) data, weight and volume, GTIN where used |
 | Mandatory checks | Description follows the naming convention [TBC]; a conversion exists for every order and sales unit; valuation class allowed for the material type; GTIN check digit valid; required views exist for every plant where the material is used |
@@ -138,6 +145,7 @@ These are defaults to confirm with each data owner. [TBC]
 | Item | Default |
 | --- | --- |
 | Data owner | Financial Controller |
+| Functions consulted | Tax (tax category); business controllers (cost centres and profit centres in their area) |
 | System of record | SAP: chart of accounts, cost centres, profit centres [TBC: group reporting structure in a consolidation tool] |
 | Critical attributes | Account type, account group, reconciliation account setting, tax category, cost centre category, person responsible, hierarchy assignment, validity dates |
 | Mandatory checks | Each new GL account maps to the group reporting structure; each cost centre and profit centre has a valid person responsible and hierarchy node; validity dates set |
