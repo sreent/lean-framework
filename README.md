@@ -17,15 +17,19 @@ that hold the same suppliers, customers, materials and finance structures.
 
 ## Documents
 
-| Document | What it covers | Status |
-| --- | --- | --- |
-| [LEAN framework](framework.md) | Scope, roles, decision rights, agent autonomy levels, exceptions, measures | Draft v0.2 |
-| [Data governance policy](policy/data-governance-policy.md) | The 11 policy statements (P-01 to P-11) | Draft v0.2 |
-| [Data classification standard](policy/standards/classification.md) | Classification levels, handling rules, default classifications | Draft v0.1 |
-| [Master data standard](policy/standards/master-data.md) | Systems of record, requests, sensitive changes, quality, duplicates, lifecycle, domain profiles | Draft v0.1 |
-| Controls catalogue | Each rule mapped to the control that enforces it | To do |
-| Agent playbook | Agent tasks, autonomy levels and escalation | To do |
-| Rollout plan | Pilot domain, baseline measures, phases | To do |
+Documents are split by who approves them, so the parts that change most need
+the lightest sign-off.
+
+| Tier | Document | Approved by | Status |
+| --- | --- | --- | --- |
+| Operating model | [LEAN framework](framework.md): scope, roles, automation and agents, measures | Executive sponsor, once | Draft v0.3 |
+| Policy | [Data governance policy](policy/data-governance-policy.md): the four LEAN principles, controls that can't be waived, authority | CEO | Draft v0.3 |
+| Standards | [Data governance standard](standards/data-governance.md) (DG-01 to DG-19) | Executive sponsor | Draft v0.1 |
+| Standards | [Data classification standard](standards/classification.md) (CLS-01 to CLS-08) | Executive sponsor, with information security and the data protection officer | Draft v0.2 |
+| Standards | [Master data standard](standards/master-data.md) (MD-01 to MD-26) | Executive sponsor, with the Financial Controller for payment controls | Draft v0.2 |
+| Domain profiles | [Supplier](domains/supplier.md), [customer](domains/customer.md), [material](domains/material.md), [finance](domains/finance.md) | Each data owner | Draft v0.1 |
+| To do | Controls catalogue, doubling as the app's backlog | Data governance specialist | – |
+| To do | Rollout plan, including the clean-up of existing records | Executive sponsor | – |
 
 Items marked `[TBC]` in the drafts are defaults to confirm or replace.
 

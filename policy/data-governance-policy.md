@@ -1,73 +1,69 @@
 # Data Governance Policy
 
-**Status:** Draft v0.2 · **Owner:** [TBC: executive sponsor] · **Approved by:** [TBC] · **Review:** yearly
+**Status:** Draft v0.3 · **Owner:** [TBC: executive sponsor] · **Approved by:** [TBC: CEO] · **Effective from:** [TBC] · **Review:** every three years, or after a major change
 
-## Purpose
+> [TBC] If an existing CEO-approved policy already covers data or information,
+> such as an information security or information management policy, add the
+> principles, controls and authority in sections 3 to 5 to it instead, and drop
+> this document.
+
+## 1. Purpose
 
 Master data is the suppliers, customers, materials and finance structures that
 every transaction relies on. It must be accurate, owned and controlled. This
-policy sets the rules. The [LEAN framework](../framework.md) explains how they
-are run, and the standards add the detail.
+policy sets the principles; the standards issued under it set the rules.
 
-## Scope
+## 2. Scope
 
-This policy applies to everyone who creates, changes, uses or distributes master
-data that is in scope, in SAP and non-SAP systems: employees, contractors, third
-parties acting for us, and AI agents. The framework lists the domains in scope.
+This policy covers the data that the data governance standards bring into
+scope, in SAP and non-SAP systems. Today that is master data. It applies to
+everyone who creates, changes or uses that data: employees, contractors, third
+parties acting for us, and automation and AI agents through the people
+accountable for them.
 
-## Policy statements
+## 3. Principles
 
-- **P-01 Named ownership.** Every master data domain has a named data owner who
-  is accountable for its quality and approves exceptions.
-- **P-02 Governed change.** Master data is created and changed only through the
-  governed process for its domain. Direct table updates are not allowed. Mass
-  changes use the approved mass-change process.
-- **P-03 One system of record.** Each domain, or each attribute group within it,
-  has one system of record. Other systems take the data from it and send changes
-  back as requests; they don't maintain their own version.
-- **P-04 Quality at entry.** A record passes its domain's mandatory checks before
-  it can be used in a transaction.
-- **P-05 Search before create.** Every new record is checked for duplicates
-  before it is created.
-- **P-06 Dual control for sensitive changes.** A change to a sensitive attribute,
-  such as bank details, payment terms or a credit limit, takes effect only after
-  a second person has verified it.
-- **P-07 Classification and least-privilege access.** Every master data attribute
-  is classified under the classification standard. Access follows the
-  classification and is limited to what each role needs.
-- **P-08 Managed lifecycle.** Records unused for a set period are reviewed and
-  blocked. Records are archived and deleted only in line with legal retention
-  requirements.
-- **P-09 Measured quality.** Data quality is measured against the owner's
-  thresholds and published monthly for each domain. Issues are fixed in the
-  system of record.
-- **P-10 Governed AI agents.** Every AI agent has a named agent owner and acts
-  only within the autonomy level the data owner has approved, with every action
-  logged. Agents never approve requests or exceptions, change sensitive
-  attributes or grant access.
-- **P-11 Time-limited exceptions.** Exceptions to this policy or its standards
-  are approved by the relevant data owner, expire, and are recorded in the
-  exception register.
+1. **Lightweight rules.** We keep only the rules that matter. Each has an owner
+   and a control, and rules that can't be enforced are removed.
+2. **Embedded controls.** Data is created and changed only through governed
+   processes. Rules are enforced in the systems that handle the data,
+   automatically wherever possible. Changes that carry financial or fraud risk
+   are confirmed by a second, independent person.
+3. **Agent-operated, people accountable.** Automation and AI agents may do
+   routine governance work, but only within limits that data owners set, and
+   every action is traceable to an accountable person.
+4. **Named ownership.** Every data domain has a named business owner who is
+   accountable for its data and approves exceptions.
 
-## Responsibilities
+## 4. Controls that can't be waived
 
-Roles are defined in section 5 of the framework. In short: data owners are
-accountable for their domain, including changes made by agents; data stewards
-run it day to day and supervise the agents, and the lead steward keeps this
-policy current; the platform team builds and runs the controls and the agents;
-and anyone who raises a request makes it complete and correct.
+These controls apply even when an exception is approved, and only the CEO can
+change them:
 
-## Compliance
+- A change to bank details or other payment data is confirmed by a second
+  person, outside the team that entered it, who can't also process payments.
+- AI agents never approve requests, exceptions or access, and never change
+  sensitive data.
+- No one approves their own request, exception or agent.
 
-Controls detect most breaches automatically and report them to the data owner.
-Deliberately bypassing a governed process, or repeatedly breaching this policy,
-is handled under [TBC: the normal disciplinary process].
+## 5. Authority
 
-## Related documents
+- The executive sponsor [TBC: role] issues and changes the data governance
+  standards under this policy, and appoints the data owners.
+- Data owners maintain the profiles for their domains, within the standards.
+- Exceptions to the standards are approved as the standards set out.
+
+## 6. Compliance
+
+Deliberately bypassing a governed process, or repeatedly breaching this policy
+or its standards, is handled under [TBC: the normal disciplinary process].
+
+## 7. Related documents
 
 - [LEAN framework](../framework.md)
-- [Data classification standard](standards/classification.md)
-- [Master data standard](standards/master-data.md)
+- [Data governance standard](../standards/data-governance.md)
+- [Data classification standard](../standards/classification.md)
+- [Master data standard](../standards/master-data.md)
 
 ## Change history
 
@@ -75,3 +71,4 @@ is handled under [TBC: the normal disciplinary process].
 | --- | --- | --- |
 | 0.1 | 2026-10-23 | First draft |
 | 0.2 | 2026-10-23 | P-10 and responsibilities updated for the simplified roles |
+| 0.3 | 2026-10-23 | Reduced to principles, controls that can't be waived, and authority, so it rarely needs CEO re-approval. The rules moved to the data governance standard. |
