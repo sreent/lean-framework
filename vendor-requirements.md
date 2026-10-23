@@ -1,17 +1,19 @@
 # Master Data Vendor Requirements
 
-**Status:** Draft v0.1 · **Approved by:** [TBC: Head of Data, AI & Development] · **Applies through:** the vendor contract [TBC: renewal date]
+**Status:** Draft v0.1 · **Approved by:** [TBC: Head of Data, AI & Development] · **Applies through:** the vendor contract, until the vendor leaves in Q2 2027 [TBC: date]
 
-The master data vendor holds the data steward role today, so the quality of
-its work is the quality of our master data. These requirements belong in the
-contract.
+The master data vendor holds the data steward role until it leaves in
+Q2 2027, so the quality of its work is the quality of our master data. These
+requirements belong in the contract, including how the vendor hands over.
 
 ## The work
 
 - Process create and change requests for SAP master data in the domains in
   scope, following the [rulebook](rulebook.md) and each domain's profile.
-- Work only from complete requests received through the governed process, and
-  turn away requests by email or spreadsheet (R-03).
+- Work only from complete requests raised in the current app, and turn away
+  requests by email or spreadsheet (R-03).
+- Act on what the agents flag, such as likely duplicates and pre-check
+  findings, before processing a request (R-05).
 - Apply each domain's conventions and checks (R-05, R-09). Every change is
   entered by one person and checked by another; nobody checks their own work
   (R-06).
@@ -41,9 +43,16 @@ contract.
 - Every change is linked to its approved request (R-08).
 - The organisation and its auditors can review the vendor's work and records.
 
-## Moving to automation
+## Exit by Q2 2027
 
-- Write down the working rules and checks the team uses, so they can become app
-  validations and agent instructions.
-- Support testing as the app takes over request types. Volumes will fall as it
-  does. [TBC: a pricing model that doesn't penalise automation]
+- Request types move to the unified master data app one at a time, each once
+  the app handles it and requesters are trained. The vendor keeps full service
+  for every request type until it has moved.
+- Before each request type moves, write down the working rules and checks the
+  team uses for it, so they can become the unified app's checks and agent
+  instructions.
+- Hand over all tickets and approval evidence before exit. They are the audit
+  trail for R-08, R-13 and R-15.
+- Vendor staff lose SAP access the day their work ends.
+- [TBC: a fallback for any request type the unified app isn't ready for, such
+  as a short extension, and a pricing model that doesn't penalise the move]

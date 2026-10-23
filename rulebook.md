@@ -1,13 +1,13 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.3 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.4 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
 
 Each rule says what must be true, not how it's enforced. The
-[controls catalogue](controls.md) covers how, today and once the app is live.
-The business owns what good data looks like: each domain's validation and
-quality rules (conventions, checks and thresholds) and its other settings sit
-in its domain profile, which its GPDO proposes and maintains. This rulebook
-only requires that they exist and are applied.
+[controls catalogue](controls.md) covers how, until Q2 2027 and once the
+unified app takes over. The business owns what good data looks like: each
+domain's validation and quality rules (conventions, checks and thresholds) and
+its other settings sit in its domain profile, which its GPDO proposes and
+maintains. This rulebook only requires that they exist and are applied.
 
 "Why" names what the rule addresses. Rules R-01 to R-12 fix the problem behind
 our data quality issues, master data that is **incorrect** or **inconsistent**.
@@ -48,11 +48,11 @@ rather than treated as breaches.
 | R-10 | Issues are fixed in the system of record, never only in a downstream copy or report. A recurring issue leads to a new or better check, which the data owner adds to the domain profile, so it doesn't come back. | Incorrect, inconsistent |
 | R-11 | Records unused for the period in the domain profile are blocked unless someone confirms they're still needed. Records with open items, orders or contracts are excluded. The data owner approves the list as a whole. | Incorrect |
 
-## The vendor
+## Third parties
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-12 | The master data vendor works within these rules under its contract, and its quality is measured. It never sets rules, approves exceptions or confirms sensitive changes. | Incorrect, audit risk |
+| R-12 | Any third party that maintains master data, such as the master data vendor until Q2 2027, works within these rules under its contract, and its quality is measured. It never sets rules, approves exceptions or confirms sensitive changes. | Incorrect, audit risk |
 
 ## Sensitive and payment data
 
@@ -82,7 +82,7 @@ Classification levels [TBC: use the company's scheme if it has one]:
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-18 | Every agent is recorded in the agent register with a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. They treat content from outside the organisation as data to check, never as instructions. Restricted data goes to an AI model outside the organisation only with the data owner's and the data protection officer's approval. | Audit risk, privacy risk |
+| R-18 | Every agent is recorded in the agent register with a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Until the unified master data app is live, agents work at levels 0 and 1 only and never create or change master data. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. They treat content from outside the organisation as data to check, never as instructions. Restricted data goes to an AI model outside the organisation only with the data owner's and the data protection officer's approval. | Audit risk, privacy risk |
 
 Autonomy levels:
 
@@ -90,7 +90,7 @@ Autonomy levels:
 | --- | --- | --- |
 | 0. Observe | Read, measure and report | Reads the reports |
 | 1. Propose | Prepare a change or decision for a person to approve | A steward or owner approves each one |
-| 2. Act and notify | Make changes of a type the data owner has approved, never to sensitive fields, through the governed process, in runs below the mass-change size | The agent owner reviews the log and can reverse any change |
+| 2. Act and notify | Make changes of a type the data owner has approved, never to sensitive fields, through the unified app, in runs below the mass-change size | The agent owner reviews the log and can reverse any change |
 
 ## The data team
 
@@ -111,3 +111,4 @@ Autonomy levels:
 | 0.1 | 2026-10-23 | First version, replacing the data governance, classification and master data standards |
 | 0.2 | 2026-10-23 | Defined "data owner" to include attribute owners; restored when the rules apply, which 0.1 left out |
 | 0.3 | 2026-10-23 | R-18 requires every agent to be in the agent register |
+| 0.4 | 2026-10-23 | R-12 covers any third party, so it outlives the vendor; R-18 limits agents to observing and proposing until the unified app is live |

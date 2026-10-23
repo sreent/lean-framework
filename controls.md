@@ -2,29 +2,32 @@
 
 **Status:** Draft v0.1 · **Approved by:** [TBC: Head of Data, AI & Development] · **Rules:** [Rulebook](rulebook.md)
 
-How each rule is enforced: today, with the vendor working in SAP, and once the
-unified master data app is live. The target column doubles as the app's
-backlog. Controls change here as the app grows; the rules don't.
+How each rule is enforced: until Q2 2027, with requests raised in the current
+app and the master data vendor making changes in SAP, and from Q2 2027, once
+the unified master data app takes over. The data platform and agents work in
+both periods; only creating and changing master data waits for the unified
+app. The second column doubles as the unified app's backlog. Controls change
+here as the app grows; the rules don't.
 
-| Rule | Today (vendor and SAP) | Target (app and agents) | Evidence |
+| Rule | Until Q2 2027 (current app, vendor, data platform, agents) | From Q2 2027 (unified app, data platform, agents) | Evidence |
 | --- | --- | --- | --- |
 | R-01 Named owner | The GPDOs sign the charter and agree their domain profiles | Same | Signed charter, agreed domain profiles |
 | R-02 Delegation | Delegations recorded in the domain profiles; the data governance specialist flags gaps and overlaps | Same | Agreed domain profiles |
-| R-03 Governed process | Requests go through the vendor's ticketing process [TBC]; requests by email or spreadsheet are turned away | All requests go through the app. Non-SAP systems raise requests through its request interface. [TBC: on the app roadmap] | Request log |
-| R-04 One system of record | Data flows from SAP over interfaces; non-SAP copies hold the SAP key [TBC] | Interface or middleware checks reject or quarantine bad records. The data platform compares each non-SAP copy with SAP, and an agent triages the differences. | Consistency scorecard |
-| R-05 Checks before approval | Vendor checklist and SAP mandatory fields; manual duplicate search | App validations at entry, such as VIES, IBAN and GTIN checks and the domain's conventions. An agent pre-checks each request and runs fuzzy duplicate matching. | Check results stored with each request |
-| R-06 Approval | Vendor maker-checker; turnaround in the vendor's reports | The app routes each request to a steward, or approves owner-approved request types automatically. A sample of automatic approvals is reviewed monthly. | Approval log, sample results |
-| R-07 Mass changes | The data owner signs off by email [TBC]; tested in a non-production system first | Mass-change function in the app, with the sign-off built in | Sign-off and test evidence |
-| R-08 Traceability | Only the vendor's stewards hold SAP change rights. Each month, the change reconciler agent matches SAP change documents to the vendor's tickets. | Only the app's service identity holds change rights, and the app records the request on every change, so a daily report finds any change without one [TBC] | Reconciliation report |
-| R-09 Conventions and quality checks | The data team runs the checks each domain profile defines on SAP extracts monthly and publishes scorecards | Checks run in the app at entry and on the data platform at rest; scorecards update daily [TBC] | Scorecards |
-| R-10 Fix at source, fix the cause | A steward fixes the record in SAP; the data team logs the cause and proposes new checks to the data owner | Each issue becomes a fix request in the app. An agent groups recurring issues and proposes new checks for the data owner to approve. | Issue log; checks added to the profile |
-| R-11 Stale records | The data team lists inactive records quarterly [TBC]; the owner approves the list | An agent prepares the list monthly; the owner approves it in the app | Approved list |
-| R-12 Vendor | Vendor contract and [requirements](vendor-requirements.md); monthly performance review | Same, with the vendor's volumes falling as the app takes over | Performance report |
+| R-03 Governed process | Requests are raised in the current app; requests by email or spreadsheet are turned away | All requests go through the unified app. Non-SAP systems raise requests through its request interface. [TBC: on the app roadmap] | Request log |
+| R-04 One system of record | Data flows from SAP over interfaces, and non-SAP copies hold the SAP key [TBC]. The data platform compares each non-SAP copy with SAP, and the consistency checker agent sorts the differences. | The same, plus checks in the interfaces or middleware that reject or quarantine bad records | Consistency scorecard |
+| R-05 Checks before approval | Vendor checklist and SAP mandatory fields. The request pre-check agent reviews requests in the current app [TBC], and the duplicate finder flags likely duplicates. | The unified app's checks at entry, such as VIES, IBAN and GTIN checks and the domain's conventions, with the request pre-check agent working inside the app | Check results stored with each request |
+| R-06 Approval | Vendor maker-checker; turnaround in the vendor's reports | The unified app approves owner-approved request types automatically and routes the rest to the person the owner names. A sample of automatic approvals is reviewed monthly. | Approval log, sample results |
+| R-07 Mass changes | The data owner signs off by email [TBC]; tested in a non-production system first | Mass-change function in the unified app, with the sign-off built in | Sign-off and test evidence |
+| R-08 Traceability | Only the vendor's stewards hold SAP change rights. Each month, the change reconciler agent matches SAP change documents to requests in the current app. | Only the unified app's service identity holds change rights, and the app records the request on every change, so a daily report finds any change without one [TBC] | Reconciliation report |
+| R-09 Conventions and quality checks | The data platform runs the checks each domain profile defines on SAP data and publishes scorecards [TBC: how often] | Checks also run in the unified app at entry; scorecards update daily [TBC] | Scorecards |
+| R-10 Fix at source, fix the cause | The quality triage agent groups failing records by cause and proposes new checks to the data owner; the vendor fixes the records in SAP | Each issue becomes a fix request in the unified app, raised by the quality triage agent | Issue log; checks added to the profile |
+| R-11 Stale records | The inactive records agent prepares the list monthly; the owner approves it; the vendor blocks the records | The same, with the approval and the blocking done in the unified app | Approved list |
+| R-12 Third parties | Vendor contract and [requirements](vendor-requirements.md); monthly performance review; exit plan for Q2 2027 | No master data vendor. Any other third party works under the same terms. | Performance report, exit records |
 | R-13 Sensitive changes | SAP sensitive-field settings block payment until the confirmer named in the domain profile confirms the change, for example with FK08/FK09 for suppliers and FD08/FD09 for customers [TBC: confirm for your release]. Other sensitive changes, including credit limits and unblocking, are confirmed before the vendor enters them. SAP settings limit one-time accounts and payee in document. [TBC] | The app holds each sensitive change until it's confirmed, then posts it to SAP. SAP's settings stay as a second line. | Confirmation log |
 | R-14 Payment data kept apart from paying | SAP roles of vendor staff and confirmers reviewed for conflicting rights [TBC: rule set] | Same, and the app stops the person who entered a change from confirming it | Access review |
-| R-15 Bank detail verification | The confirmer calls the supplier back on details already on file and keeps the evidence; a report flags shared bank accounts | The app requires call-back evidence before confirmation, and checks the new bank account against every other supplier and customer when the change is entered | Call-back evidence, flag report |
+| R-15 Bank detail verification | The confirmer calls the supplier back on details already on file and keeps the evidence; a report flags shared bank accounts | The unified app requires call-back evidence before confirmation, and checks the new bank account against every other supplier and customer when the change is entered | Call-back evidence, flag report |
 | R-16 Access and masking | SAP roles reviewed for access to flagged fields; extracts of Restricted data need owner approval; data masked when SAP is copied to test systems [TBC: tool] | Same | Access review, approvals, masking log |
 | R-17 Personal data lifecycle | [TBC: SAP Information Lifecycle Management end-of-purpose checks] | Same | Blocking and deletion log |
 | R-18 Agents | [Agent register](operating-model.md#agents) kept by the data governance specialist; design review before go-live; logs kept as long as SAP change documents. Agents that don't touch master data, such as one that chases exception expiry dates, are approved by the Head of Data, AI & Development. | An agent moves up a level on accuracy checked against an independent sample, and drops a level after a serious error. Changes to its model, instructions or tools are tested and re-approved. | Register, logs, sample results |
 | R-19 Data team | Emergency access is logged and reviewed by [TBC: the internal controls team]; app and agent changes go through change management | Same | Review log, release records |
-| R-20 Exceptions | Exception register [TBC: location] | Register in the app, which reminds owners before exceptions expire | Register |
+| R-20 Exceptions | Exception register [TBC: location] | Register in the unified app, which reminds owners before exceptions expire | Register |

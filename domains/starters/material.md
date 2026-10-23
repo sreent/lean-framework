@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
+| Governed process (R-03) | The current app and the vendor until Q2 2027; then the unified master data app |
 | System of record (R-04) | SAP material master; PLM for engineering attributes; PIM or e-commerce for marketing content |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
 | Critical fields (R-09) | Material type, base unit of measure and conversions, description, material group, valuation class, plant planning (MRP) data, weight and volume, GTIN where used |

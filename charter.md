@@ -17,9 +17,11 @@ protection and internal controls] to master data. It doesn't replace them.
 ## Scope
 
 Master data in SAP across four domains, one per GPDO (see below), and the
-non-SAP systems that hold copies of it. SAP comes first: the unified master
-data app covers SAP master data, and non-SAP copies are checked against SAP
-until the app can take requests from those systems.
+non-SAP systems that hold copies of it. SAP comes first. Until Q2 2027,
+requests are raised in the current app and the master data vendor makes the
+changes in SAP; after that, the unified master data app takes over. Non-SAP
+copies are checked against SAP until the unified app can take requests from
+those systems.
 
 ## Principles
 
@@ -41,7 +43,7 @@ data is shared between domains, such as the material master, the GPDOs agree
 who owns which part.
 
 The GPDOs agree the proposals together at the monthly owner review and record
-them in the domain profiles, because the app and the vendor need to know who
+them in the domain profiles, because the apps and the vendor need to know who
 approves what. Every piece of data has exactly one owner (R-02). The data
 governance specialist provides the [profile template](domains/template.md) and
 flags anything with no owner or more than one, but doesn't propose the
@@ -54,9 +56,9 @@ breakdown.
 | Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in the domain profiles), exceptions in their domains, which request types the app approves automatically, and what agents may do there. Proposes how their domain breaks down, and delegates attribute owners. Their team confirms sensitive changes to their fields. |
 | Attribute owner | Whoever a GPDO delegates part of their domain to, by subdomain, business unit or group of fields | Decides for that part, within the domain's conventions and checks: exceptions, automatic approvals and what agents may do. An owner of a group of fields also sets its conventions and checks. They, or someone in their team, confirm sensitive changes to it. |
 | Head of Data, AI & Development | [TBC: name] | Approves the rulebook, the controls catalogue and the vendor requirements. Accountable for the data team's delivery: the app, the agents, the vendor and running this framework. |
-| Data steward | The master data vendor today; a small exceptions team once the app automates routine work | Decides routine requests, within the rules |
+| Data steward | The master data vendor until Q2 2027. After that, the unified app and agents do the routine work, and a person each owner names in their team decides the rest. | Decides routine requests, within the rules |
 | Data governance specialist | The data team | Runs the framework and owns the agents. Provides the profile template and flags gaps and overlaps in ownership. Decides nothing about data content. |
-| Platform team | The data team (the app) and the SAP team | Builds and runs the app, the controls and the agent infrastructure. Decides nothing about data content. |
+| Platform team | The data team (the apps and the data platform) and the SAP team | Runs the data platform and the current app [TBC], builds the unified app, and runs the controls and the agent infrastructure. Decides nothing about data content. |
 
 ## How documents are approved
 

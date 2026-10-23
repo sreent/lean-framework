@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The unified master data app, if it covers pricing [TBC]; until then, the current pricing request process |
+| Governed process (R-03) | The current pricing request process until Q2 2027 [TBC: or the current app]; then the unified master data app, if it covers pricing [TBC] |
 | System of record (R-04) | SAP condition records for prices, discounts and surcharges [TBC: any pricing or quoting tool outside SAP] |
 | Turnaround times (R-06) | [TBC] |
 | Critical fields (R-09) | Condition type, price, currency, unit of measure, validity dates, customer or price list, material, sales area, scales |

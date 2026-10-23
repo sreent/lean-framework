@@ -15,7 +15,8 @@ R = responsible, A = accountable, C = consulted, I = informed.
 - **Head of Data:** the Head of Data, AI & Development.
 - **Specialist:** the data governance specialist.
 - **Platform:** the platform team.
-- **Steward:** the master data vendor today.
+- **Steward:** the master data vendor until Q2 2027; after that, a person each
+  owner names, for what the unified app and agents can't handle.
 - **Agent:** agents do part of the work, but are never accountable.
 
 | Activity | Owner | Head of Data | Specialist | Platform | Steward | Requester | Agent |
@@ -45,16 +46,19 @@ R = responsible, A = accountable, C = consulted, I = informed.
 ## The platform
 
 Three systems enforce the rules. The [controls catalogue](controls.md) shows
-how each rule is enforced, today and once the app is live.
+how each rule is enforced, until Q2 2027 and once the unified app takes over.
 
 | System | Its job in governance |
 | --- | --- |
-| Unified master data app | The front door for SAP master data, built by the data team. It checks every request on entry, routes approvals, approves owner-approved request types automatically, and holds sensitive changes until they're confirmed before posting them to SAP. It covers SAP master data for now; later it can take requests from non-SAP systems. [TBC: go-live dates] |
-| SAP | The system of record. Only the app can change master data, and the vendor's stewards until the app is live. Its sensitive-field settings act as a second line, and its change documents feed the reconciliation (R-08). |
-| Data platform | Runs the checks on stored data, builds the scorecards, compares non-SAP copies with SAP, and holds the data agents read. |
+| Current app | Where requests are raised until Q2 2027. The vendor then makes the changes in SAP. [TBC: its name, and who runs it] |
+| Unified master data app | From Q2 2027, the front door for SAP master data, built by the data team. It checks every request on entry, routes approvals, approves owner-approved request types automatically, and holds sensitive changes until they're confirmed before posting them to SAP. It covers SAP master data for now; later it can take requests from non-SAP systems. [TBC: go-live dates] |
+| SAP | The system of record. Until Q2 2027, only the vendor's stewards can change master data; after that, only the unified app. Its sensitive-field settings act as a second line, and its change documents feed the reconciliation (R-08). |
+| Data platform | Runs the checks on stored data, builds the scorecards, compares non-SAP copies with SAP, and holds the data agents read. It does all this before Q2 2027 too. |
 
-Until the app is live, the vendor works directly in SAP, and the "Today"
-column of the controls catalogue applies.
+Until Q2 2027, requests are raised in the current app and the vendor makes the
+changes in SAP; the first column of the controls catalogue covers that period.
+Only creating and changing master data waits for the unified app: the data
+platform and agents check, measure and propose from now on.
 
 ## Agents
 
@@ -62,6 +66,12 @@ Agents are for work that needs judgement. A check with a fixed answer, such as
 whether a bank account is already used by another supplier, or a reminder on a
 set date, belongs in the app's rules instead (see the
 [controls catalogue](controls.md)).
+
+Until the unified app is live, agents don't create or change master data: they
+work at levels 0 and 1 only, on requests in the current app and on the data
+platform, and the vendor makes every change. After that, they can also prepare
+requests in the unified app and make the non-sensitive change types owners
+approve (level 2).
 
 This is the agent register (R-18). Every agent has a named agent owner from
 the data team, starts at a low autonomy level, and moves up only on evidence
@@ -73,11 +83,11 @@ defined in the rulebook.
 | Agent | What it does | Rules | Starts at | When | Agent owner |
 | --- | --- | --- | --- | --- | --- |
 | Duplicate finder | Finds likely duplicates among existing records, including near matches on names and addresses, and proposes which to keep | R-05, R-10 | 1. Propose | Pilot | [TBC] |
-| Change reconciler | Matches SAP master data changes to approved requests, including vendor tickets without a clear reference, and reports changes without one. Once the app records the request on every change, a fixed report takes over. | R-08 | 0. Observe | Pilot | [TBC] |
-| Request pre-check | Reviews each request before a steward sees it: reads attachments, spots likely duplicates, and flags values that pass the app's checks but look wrong | R-05 | 1. Propose | With the app | [TBC] |
-| Quality triage | Groups failing records by cause, raises fix requests and proposes new checks to the owner | R-09, R-10 | 1. Propose | With the app | [TBC] |
-| Consistency checker | Works out which differences between non-SAP copies and SAP matter, and which side is right | R-04 | 0. Observe | Later | [TBC] |
-| Inactive records | Prepares the monthly list of records to block, and flags those that may still be needed, such as seasonal suppliers | R-11 | 1. Propose | Later | [TBC] |
+| Change reconciler | Matches SAP master data changes to approved requests in the current app, including those without a clear reference, and reports changes without one. Once the unified app records the request on every change, a fixed report takes over. | R-08 | 0. Observe | Pilot | [TBC] |
+| Request pre-check | Reviews each request before it's processed: reads attachments, spots likely duplicates, and flags values that pass the checks but look wrong | R-05 | 1. Propose | Before Q2 2027, in the current app [TBC] | [TBC] |
+| Quality triage | Groups failing records by cause, raises fix requests and proposes new checks to the owner | R-09, R-10 | 1. Propose | Before Q2 2027, on the data platform | [TBC] |
+| Consistency checker | Works out which differences between non-SAP copies and SAP matter, and which side is right | R-04 | 0. Observe | Before Q2 2027, on the data platform | [TBC] |
+| Inactive records | Prepares the monthly list of records to block, and flags those that may still be needed, such as seasonal suppliers | R-11 | 1. Propose | Before Q2 2027, on the data platform | [TBC] |
 
 ## Rhythm
 
