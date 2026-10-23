@@ -12,27 +12,22 @@ four pillars, one for each letter:
 | **A**gent-operated | AI agents handle the routine governance tasks. |
 | **N**amed ownership | Data owners stay accountable and approve exceptions. |
 
-## The pillars
+The first phase focuses on master data, mainly in SAP, plus the non-SAP systems
+that hold the same suppliers, customers, materials and finance structures.
 
-### L — Lightweight policies
+## Documents
 
-Only the rules that matter, kept short. Policies are written to be read and
-followed, not filed.
+| Document | What it covers | Status |
+| --- | --- | --- |
+| [LEAN framework](framework.md) | Scope, roles, decision rights, agent autonomy levels, exceptions, measures | Draft v0.1 |
+| [Data governance policy](policy/data-governance-policy.md) | The 11 policy statements (P-01 to P-11) | Draft v0.1 |
+| [Data classification standard](policy/standards/classification.md) | Classification levels, handling rules, default classifications | Draft v0.1 |
+| [Master data standard](policy/standards/master-data.md) | Systems of record, requests, sensitive changes, quality, duplicates, lifecycle, domain profiles | Draft v0.1 |
+| Controls catalogue | Each rule mapped to the control that enforces it | To do |
+| Agent playbook | Agent tasks, autonomy levels and escalation | To do |
+| Rollout plan | Pilot domain, baseline measures, phases | To do |
 
-### E — Embedded controls
-
-Quality, access and classification are enforced in the pipelines themselves,
-so governance happens where the data moves rather than in a separate review step.
-
-### A — Agent-operated
-
-AI agents handle the routine governance tasks, leaving people free for the
-decisions that need judgement.
-
-### N — Named ownership
-
-Data owners stay accountable and approve exceptions. Every dataset has a named
-person who answers for it.
+Items marked `[TBC]` in the drafts are defaults to confirm or replace.
 
 ## How the pillars fit together
 
