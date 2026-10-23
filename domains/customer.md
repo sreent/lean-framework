@@ -12,7 +12,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Setting | Default |
 | --- | --- |
 | Data owner (R-01) | Head of Order-to-Cash or Sales Operations |
-| Attribute group owners (R-02) | Credit Manager: credit limit and risk category, payment terms, bank details, reconciliation account |
+| Attribute group owners (R-02) | Credit management: credit limit and risk category [TBC: wherever credit management sits]. Finance: reconciliation account. |
 | Functions consulted | Logistics (shipping data) |
 | Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
 | System of record (R-04) | SAP for legal, financial and logistics fields; CRM for sales contacts and segmentation. In S/4HANA, central data is shared with the supplier role (R-02). |
@@ -25,7 +25,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Inactivity period and block (R-11) | No orders or invoices for 24 months: sales and posting block |
 | Excluded from inactivity blocking (R-11) | Customers with open items or open orders |
 | Sensitive fields (R-13) | Bank details, credit limit and risk category, payment terms, tax IDs |
-| Sensitive changes confirmed by (R-13, R-14) | Someone in credit management without credit release or payment rights |
+| Sensitive changes confirmed by (R-13, R-14) | Credit limit and risk category: someone in credit management, not sales. Other sensitive fields: someone in the data owner's team. Neither holds credit release or payment rights. |
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
 | Personal data fields (R-16) | Contact names, emails and phone numbers; names and addresses of consumers |
 | Payment data fields (R-16) | Bank details, payment terms, credit limit |

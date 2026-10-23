@@ -19,7 +19,7 @@ privacy and audit.
 | ID | Rule | Why |
 | --- | --- | --- |
 | R-01 | Every master data domain has a named data owner, accountable for its data however it's changed: by people, the vendor, the app or agents. | Incorrect, inconsistent |
-| R-02 | A data owner may delegate a group of fields to a leader whose function carries their financial, legal or tax risk; the domain profile records it. In S/4HANA, business partner central data (name, address, tax numbers, bank details) has one owner across the supplier and customer roles. | Incorrect, inconsistent |
+| R-02 | Every field has exactly one owner: the domain's data owner, or a leader in another function to whom the data owner has delegated a group of fields because that function knows the right values and relies on them most. The domain profile records each delegation. In S/4HANA, business partner central data (name, address, tax numbers, bank details) has one owner across the supplier and customer roles. | Incorrect, inconsistent |
 
 ## Changing master data
 
@@ -50,7 +50,7 @@ privacy and audit.
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-13 | A change to a sensitive field, as listed in the domain profile, can't be used until someone outside the team that entered it confirms it. Unblocking a record, and bank details on one-time accounts or entered as a payee in a document, count as sensitive changes. | Fraud risk |
+| R-13 | A change to a sensitive field, as listed in the domain profile, can't be used until the field's owner, or someone they name in their team, confirms it. The confirmer is never in the team that entered the change. Unblocking a record, and bank details on one-time accounts or entered as a payee in a document, count as sensitive changes. | Fraud risk |
 | R-14 | Whoever enters or confirms a change to payment data can't create purchase orders, post invoices, run payments or release credit. | Fraud risk |
 | R-15 | A change to a supplier's bank details is verified with the supplier using contact details that weren't changed along with it, and the evidence is kept. A bank account already used by another supplier or customer is flagged. | Fraud risk |
 

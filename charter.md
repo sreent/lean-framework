@@ -34,8 +34,8 @@ app can take requests from those systems.
 
 | Role | Held by [TBC] | Decides or does |
 | --- | --- | --- |
-| Data owner | One business process owner per domain: Head of Procurement (supplier), Head of Order-to-Cash (customer), Head of Supply Chain (material), Financial Controller (finance) | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in their domain profile), exceptions in their domain, which request types the app approves automatically, and what agents may do there |
-| Attribute group owner | A Finance leader, by delegation from a data owner, for fields where Finance carries the risk | Decides the same for those fields. Their team confirms sensitive changes to them. |
+| Data owner | One business process owner per domain: Head of Procurement (supplier), Head of Order-to-Cash (customer), Head of Supply Chain (material), Financial Controller (finance structures) | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in their domain profile), exceptions in their domain, which request types the app approves automatically, and what agents may do there. Their team confirms sensitive changes to their fields. |
+| Attribute group owner | A leader in another function, by delegation from a data owner, for a group of fields that function knows best and relies on most | Decides the same for those fields, and their team confirms sensitive changes to them |
 | Head of Data, AI & Development | [TBC: name] | Approves the rulebook, the controls catalogue and the vendor requirements. Accountable for the data team's delivery: the app, the agents, the vendor and running this framework. |
 | Data steward | The master data vendor today; a small exceptions team once the app automates routine work | Decides routine requests, within the rules |
 | Data governance specialist | The data team | Runs the framework and owns the agents. Decides nothing about data content. |
@@ -52,11 +52,11 @@ app can take requests from those systems.
 
 ## Controls we never switch off
 
-These can't be waived by exception. Changing them needs every signatory, and
-for the payment controls, the Financial Controller:
+These can't be waived by exception, and changing them needs every signatory:
 
-- A sensitive change can't be used until someone outside the team that entered
-  it confirms it (R-13). Payment data is kept apart from paying, and bank
+- A sensitive change can't be used until the field's owner, or someone in
+  their team, confirms it, and the confirmer is never in the team that entered
+  it (R-13). Payment data is kept apart from paying, and bank
   details are verified with the supplier (R-14, R-15).
 - Agents never approve requests or exceptions, change sensitive fields, delete
   records or grant access (R-18).
@@ -79,5 +79,5 @@ for the payment controls, the Financial Controller:
 | Data owner, supplier | | |
 | Data owner, customer | | |
 | Data owner, material | | |
-| Data owner, finance | | |
+| Data owner, finance structures | | |
 | Head of Data, AI & Development | | |

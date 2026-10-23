@@ -1,4 +1,4 @@
-# Finance Profile
+# Finance Structures Profile
 
 **Status:** Draft v0.2 · **Approved by:** [TBC: the data owner, with the attribute group owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
 
@@ -25,7 +25,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Inactivity period and block (R-11) | No postings for 24 months: posting block |
 | Excluded from inactivity blocking (R-11) | Accounts used only at year-end or for rare events, such as impairments |
 | Sensitive fields (R-13) | Account type, reconciliation account setting, posting controls |
-| Sensitive changes confirmed by (R-13) | Someone in the Financial Controller's team other than the person who entered the change |
+| Sensitive changes confirmed by (R-13) | Someone in the Financial Controller's team, or the Head of Tax's team for tax category, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Personal data fields (R-16) | Person responsible for a cost centre or profit centre |
 | Payment data fields (R-16) | None |

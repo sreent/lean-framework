@@ -12,7 +12,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Setting | Default |
 | --- | --- |
 | Data owner (R-01) | Head of Procurement |
-| Attribute group owners (R-02) | Head of Accounts Payable or Financial Controller: bank details, payment terms and methods, reconciliation account, withholding tax |
+| Attribute group owners (R-02) | Accounts Payable: reconciliation account and withholding tax [TBC]. The data owner keeps bank details and payment terms. |
 | Functions consulted | None by default |
 | Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
 | System of record (R-04) | SAP: business partner (supplier role) or vendor master. Onboarding data from a procurement platform or supplier portal arrives as create requests. In S/4HANA, central data is shared with the customer role (R-02). |
@@ -25,7 +25,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Inactivity period and block (R-11) | No purchase orders or invoices for 24 months: purchasing and posting block |
 | Excluded from inactivity blocking (R-11) | Suppliers with open items, open purchase orders or contracts |
 | Sensitive fields (R-13) | Bank details, alternative payee, payment terms, payment methods, tax IDs, name and address, and the phone numbers and email addresses used to verify changes (R-15) |
-| Sensitive changes confirmed by (R-13, R-14) | Someone in Accounts Payable without payment rights |
+| Sensitive changes confirmed by (R-13, R-14) | Someone in the data owner's team, such as supplier management, without rights to create purchase orders, post invoices or run payments |
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
 | Personal data fields (R-16) | Contact names, emails and phone numbers; names, addresses and tax IDs of sole traders |
 | Payment data fields (R-16) | Bank details, alternative payee, payment terms and methods |

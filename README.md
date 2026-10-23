@@ -26,7 +26,7 @@ risks that come with master data: payment fraud, privacy and audit.
 
 ## Scope
 
-Supplier, customer, material and finance master data. SAP comes first: the
+Supplier, customer and material master data, and finance structures (GL accounts, cost centres and profit centres). SAP comes first: the
 unified master data app covers SAP master data, and non-SAP copies are checked
 against SAP until the app can take requests from those systems.
 
@@ -38,7 +38,7 @@ against SAP until the app can take requests from those systems.
 | [Rulebook](rulebook.md) | 20 rules: what must be true, and why | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced today and once the app is live. Doubles as the app backlog. | Head of Data, AI & Development |
 | [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver | Head of Data, AI & Development, through the contract |
-| Domain profiles: [supplier](domains/supplier.md), [customer](domains/customer.md), [material](domains/material.md), [finance](domains/finance.md) | Each domain's validation and quality rules (conventions, checks, thresholds) and other settings: sensitive and personal data, and what's automated | Each data owner |
+| Domain profiles: [supplier](domains/supplier.md), [customer](domains/customer.md), [material](domains/material.md), [finance structures](domains/finance-structures.md) | Each domain's validation and quality rules (conventions, checks, thresholds) and other settings: sensitive and personal data, and what's automated | Each data owner |
 
 Items marked `[TBC]` are defaults to confirm.
 
@@ -66,7 +66,7 @@ Items marked `[TBC]` are defaults to confirm.
   make small approved fixes, and a person decides (R-18).
 - **The checks on the data team come from outside it.** The data team manages
   the vendor, builds the app and runs the agents. The business owns the data
-  and its settings, Finance confirms sensitive changes, every SAP change is
+  and its settings, the owner's team confirms sensitive changes, every SAP change is
   traced to an approved request, and someone outside the team reviews
   emergency access.
 

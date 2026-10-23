@@ -25,7 +25,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Inactivity period and block (R-11) | No stock, movements or open orders for 24 months: blocked material status (cross-plant or plant-specific) |
 | Excluded from inactivity blocking (R-11) | Materials in active bills of materials, and spare parts held for maintenance |
 | Sensitive fields (R-13) | Standard price, valuation class, price control |
-| Sensitive changes confirmed by (R-13) | Someone in costing other than the person who entered the change |
+| Sensitive changes confirmed by (R-13) | Someone in costing, as owner of the accounting and costing views, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Personal data fields (R-16) | None |
 | Payment data fields (R-16) | None |
