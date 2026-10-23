@@ -1,19 +1,18 @@
 # Pricing Profile
 
-**Status:** Draft v0.1 · **Phase:** [TBC: phase 1, or added after the first measurements] · **Approved by:** [TBC: the data owner, with the attribute group owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
+**Status:** Draft v0.1 · **Phase:** [TBC: phase 1, or added after the first measurements] · **Approved by:** [TBC: the GPDO, with the attribute owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
 
 This profile holds the domain's validation and quality rules, and the other
-settings the rulebook refers to. The business owns them: the data owner
+settings the rulebook refers to. The business owns them: the GPDO, as data owner,
 approves the profile and can change it at any time, within the rulebook, and
-attribute group owners approve changes to their fields. The data team turns
+attribute owners approve changes to their fields. The data team turns
 them into checks and can propose new ones. All values are defaults to confirm.
 [TBC]
 
 | Setting | Default |
 | --- | --- |
-| Data owner (R-01) | Head of Commercial |
-| Attribute group owners (R-02) | None by default |
-| Functions consulted | Finance (margins and revenue) [TBC] |
+| Data owner (R-01) | [TBC: agreed by the GPDOs] |
+| Attribute owners, delegated by the GPDO (R-02) | [TBC: delegated by the data owner] |
 | Governed process (R-03) | The unified master data app, if it covers pricing [TBC]; until then, the current pricing request process |
 | System of record (R-04) | SAP condition records for prices, discounts and surcharges [TBC: any pricing or quoting tool outside SAP] |
 | Turnaround times (R-06) | [TBC] |
@@ -25,7 +24,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Inactivity period and block (R-11) | Not applicable: condition records end on their validity date |
 | Excluded from inactivity blocking (R-11) | Not applicable |
 | Sensitive fields (R-13) | Prices and discounts that change by more than [TBC]% |
-| Sensitive changes confirmed by (R-13) | Someone in the data owner's team, such as pricing management, other than the person who entered the change |
+| Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Personal data fields (R-16) | None |
 | Payment data fields (R-16) | None |

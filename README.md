@@ -26,10 +26,10 @@ risks that come with master data: payment fraud, privacy and audit.
 
 ## Scope
 
-Six domains, owned by four functions (see the [charter](charter.md)):
-customer and pricing (commercial), material and production data
-(manufacturing), supplier (procurement), and finance structures such as GL
-accounts and cost centres (finance). SAP comes first: the
+Six domains: customer, pricing, material, production data, supplier, and
+finance structures such as GL accounts and cost centres. The four GPDOs
+(Commercial, Manufacturing, Finance and Procurement) are the data owners and
+agree among themselves who owns what (see the [charter](charter.md)). SAP comes first: the
 unified master data app covers SAP master data, and non-SAP copies are checked
 against SAP until the app can take requests from those systems.
 
@@ -37,7 +37,7 @@ against SAP until the app can take requests from those systems.
 
 | Document | What it holds | Approved by |
 | --- | --- | --- |
-| [Charter](charter.md) | Who owns what, who decides what, and the controls we never switch off | The data owners and the Head of Data, AI & Development, once |
+| [Charter](charter.md) | Who owns what, who decides what, and the controls we never switch off | The four GPDOs and the Head of Data, AI & Development, once |
 | [Rulebook](rulebook.md) | 20 rules: what must be true, and why | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced today and once the app is live. Doubles as the app backlog. | Head of Data, AI & Development |
 | [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver | Head of Data, AI & Development, through the contract |

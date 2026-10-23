@@ -1,19 +1,18 @@
 # Production Data Profile
 
-**Status:** Draft v0.1 · **Phase:** [TBC: phase 1, or added after the first measurements] · **Approved by:** [TBC: the data owner, with the attribute group owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
+**Status:** Draft v0.1 · **Phase:** [TBC: phase 1, or added after the first measurements] · **Approved by:** [TBC: the GPDO, with the attribute owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
 
 This profile holds the domain's validation and quality rules, and the other
-settings the rulebook refers to. The business owns them: the data owner
+settings the rulebook refers to. The business owns them: the GPDO, as data owner,
 approves the profile and can change it at any time, within the rulebook, and
-attribute group owners approve changes to their fields. The data team turns
+attribute owners approve changes to their fields. The data team turns
 them into checks and can propose new ones. All values are defaults to confirm.
 [TBC]
 
 | Setting | Default |
 | --- | --- |
-| Data owner (R-01) | Head of Manufacturing |
-| Attribute group owners (R-02) | Finance (costing): cost centre and activity types on work centres [TBC] |
-| Functions consulted | None by default |
+| Data owner (R-01) | [TBC: agreed by the GPDOs] |
+| Attribute owners, delegated by the GPDO (R-02) | [TBC: delegated by the data owner] |
 | Governed process (R-03) | The unified master data app, if it covers production data [TBC]; until then, the current engineering change process |
 | System of record (R-04) | SAP bills of materials, routings or master recipes, work centres and production versions [TBC: PLM for engineering bills of materials] |
 | Turnaround times (R-06) | [TBC] |

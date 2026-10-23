@@ -1,6 +1,6 @@
 # Master Data Governance Charter
 
-**Status:** Draft v0.1 · **Signed by:** the data owners and the Head of Data, AI & Development · **Effective from:** [TBC] · **Review:** yearly, and whenever a signatory changes
+**Status:** Draft v0.1 · **Signed by:** the four GPDOs and the Head of Data, AI & Development · **Effective from:** [TBC] · **Review:** yearly, and whenever a signatory changes
 
 ## Purpose
 
@@ -15,7 +15,7 @@ protection and internal controls] to master data. It doesn't replace them.
 
 ## Scope
 
-Six master data domains in SAP, owned by four functions (see below), and the
+Six master data domains in SAP, owned by the four GPDOs (see below), and the
 non-SAP systems that hold copies of them. SAP comes first: the unified master data app
 covers SAP master data, and non-SAP copies are checked against SAP until the
 app can take requests from those systems.
@@ -32,28 +32,23 @@ app can take requests from those systems.
 
 ## Who owns what
 
-Four functions own master data. Each owns whole domains, and may own groups of
-fields in another function's domain where it knows the right values best.
-Every field has exactly one owner (R-02).
+The data owners are the four GPDOs (global process and data owners):
+Commercial, Manufacturing, Finance and Procurement. They agree among
+themselves which GPDO owns each domain, and each GPDO delegates attribute
+owners for groups of fields in their domains. Both are recorded in the domain
+profiles, because the app and the vendor need to know who approves what, and
+they can change without changing this charter.
 
-| Domain | Commercial | Manufacturing | Procurement | Finance |
-| --- | --- | --- | --- | --- |
-| Customer | **Owner** | | | Fields: credit limit and risk category [TBC: if credit management sits in Finance], reconciliation account |
-| Pricing conditions | **Owner** | | | Consulted |
-| Material | Fields: sales views | **Owner:** basic data, units of measure, planning and production views | Fields: purchasing view | Fields: accounting and costing views |
-| Production data: bills of materials, routings, work centres, production versions | | **Owner** | | Fields: costing data on work centres |
-| Supplier | | | **Owner** | Fields: reconciliation account, withholding tax |
-| Finance structures: GL accounts, cost centres, profit centres | | | | **Owner** |
-
-[TBC: defaults to confirm.] Changing the map needs the agreement of the owners
-whose data moves.
+Every field has exactly one owner (R-02). The data governance specialist flags
+any field with no owner or more than one, and the GPDOs settle it at the
+monthly owner review.
 
 ## Who decides what
 
 | Role | Held by [TBC] | Decides or does |
 | --- | --- | --- |
-| Data owner | One leader per function, owning that function's domains: Head of Commercial, Head of Manufacturing, Head of Procurement and Financial Controller | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in the domain profiles), exceptions in their domains, which request types the app approves automatically, and what agents may do there. Their team confirms sensitive changes to their fields. |
-| Attribute group owner | A leader in another function, by delegation from a data owner, for a group of fields that function knows best and relies on most | Decides the same for those fields, and their team confirms sensitive changes to them |
+| Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in the domain profiles), exceptions in their domains, which request types the app approves automatically, and what agents may do there. Delegates attribute owners. Their team confirms sensitive changes to their fields. |
+| Attribute owner | Whoever a GPDO delegates a group of fields to, inside or outside their function | Decides the same for those fields, and they or someone in their team confirm sensitive changes to them |
 | Head of Data, AI & Development | [TBC: name] | Approves the rulebook, the controls catalogue and the vendor requirements. Accountable for the data team's delivery: the app, the agents, the vendor and running this framework. |
 | Data steward | The master data vendor today; a small exceptions team once the app automates routine work | Decides routine requests, within the rules |
 | Data governance specialist | The data team | Runs the framework and owns the agents. Decides nothing about data content. |
@@ -63,10 +58,10 @@ whose data moves.
 
 | Document | Approved by |
 | --- | --- |
-| This charter | All data owners and the Head of Data, AI & Development |
+| This charter | The four GPDOs and the Head of Data, AI & Development |
 | Rulebook | The Head of Data, AI & Development. Every change goes in the change log and to the next monthly owner review. |
 | Controls catalogue and vendor requirements | The Head of Data, AI & Development |
-| Domain profiles | Each data owner, with attribute group owners for their fields |
+| Domain profiles | Each GPDO, with the attribute owners they've delegated for their fields |
 
 ## Controls we never switch off
 
@@ -94,8 +89,8 @@ These can't be waived by exception, and changing them needs every signatory:
 
 | Role | Name | Date |
 | --- | --- | --- |
-| Data owner, commercial (customer, pricing) | | |
-| Data owner, manufacturing (material, production data) | | |
-| Data owner, procurement (supplier) | | |
-| Data owner, finance (finance structures) | | |
+| Commercial GPDO | | |
+| Manufacturing GPDO | | |
+| Procurement GPDO | | |
+| Finance GPDO | | |
 | Head of Data, AI & Development | | |

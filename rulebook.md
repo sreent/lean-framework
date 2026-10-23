@@ -18,8 +18,8 @@ privacy and audit.
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-01 | Every master data domain has a named data owner, accountable for its data however it's changed: by people, the vendor, the app or agents. | Incorrect, inconsistent |
-| R-02 | Every field has exactly one owner: the domain's data owner, or a leader in another function to whom the data owner has delegated a group of fields because that function knows the right values and relies on them most. The domain profile records each delegation. In S/4HANA, business partner central data (name, address, tax numbers, bank details) has one owner across the supplier and customer roles. | Incorrect, inconsistent |
+| R-01 | Every master data domain has a named data owner, its GPDO, accountable for its data however it's changed: by people, the vendor, the app or agents. | Incorrect, inconsistent |
+| R-02 | Every field has exactly one owner: the domain's data owner, or an attribute owner to whom the data owner has delegated a group of fields, usually whoever knows the right values best. The domain profile records each delegation. In S/4HANA, business partner central data (name, address, tax numbers, bank details) has one owner across the supplier and customer roles. | Incorrect, inconsistent |
 
 ## Changing master data
 
@@ -94,7 +94,7 @@ Autonomy levels:
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-20 | Exceptions are approved by the data owner, or the attribute group owner for their fields, never by whoever asked for them. Each one is recorded with its rule, reason, approver and expiry, expires within [TBC: 90 days], and can be renewed once. The controls the charter lists can't be waived. | Audit risk |
+| R-20 | Exceptions are approved by the data owner, or the attribute owner for their fields, never by whoever asked for them. Each one is recorded with its rule, reason, approver and expiry, expires within [TBC: 90 days], and can be renewed once. The controls the charter lists can't be waived. | Audit risk |
 
 ## Change log
 

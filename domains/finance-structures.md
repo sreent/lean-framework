@@ -1,19 +1,18 @@
 # Finance Structures Profile
 
-**Status:** Draft v0.2 · **Approved by:** [TBC: the data owner, with the attribute group owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
+**Status:** Draft v0.2 · **Approved by:** [TBC: the GPDO, with the attribute owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
 
 This profile holds the domain's validation and quality rules, and the other
-settings the rulebook refers to. The business owns them: the data owner
+settings the rulebook refers to. The business owns them: the GPDO, as data owner,
 approves the profile and can change it at any time, within the rulebook, and
-attribute group owners approve changes to their fields. The data team turns
+attribute owners approve changes to their fields. The data team turns
 them into checks and can propose new ones. All values are defaults to confirm.
 [TBC]
 
 | Setting | Default |
 | --- | --- |
-| Data owner (R-01) | Financial Controller |
-| Attribute group owners (R-02) | Head of Tax: tax category |
-| Functions consulted | Business controllers (cost centres and profit centres in their area) |
+| Data owner (R-01) | [TBC: agreed by the GPDOs] |
+| Attribute owners, delegated by the GPDO (R-02) | [TBC: delegated by the data owner] |
 | Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
 | System of record (R-04) | SAP: chart of accounts, cost centres, profit centres, and cost elements on ECC [TBC: group reporting structure in a consolidation tool] |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
@@ -25,7 +24,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Inactivity period and block (R-11) | No postings for 24 months: posting block |
 | Excluded from inactivity blocking (R-11) | Accounts used only at year-end or for rare events, such as impairments |
 | Sensitive fields (R-13) | Account type, reconciliation account setting, posting controls |
-| Sensitive changes confirmed by (R-13) | Someone in the Financial Controller's team, or the Head of Tax's team for tax category, other than the person who entered the change |
+| Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Personal data fields (R-16) | Person responsible for a cost centre or profit centre |
 | Payment data fields (R-16) | None |
