@@ -6,13 +6,21 @@ Each rule says what must be true, not how it's enforced. The
 [controls catalogue](controls.md) covers how, today and once the app is live.
 The business owns what good data looks like: each domain's validation and
 quality rules (conventions, checks and thresholds) and its other settings sit
-in its domain profile, which its GPDO proposes and maintains. This rulebook only
-requires that they exist and are applied.
+in its domain profile, which its GPDO proposes and maintains. This rulebook
+only requires that they exist and are applied.
 
 "Why" names what the rule addresses. Rules R-01 to R-12 fix the problem behind
 our data quality issues, master data that is **incorrect** or **inconsistent**.
 Rules R-13 to R-20 manage **risks** that come with master data: payment fraud,
 privacy and audit.
+
+"Data owner" in these rules means the GPDO, or the attribute owner for the
+part of the domain delegated to them.
+
+The rules apply to new and changed records from the effective date in the
+charter. Existing records are brought into line domain by domain, starting with
+the pilot. Until then, gaps in existing records are tracked on the scorecards
+rather than treated as breaches.
 
 ## Ownership
 
@@ -101,3 +109,4 @@ Autonomy levels:
 | Version | Date | Change |
 | --- | --- | --- |
 | 0.1 | 2026-10-23 | First version, replacing the data governance, classification and master data standards |
+| 0.2 | 2026-10-23 | Defined "data owner" to include attribute owners; restored when the rules apply, which 0.1 left out |

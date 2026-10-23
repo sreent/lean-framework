@@ -34,8 +34,8 @@ unit, by group of fields, or a mix. Two things keep any split working:
 
 | Part of the domain (subdomain, business unit or field group) | Master data covered | Owner | In scope from |
 | --- | --- | --- | --- |
-| [e.g. customer general data] | [e.g. name, address, tax numbers] | [the GPDO, or a named attribute owner] | [phase 1 or later] |
-| [e.g. customer sales data, business unit A] | [e.g. sales area data for its sales organisations] | [a named attribute owner] | [phase 1 or later] |
+| [e.g. customer general data] | [e.g. name, address, tax numbers] | [the GPDO, or a named attribute owner] | [now, or a later date] |
+| [e.g. customer sales data, business unit A] | [e.g. sales area data for its sales organisations] | [a named attribute owner] | [now, or a later date] |
 
 Shared with other domains: [data split with another GPDO's domain, such as
 views of the material master, and the agreed split]
@@ -49,6 +49,7 @@ The settings the rulebook refers to, for each subdomain:
 | Governed process | R-03 | |
 | System of record | R-04 | |
 | Turnaround times | R-06 | |
+| Contact for the stewards' questions | R-06 | |
 | Critical fields and their conventions | R-09 | |
 | Mandatory checks | R-05, R-09 | |
 | Quality thresholds | R-09 | |

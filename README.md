@@ -26,11 +26,11 @@ risks that come with master data: payment fraud, privacy and audit.
 
 ## Scope
 
-Four domains, one per GPDO: Commercial, Manufacturing, Finance and
-Procurement. Each GPDO proposes what master data their domain covers, such as
-customers, pricing, materials, production data, suppliers or finance
-structures, and how it breaks down by subdomain, business unit or group of
-fields (see the [charter](charter.md)). SAP comes first: the
+Four domains, one per GPDO (global process and data owner): Commercial,
+Manufacturing, Finance and Procurement. Each GPDO proposes what master data
+their domain covers, such as customers, pricing, materials, production data,
+suppliers or finance structures, and how it breaks down by subdomain, business
+unit or group of fields (see the [charter](charter.md)). SAP comes first: the
 unified master data app covers SAP master data, and non-SAP copies are checked
 against SAP until the app can take requests from those systems.
 
@@ -70,14 +70,15 @@ Items marked `[TBC]` are defaults to confirm.
   make small approved fixes, and a person decides (R-18).
 - **The checks on the data team come from outside it.** The data team manages
   the vendor, builds the app and runs the agents. The business owns the data
-  and its settings, the owner's team confirms sensitive changes, every SAP change is
-  traced to an approved request, and someone outside the team reviews
-  emergency access.
+  and its settings, the owner's team confirms sensitive changes, every SAP
+  change is traced to an approved request, and someone outside the team
+  reviews emergency access.
 
 ## Rhythm
 
 - **Monthly owner review, 30 minutes,** run by the data governance specialist:
-  scorecards, exceptions, agent performance and rule changes.
+  scorecards, exceptions, ownership gaps, changes to domain profiles, agent
+  performance and rule changes.
 - **Quarterly:** a one-page scorecard to the executive team.
 
 ## Measures

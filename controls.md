@@ -8,8 +8,8 @@ backlog. Controls change here as the app grows; the rules don't.
 
 | Rule | Today (vendor and SAP) | Target (app and agents) | Evidence |
 | --- | --- | --- | --- |
-| R-01 Named owner | Owners sign the charter and their domain profiles | Same | Signed charter and profiles |
-| R-02 Delegation | Delegations recorded in the domain profiles | Same | Signed profiles |
+| R-01 Named owner | The GPDOs sign the charter and agree their domain profiles | Same | Signed charter, agreed domain profiles |
+| R-02 Delegation | Delegations recorded in the domain profiles; the data governance specialist flags gaps and overlaps | Same | Agreed domain profiles |
 | R-03 Governed process | Requests go through the vendor's ticketing process [TBC]; requests by email or spreadsheet are turned away | All requests go through the app. Non-SAP systems raise requests through its request interface. [TBC: on the app roadmap] | Request log |
 | R-04 One system of record | Data flows from SAP over interfaces; non-SAP copies hold the SAP key [TBC] | Interface or middleware checks reject or quarantine bad records. The data platform compares each non-SAP copy with SAP, and an agent triages the differences. | Consistency scorecard |
 | R-05 Checks before approval | Vendor checklist and SAP mandatory fields; manual duplicate search | App validations at entry, such as VIES, IBAN and GTIN checks and the domain's conventions. An agent pre-checks each request and runs fuzzy duplicate matching. | Check results stored with each request |
@@ -25,6 +25,6 @@ backlog. Controls change here as the app grows; the rules don't.
 | R-15 Bank detail verification | The confirmer calls the supplier back on details already on file and keeps the evidence; a report flags shared bank accounts | The app requires call-back evidence before confirmation. An agent checks for shared accounts, comparing masked values. | Call-back evidence, flag report |
 | R-16 Access and masking | SAP roles reviewed for access to flagged fields; extracts of Restricted data need owner approval; data masked when SAP is copied to test systems [TBC: tool] | Same | Access review, approvals, masking log |
 | R-17 Personal data lifecycle | [TBC: SAP Information Lifecycle Management end-of-purpose checks] | Same | Blocking and deletion log |
-| R-18 Agents | Agent register kept by the data governance specialist; design review before go-live; logs kept as long as SAP change documents | An agent moves up a level on accuracy checked against an independent sample, and drops a level after a serious error. Changes to its model, instructions or tools are tested and re-approved. | Register, logs, sample results |
+| R-18 Agents | Agent register kept by the data governance specialist; design review before go-live; logs kept as long as SAP change documents. Agents that don't touch master data, such as one that chases exception expiry dates, are approved by the Head of Data, AI & Development. | An agent moves up a level on accuracy checked against an independent sample, and drops a level after a serious error. Changes to its model, instructions or tools are tested and re-approved. | Register, logs, sample results |
 | R-19 Data team | Emergency access is logged and reviewed by [TBC: the internal controls team]; app and agent changes go through change management | Same | Review log, release records |
 | R-20 Exceptions | Exception register [TBC: location] | Register in the app; an agent chases expiry dates | Register |
