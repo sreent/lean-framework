@@ -8,7 +8,8 @@ Data quality problems across the business trace back to master data that is
 incorrect or inconsistent. This charter is our agreement on who owns master
 data, who decides what, and the few controls we never switch off. The
 [rulebook](rulebook.md) holds the rules, the [controls catalogue](controls.md)
-says how each one is enforced, and each domain's profile holds its settings.
+says how each one is enforced, the [operating model](operating-model.md) shows
+who does what day to day, and each domain's profile holds its settings.
 
 It applies the company's existing policies on [TBC: information security, data
 protection and internal controls] to master data. It doesn't replace them.
@@ -63,7 +64,7 @@ breakdown.
 | --- | --- |
 | This charter | The four GPDOs and the Head of Data, AI & Development |
 | Rulebook | The Head of Data, AI & Development. Every change goes in the change log and to the next monthly owner review. |
-| Controls catalogue and vendor requirements | The Head of Data, AI & Development |
+| Controls catalogue, vendor requirements and operating model | The Head of Data, AI & Development. The operating model summarises this charter and the rulebook; where they differ, they win. |
 | Domain profiles | Proposed by each GPDO for their own domain, and agreed by the GPDOs together. After that, each GPDO maintains theirs, and attribute owners approve changes to their part. |
 
 ## Controls we never switch off
