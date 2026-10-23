@@ -1,18 +1,13 @@
-# Customer Profile
+# Customer: Starter Settings
 
-**Status:** Draft v0.2 · **Approved by:** [TBC: the GPDO, with the attribute owners below for their fields] · **Rules:** [Rulebook](../rulebook.md)
+**Status:** Starter v0.1 · **Use:** input to a GPDO's [domain profile](../template.md) · **Rules:** [Rulebook](../../rulebook.md)
 
-This profile holds the domain's validation and quality rules, and the other
-settings the rulebook refers to. The business owns them: the GPDO, as data owner,
-approves the profile and can change it at any time, within the rulebook, and
-attribute owners approve changes to their fields. The data team turns
-them into checks and can propose new ones. All values are defaults to confirm.
-[TBC]
+Starter material, not a decision: common SAP settings for customer data.
+The GPDO who owns this data can use, change or drop any of it when proposing
+their domain profile. [TBC]
 
-| Setting | Default |
+| Setting | Starter value |
 | --- | --- |
-| Data owner (R-01) | [TBC: agreed by the GPDOs] |
-| Attribute owners, delegated by the GPDO (R-02) | [TBC: delegated by the data owner] |
 | Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
 | System of record (R-04) | SAP for legal, financial and logistics fields; CRM for sales contacts and segmentation. In S/4HANA, central data is shared with the supplier role (R-02). |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |

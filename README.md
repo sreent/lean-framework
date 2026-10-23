@@ -26,10 +26,11 @@ risks that come with master data: payment fraud, privacy and audit.
 
 ## Scope
 
-Six domains: customer, pricing, material, production data, supplier, and
-finance structures such as GL accounts and cost centres. The four GPDOs
-(Commercial, Manufacturing, Finance and Procurement) are the data owners and
-agree among themselves who owns what (see the [charter](charter.md)). SAP comes first: the
+Four domains, one per GPDO: Commercial, Manufacturing, Finance and
+Procurement. Each GPDO proposes what master data their domain covers, such as
+customers, pricing, materials, production data, suppliers or finance
+structures, and how it breaks down by subdomain, business unit or group of
+fields (see the [charter](charter.md)). SAP comes first: the
 unified master data app covers SAP master data, and non-SAP copies are checked
 against SAP until the app can take requests from those systems.
 
@@ -41,7 +42,7 @@ against SAP until the app can take requests from those systems.
 | [Rulebook](rulebook.md) | 20 rules: what must be true, and why | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced today and once the app is live. Doubles as the app backlog. | Head of Data, AI & Development |
 | [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver | Head of Data, AI & Development, through the contract |
-| Domain profiles: [customer](domains/customer.md), [pricing](domains/pricing.md), [material](domains/material.md), [production data](domains/production.md), [supplier](domains/supplier.md), [finance structures](domains/finance-structures.md) | Each domain's validation and quality rules (conventions, checks, thresholds) and other settings: sensitive and personal data, and what's automated | Each data owner |
+| Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | Proposed by each GPDO, agreed by the GPDOs together |
 
 Items marked `[TBC]` are defaults to confirm.
 
@@ -96,12 +97,14 @@ Baseline each one in the first month, then set targets. [TBC]
 
 ## Getting started
 
-1. **Measure first.** Run each domain's checks across all six domains as
+1. **Measure first.** Run the starter checks across the master data in scope as
    read-only scorecards. This needs little from the business beyond access to
    the data, and shows where the data is worst.
-2. **Pilot one domain for about 90 days,** where the scorecards and the
-   downstream impact are worst. Agree its conventions, switch on its checks,
-   and add one or two agents, such as duplicate matching and SAP change
-   reconciliation.
-3. **Expand based on the results** to the other domains, as the app takes over
-   request types.
+2. **Each GPDO proposes their domain profile,** using the template and the
+   scorecards: how the domain breaks down, who owns each part, what's in scope
+   first, and its validation and quality rules. The GPDOs agree the proposals
+   together.
+3. **Pilot one domain for about 90 days,** where the scorecards and the
+   downstream impact are worst. Switch on its checks, and add one or two
+   agents, such as duplicate matching and SAP change reconciliation.
+4. **Expand based on the results,** as the app takes over request types.

@@ -6,7 +6,7 @@ Each rule says what must be true, not how it's enforced. The
 [controls catalogue](controls.md) covers how, today and once the app is live.
 The business owns what good data looks like: each domain's validation and
 quality rules (conventions, checks and thresholds) and its other settings sit
-in its domain profile, which the data owner approves. This rulebook only
+in its domain profile, which its GPDO proposes and maintains. This rulebook only
 requires that they exist and are applied.
 
 "Why" names what the rule addresses. Rules R-01 to R-12 fix the problem behind
@@ -19,7 +19,7 @@ privacy and audit.
 | ID | Rule | Why |
 | --- | --- | --- |
 | R-01 | Every master data domain has a named data owner, its GPDO, accountable for its data however it's changed: by people, the vendor, the app or agents. | Incorrect, inconsistent |
-| R-02 | Every field has exactly one owner: the domain's data owner, or an attribute owner to whom the data owner has delegated a group of fields, usually whoever knows the right values best. The domain profile records each delegation. In S/4HANA, business partner central data (name, address, tax numbers, bank details) has one owner across the supplier and customer roles. | Incorrect, inconsistent |
+| R-02 | Every field on every record has exactly one owner: the domain's data owner, or an attribute owner the data owner has delegated part of the domain to, by subdomain, business unit or group of fields. The domain profile records each delegation. In S/4HANA, business partner central data (name, address, tax numbers, bank details) has one owner across the supplier and customer roles. | Incorrect, inconsistent |
 
 ## Changing master data
 
@@ -36,7 +36,7 @@ privacy and audit.
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-09 | Each domain profile defines its critical fields, the conventions they follow (format, naming and allowed values), the checks that enforce them, and a quality threshold for each. Results are published monthly. | Incorrect, inconsistent |
+| R-09 | Each domain profile defines its critical fields, the conventions they follow (format, naming and allowed values), the checks that enforce them, and a quality threshold for each. Conventions and checks are the same across the domain's subdomains and business units unless the GPDO agrees a difference. Results are published monthly. | Incorrect, inconsistent |
 | R-10 | Issues are fixed in the system of record, never only in a downstream copy or report. A recurring issue leads to a new or better check, which the data owner adds to the domain profile, so it doesn't come back. | Incorrect, inconsistent |
 | R-11 | Records unused for the period in the domain profile are blocked unless someone confirms they're still needed. Records with open items, orders or contracts are excluded. The data owner approves the list as a whole. | Incorrect |
 
