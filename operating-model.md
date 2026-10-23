@@ -38,7 +38,7 @@ R = responsible, A = accountable, C = consulted, I = informed.
 | Supervise agents (agent owner) | I | I | A/R | C | C | – | – |
 | Approve an agent's autonomy level | A/R | C | C | C | – | – | – |
 | Approve an exception | A/R | – | C | – | – | I | – |
-| Track exceptions to expiry | I | – | A | – | – | – | R |
+| Track exceptions to expiry | I | – | A/R | – | – | – | – |
 | Manage the vendor against its requirements | I | A | R | – | C | – | – |
 | Maintain the rulebook, controls catalogue and this operating model | C | A | R | C | – | – | – |
 
@@ -58,6 +58,11 @@ column of the controls catalogue applies.
 
 ## Agents
 
+Agents are for work that needs judgement. A check with a fixed answer, such as
+whether a bank account is already used by another supplier, or a reminder on a
+set date, belongs in the app's rules instead (see the
+[controls catalogue](controls.md)).
+
 This is the agent register (R-18). Every agent has a named agent owner from
 the data team, starts at a low autonomy level, and moves up only on evidence
 from an independent sample. Data owners approve how far an agent may act in
@@ -67,14 +72,12 @@ defined in the rulebook.
 
 | Agent | What it does | Rules | Starts at | When | Agent owner |
 | --- | --- | --- | --- | --- | --- |
-| Duplicate finder | Finds likely duplicates among existing records and proposes which to keep | R-05, R-10 | 1. Propose | Pilot | [TBC] |
-| Change reconciler | Matches every SAP master data change to an approved request and reports any without one | R-08 | 0. Observe | Pilot | [TBC] |
-| Request pre-check | Checks each request for completeness, validity and duplicates before a steward sees it | R-05 | 1. Propose | With the app | [TBC] |
+| Duplicate finder | Finds likely duplicates among existing records, including near matches on names and addresses, and proposes which to keep | R-05, R-10 | 1. Propose | Pilot | [TBC] |
+| Change reconciler | Matches SAP master data changes to approved requests, including vendor tickets without a clear reference, and reports changes without one. Once the app records the request on every change, a fixed report takes over. | R-08 | 0. Observe | Pilot | [TBC] |
+| Request pre-check | Reviews each request before a steward sees it: reads attachments, spots likely duplicates, and flags values that pass the app's checks but look wrong | R-05 | 1. Propose | With the app | [TBC] |
 | Quality triage | Groups failing records by cause, raises fix requests and proposes new checks to the owner | R-09, R-10 | 1. Propose | With the app | [TBC] |
-| Consistency checker | Compares non-SAP copies with SAP and sorts the differences | R-04 | 0. Observe | Later | [TBC] |
-| Bank account check | Flags bank accounts shared between suppliers or customers, using masked values | R-15 | 0. Observe | Later | [TBC] |
-| Inactive records | Prepares the monthly list of records to block | R-11 | 1. Propose | Later | [TBC] |
-| Exception chaser | Tracks exception expiry dates and reminds owners | R-20 | 0. Observe | Later | [TBC] |
+| Consistency checker | Works out which differences between non-SAP copies and SAP matter, and which side is right | R-04 | 0. Observe | Later | [TBC] |
+| Inactive records | Prepares the monthly list of records to block, and flags those that may still be needed, such as seasonal suppliers | R-11 | 1. Propose | Later | [TBC] |
 
 ## Rhythm
 
