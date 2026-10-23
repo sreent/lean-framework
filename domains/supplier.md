@@ -12,7 +12,7 @@ them into checks and can propose new ones. All values are defaults to confirm.
 | Setting | Default |
 | --- | --- |
 | Data owner (R-01) | Head of Procurement |
-| Attribute group owners (R-02) | Accounts Payable: reconciliation account and withholding tax [TBC]. The data owner keeps bank details and payment terms. |
+| Attribute group owners (R-02) | Finance (accounts payable): reconciliation account and withholding tax [TBC]. The data owner keeps bank details and payment terms. |
 | Functions consulted | None by default |
 | Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
 | System of record (R-04) | SAP: business partner (supplier role) or vendor master. Onboarding data from a procurement platform or supplier portal arrives as create requests. In S/4HANA, central data is shared with the customer role (R-02). |

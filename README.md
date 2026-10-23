@@ -26,7 +26,10 @@ risks that come with master data: payment fraud, privacy and audit.
 
 ## Scope
 
-Supplier, customer and material master data, and finance structures (GL accounts, cost centres and profit centres). SAP comes first: the
+Six domains, owned by four functions (see the [charter](charter.md)):
+customer and pricing (commercial), material and production data
+(manufacturing), supplier (procurement), and finance structures such as GL
+accounts and cost centres (finance). SAP comes first: the
 unified master data app covers SAP master data, and non-SAP copies are checked
 against SAP until the app can take requests from those systems.
 
@@ -38,7 +41,7 @@ against SAP until the app can take requests from those systems.
 | [Rulebook](rulebook.md) | 20 rules: what must be true, and why | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced today and once the app is live. Doubles as the app backlog. | Head of Data, AI & Development |
 | [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver | Head of Data, AI & Development, through the contract |
-| Domain profiles: [supplier](domains/supplier.md), [customer](domains/customer.md), [material](domains/material.md), [finance structures](domains/finance-structures.md) | Each domain's validation and quality rules (conventions, checks, thresholds) and other settings: sensitive and personal data, and what's automated | Each data owner |
+| Domain profiles: [customer](domains/customer.md), [pricing](domains/pricing.md), [material](domains/material.md), [production data](domains/production.md), [supplier](domains/supplier.md), [finance structures](domains/finance-structures.md) | Each domain's validation and quality rules (conventions, checks, thresholds) and other settings: sensitive and personal data, and what's automated | Each data owner |
 
 Items marked `[TBC]` are defaults to confirm.
 
@@ -93,7 +96,7 @@ Baseline each one in the first month, then set targets. [TBC]
 
 ## Getting started
 
-1. **Measure first.** Run each domain's checks across all four domains as
+1. **Measure first.** Run each domain's checks across all six domains as
    read-only scorecards. This needs little from the business beyond access to
    the data, and shows where the data is worst.
 2. **Pilot one domain for about 90 days,** where the scorecards and the

@@ -15,8 +15,8 @@ protection and internal controls] to master data. It doesn't replace them.
 
 ## Scope
 
-Supplier, customer, material and finance master data in SAP, and the non-SAP
-systems that hold copies of it. SAP comes first: the unified master data app
+Six master data domains in SAP, owned by four functions (see below), and the
+non-SAP systems that hold copies of them. SAP comes first: the unified master data app
 covers SAP master data, and non-SAP copies are checked against SAP until the
 app can take requests from those systems.
 
@@ -30,11 +30,29 @@ app can take requests from those systems.
    the data owners set. People stay accountable.
 4. **Named ownership.** Every domain has a named business owner.
 
+## Who owns what
+
+Four functions own master data. Each owns whole domains, and may own groups of
+fields in another function's domain where it knows the right values best.
+Every field has exactly one owner (R-02).
+
+| Domain | Commercial | Manufacturing | Procurement | Finance |
+| --- | --- | --- | --- | --- |
+| Customer | **Owner** | | | Fields: credit limit and risk category [TBC: if credit management sits in Finance], reconciliation account |
+| Pricing conditions | **Owner** | | | Consulted |
+| Material | Fields: sales views | **Owner:** basic data, units of measure, planning and production views | Fields: purchasing view | Fields: accounting and costing views |
+| Production data: bills of materials, routings, work centres, production versions | | **Owner** | | Fields: costing data on work centres |
+| Supplier | | | **Owner** | Fields: reconciliation account, withholding tax |
+| Finance structures: GL accounts, cost centres, profit centres | | | | **Owner** |
+
+[TBC: defaults to confirm.] Changing the map needs the agreement of the owners
+whose data moves.
+
 ## Who decides what
 
 | Role | Held by [TBC] | Decides or does |
 | --- | --- | --- |
-| Data owner | One business process owner per domain: Head of Procurement (supplier), Head of Order-to-Cash (customer), Head of Supply Chain (material), Financial Controller (finance structures) | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in their domain profile), exceptions in their domain, which request types the app approves automatically, and what agents may do there. Their team confirms sensitive changes to their fields. |
+| Data owner | One leader per function, owning that function's domains: Head of Commercial, Head of Manufacturing, Head of Procurement and Financial Controller | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in the domain profiles), exceptions in their domains, which request types the app approves automatically, and what agents may do there. Their team confirms sensitive changes to their fields. |
 | Attribute group owner | A leader in another function, by delegation from a data owner, for a group of fields that function knows best and relies on most | Decides the same for those fields, and their team confirms sensitive changes to them |
 | Head of Data, AI & Development | [TBC: name] | Approves the rulebook, the controls catalogue and the vendor requirements. Accountable for the data team's delivery: the app, the agents, the vendor and running this framework. |
 | Data steward | The master data vendor today; a small exceptions team once the app automates routine work | Decides routine requests, within the rules |
@@ -76,8 +94,8 @@ These can't be waived by exception, and changing them needs every signatory:
 
 | Role | Name | Date |
 | --- | --- | --- |
-| Data owner, supplier | | |
-| Data owner, customer | | |
-| Data owner, material | | |
-| Data owner, finance structures | | |
+| Data owner, commercial (customer, pricing) | | |
+| Data owner, manufacturing (material, production data) | | |
+| Data owner, procurement (supplier) | | |
+| Data owner, finance (finance structures) | | |
 | Head of Data, AI & Development | | |

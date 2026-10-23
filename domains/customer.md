@@ -11,9 +11,9 @@ them into checks and can propose new ones. All values are defaults to confirm.
 
 | Setting | Default |
 | --- | --- |
-| Data owner (R-01) | Head of Order-to-Cash or Sales Operations |
-| Attribute group owners (R-02) | Credit management: credit limit and risk category [TBC: wherever credit management sits]. Finance: reconciliation account. |
-| Functions consulted | Logistics (shipping data) |
+| Data owner (R-01) | Head of Commercial |
+| Attribute group owners (R-02) | Finance: credit limit and risk category [TBC: if credit management sits in Finance; otherwise the data owner keeps them], and reconciliation account |
+| Functions consulted | Manufacturing (delivering plants and shipping data) [TBC] |
 | Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
 | System of record (R-04) | SAP for legal, financial and logistics fields; CRM for sales contacts and segmentation. In S/4HANA, central data is shared with the supplier role (R-02). |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |

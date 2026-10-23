@@ -11,9 +11,9 @@ them into checks and can propose new ones. All values are defaults to confirm.
 
 | Setting | Default |
 | --- | --- |
-| Data owner (R-01) | Head of Supply Chain |
-| Attribute group owners (R-02) | Financial Controller or Head of Costing: accounting and costing views (valuation class, price control, standard price) |
-| Functions consulted | Procurement (purchasing view), Sales (sales views), Engineering (technical attributes) |
+| Data owner (R-01) | Head of Manufacturing [TBC: or Commercial for traded goods, if they're managed separately] |
+| Attribute group owners (R-02) | Commercial: sales views. Procurement: purchasing view. Finance (costing): accounting and costing views (valuation class, price control, standard price). |
+| Functions consulted | None by default |
 | Governed process (R-03) | The unified master data app; until it's live, the vendor's request process |
 | System of record (R-04) | SAP material master; PLM for engineering attributes; PIM or e-commerce for marketing content |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
