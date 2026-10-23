@@ -40,6 +40,7 @@ against SAP until the app can take requests from those systems.
 | --- | --- | --- |
 | [Charter](charter.md) | Who owns what, who decides what, and the controls we never switch off | The four GPDOs and the Head of Data, AI & Development, once |
 | [Rulebook](rulebook.md) | 20 rules: what must be true, and why | Head of Data, AI & Development |
+| [Operating model](operating-model.md) | Who does what (RACI), the platform, the agent register, rhythm and measures | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced today and once the app is live. Doubles as the app backlog. | Head of Data, AI & Development |
 | [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver | Head of Data, AI & Development, through the contract |
 | Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | Proposed by each GPDO, agreed by the GPDOs together |
@@ -74,27 +75,8 @@ Items marked `[TBC]` are defaults to confirm.
   change is traced to an approved request, and someone outside the team
   reviews emergency access.
 
-## Rhythm
-
-- **Monthly owner review, 30 minutes,** run by the data governance specialist:
-  scorecards, exceptions, ownership gaps, changes to domain profiles, agent
-  performance and rule changes.
-- **Quarterly:** a one-page scorecard to the executive team.
-
-## Measures
-
-Baseline each one in the first month, then set targets. [TBC]
-
-- Records passing their domain's checks (incorrect data)
-- Duplicates, and differences between SAP and non-SAP copies (inconsistent
-  data)
-- Downstream issues traced back to master data, such as blocked invoices,
-  failed deliveries and report corrections
-- Request turnaround and first-time-right rate
-- Share of requests approved automatically
-- SAP changes without an approved request
-- Agents: work handled, proposal acceptance and review time. Almost no
-  rejections combined with very short reviews usually means rubber-stamping.
+The [operating model](operating-model.md) has the detail: who does what, the
+platform, the agents, and the rhythm and measures.
 
 ## Getting started
 
@@ -106,6 +88,6 @@ Baseline each one in the first month, then set targets. [TBC]
    first, and its validation and quality rules. The GPDOs agree the proposals
    together.
 3. **Pilot one domain for about 90 days,** where the scorecards and the
-   downstream impact are worst. Switch on its checks, and add one or two
-   agents, such as duplicate matching and SAP change reconciliation.
+   downstream impact are worst. Switch on its checks, and add the first two
+   agents: the duplicate finder and the change reconciler.
 4. **Expand based on the results,** as the app takes over request types.

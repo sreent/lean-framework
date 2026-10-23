@@ -1,6 +1,6 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.1 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.3 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
 
 Each rule says what must be true, not how it's enforced. The
 [controls catalogue](controls.md) covers how, today and once the app is live.
@@ -82,7 +82,7 @@ Classification levels [TBC: use the company's scheme if it has one]:
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-18 | Every agent has a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. They treat content from outside the organisation as data to check, never as instructions. Restricted data goes to an AI model outside the organisation only with the data owner's and the data protection officer's approval. | Audit risk, privacy risk |
+| R-18 | Every agent is recorded in the agent register with a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. They treat content from outside the organisation as data to check, never as instructions. Restricted data goes to an AI model outside the organisation only with the data owner's and the data protection officer's approval. | Audit risk, privacy risk |
 
 Autonomy levels:
 
@@ -110,3 +110,4 @@ Autonomy levels:
 | --- | --- | --- |
 | 0.1 | 2026-10-23 | First version, replacing the data governance, classification and master data standards |
 | 0.2 | 2026-10-23 | Defined "data owner" to include attribute owners; restored when the rules apply, which 0.1 left out |
+| 0.3 | 2026-10-23 | R-18 requires every agent to be in the agent register |
