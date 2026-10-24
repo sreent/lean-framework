@@ -1,9 +1,10 @@
 # Domain Profile Template
 
-Each GPDO proposes a profile for their own domain, using this template. The
-GPDOs agree the proposals together at the monthly owner review, so nothing is
-missed or owned twice. After that, the GPDO maintains the profile, and
-attribute owners approve changes to their part of it.
+Each GPDO approves a profile for their own domain, using this template, and
+agrees any data shared with another domain with that domain's GPDO. The
+governance coordinator agent can draft it from the starters and the data as it
+stands. Once the unified app holds profiles as settings, the profile lives
+there, and owners approve changes to it in the app.
 
 The [starter material](starters/) has common SAP checks, conventions and
 settings for customer, pricing, material, production, supplier and finance
@@ -23,9 +24,9 @@ unit, by group of fields, or a mix. Four things keep any split working:
   across subdomains and business units unless the GPDO agrees a difference
   (R-09). Otherwise, splitting ownership brings back the inconsistency we're
   fixing.
-- **A steward for each part.** Each part's owner names a steward from their
-  own team; the [charter](../charter.md) says what stewards do. One steward can
-  cover several parts, or the whole domain.
+- **One steward, unless volume needs more.** The GPDO names one steward for
+  the domain from their own team, or one for each part where volume needs it.
+  The [charter](../charter.md) says what stewards do.
 - **Include data outside SAP.** List every system that holds your domain's
   data, such as recipe systems, PLM or spreadsheets, even if it comes into the
   framework later. Ownership, classification and access apply to it now
@@ -35,7 +36,7 @@ unit, by group of fields, or a mix. Four things keep any split working:
 
 # [Domain] Profile
 
-**Status:** Proposed by the [domain] GPDO · **Agreed:** [date, at the monthly owner review] · **Rules:** [Rulebook](../rulebook.md)
+**Status:** Approved by the [domain] GPDO on [date] · **Rules:** [Rulebook](../rulebook.md)
 
 ## Breakdown
 
@@ -46,7 +47,7 @@ unit, by group of fields, or a mix. Four things keep any split working:
 | [e.g. recipes] | [e.g. formulas and process parameters] | [e.g. the recipe system] | [a named attribute owner] | [a named person or team] | [e.g. owned and protected now; the other rules later] |
 
 Shared with other domains: [data split with another GPDO's domain, such as
-views of the material master, and the agreed split]
+views of the material master, and the split agreed with that GPDO]
 
 ## Settings
 

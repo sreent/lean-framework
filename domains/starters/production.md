@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current engineering change process [TBC: or the current app], then the unified master data app if it covers production data [TBC] |
+| Governed process (R-03) | The unified master data app, if it covers production data [TBC]; until then, the current engineering change process [TBC: or the current app] |
 | Request types (R-03) | Create or change bills of materials, routings, master recipes, work centres and production versions |
 | System of record (R-04) | SAP bills of materials, routings or master recipes, work centres and production versions [TBC: PLM for engineering bills of materials] |
 | Turnaround times (R-06) | [TBC] |

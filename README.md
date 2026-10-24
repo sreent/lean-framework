@@ -4,10 +4,10 @@
 
 | Pillar | Principle |
 | --- | --- |
-| **L**ightweight policies | Only the rules that matter, kept short. |
-| **E**mbedded controls | Rules enforced in SAP and the app, not left to memory. |
-| **A**gent-operated | Automation and AI agents handle routine governance work. |
-| **N**amed ownership | Data owners stay accountable and approve exceptions. |
+| **L**ightweight policies | Only the rules that matter, and as few people as possible. |
+| **E**mbedded controls | The app decides by default and logs its own evidence. |
+| **A**gent-operated | AI agents do the coordination and routine work. |
+| **N**amed ownership | Every piece of data has one named owner, who sets its rules. |
 
 ## The problem
 
@@ -25,6 +25,24 @@ Twelve of the twenty-two rules address these two problems. The other ten
 manage risks that come with master data: trade secrets, payment fraud,
 privacy and audit.
 
+## The target setup
+
+Technology runs governance, and people decide. The documents describe this
+setup. The [interim arrangements](interim.md) cover the time until each
+request type moves to the unified master data app.
+
+| Layer | Who or what | Does |
+| --- | --- | --- |
+| Decide | The four GPDOs, and attribute owners where a GPDO delegates | Own their data and set its rules as settings in the unified app |
+| Enforce | The unified app, SAP and the data platform | Check every request, approve what passes, hold sensitive changes, measure quality and log the evidence |
+| Coordinate | AI agents | Prepare, chase, route, draft and propose, and make the judgement calls the app can't |
+| Exceptions | One steward per domain | Decide what the app can't: sensitive changes, likely duplicates and unusual requests |
+| Run | The data team, under the Head of Data, AI & Development | Build and run the app, the data platform and the agents, and run the framework |
+| Assure | Internal controls | Review emergency access and any change made without a request |
+
+A routine change involves one person, the requester. A sensitive change
+involves two: the requester and the steward.
+
 ## Scope
 
 Four domains, one per GPDO (global process and data owner): Commercial,
@@ -39,36 +57,11 @@ and the [roadmap](roadmap.md) says how and when we get there.
 | --- | --- | --- |
 | [Charter](charter.md) | Who owns what, who decides what, and the controls we never switch off | The four GPDOs and the Head of Data, AI & Development, once |
 | [Rulebook](rulebook.md) | 22 rules: what must be true, and why | Head of Data, AI & Development |
-| [Operating model](operating-model.md) | Who does what (RACI), the platform, the data landscape, the agent register, requesters, rhythm and measures | Head of Data, AI & Development |
-| [Roadmap](roadmap.md) | The one document with dates, and the one place that describes the move to the unified app: the timeline, the critical path and clean-up | Head of Data, AI & Development |
-| [Controls catalogue](controls.md) | How each rule is enforced, including what the unified app must do | Head of Data, AI & Development |
-| [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver until it leaves, and how it hands over | Head of Data, AI & Development, through the contract |
-| Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | Proposed by each GPDO, agreed by the GPDOs together |
-
-## How it works
-
-- **The business defines good data; the data team enforces it.** Each data
-  owner sets their domain's validation and quality rules in its profile. The
-  data team turns them into checks in the app and on the data platform, and
-  can propose new ones, but the owner decides.
-- **Rules and controls are separate.** The rulebook says what must be true; the
-  controls catalogue says how. As the app replaces manual work, the controls
-  change and the rules don't.
-- **Quality is built in at entry, and causes get fixed.** Checks run when data
-  is entered, not weeks later in a report. When the same issue keeps coming
-  back, the fix is a new check, not another clean-up.
-- **A steward for every part of a domain.** Named by the part's owner from
-  their own team, the steward does the day-to-day work, from answering
-  questions to confirming sensitive changes; the charter lists it. One steward
-  can cover several parts.
-- **App rules and AI agents are treated differently.** The app's fixed rules
-  behave the same way every time and can be tested, so they may approve the
-  request types owners choose. AI agents' judgements vary, so they only check,
-  propose or make small approved fixes, and a person decides (R-18).
-- **The checks on the data team come from outside it.** The data team manages
-  the vendor, builds the app and runs the agents, but the business owns the
-  data, stewards confirm sensitive changes, every SAP change is traced to an
-  approved request, and someone outside the team reviews emergency access.
+| [Operating model](operating-model.md) | Who does what, the platform, the agents, the data landscape, requesters, rhythm and measures | Head of Data, AI & Development |
+| [Controls catalogue](controls.md) | How each rule is enforced, and the evidence each control logs | Head of Data, AI & Development |
+| [Roadmap](roadmap.md) | The one document with dates: how and when we get to the target | Head of Data, AI & Development |
+| [Interim arrangements](interim.md) | What the master data vendor and the current app do until each request type moves, and the vendor's requirements. Deleted when the vendor leaves. | Head of Data, AI & Development |
+| Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | Each GPDO, for their own domain |
 
 ## Open decisions
 
@@ -85,6 +78,7 @@ and the [roadmap](roadmap.md) says how and when we get there.
   and the roadmap's later dates, including the fallback if the vendor's exit
   slips.
 - **The data team:** how each control works in practice, such as whether SAP's
-  own confirmation of bank changes stays on, and the masking tool; the current
-  app's name and who runs it; and how requesters are trained.
+  own confirmation of bank changes stays on, and the masking tool; when
+  profiles move into the unified app; the current app's name and who runs it;
+  and how requesters are trained.
 - **This page:** a recent example and a rough cost of each problem.
