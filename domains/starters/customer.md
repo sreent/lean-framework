@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current app and the master data vendor until the unified app takes over (see the roadmap); then the unified master data app |
+| Governed process (R-03) | The current app, then the unified master data app (see the roadmap) |
 | System of record (R-04) | SAP for legal, financial and logistics fields; CRM for sales contacts and segmentation. In S/4HANA, central data is shared with the supplier role (R-02). |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
 | Critical fields (R-09) | Legal name; addresses for each partner function (sold-to, ship-to, bill-to, payer); tax ID; payment terms; credit limit; sales area data |

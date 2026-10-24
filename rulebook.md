@@ -1,13 +1,13 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.6 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.7 · **Approved by:** the Head of Data, AI & Development · **Under:** [Master data governance charter](charter.md)
 
-Each rule says what must be true, not how it's enforced. The
-[controls catalogue](controls.md) covers how, before and after the unified
-app takes over. The business owns what good data looks like: each
-domain's validation and quality rules (conventions, checks and thresholds) and
-its other settings sit in its domain profile, which its GPDO proposes and
-maintains. This rulebook only requires that they exist and are applied.
+Each rule says what must be true, not how it's enforced; the
+[controls catalogue](controls.md) covers how. The business owns what good data
+looks like: each domain's validation and quality rules (conventions, checks and
+thresholds) and its other settings sit in its domain profile, which its GPDO
+proposes and maintains. This rulebook only requires that they exist and are
+applied.
 
 "Why" names what the rule addresses. Rules R-01 to R-12 fix the problem behind
 our data quality issues, master data that is **incorrect** or **inconsistent**.
@@ -25,9 +25,9 @@ start, wherever it's held: ownership (R-01, R-02), classified fields and
 access (R-16), trade secrets (R-21) and AI tools (R-22).
 
 The rules apply to new and changed records from the effective date in the
-charter. Existing records are brought into line domain by domain, starting with
-the pilot. Until then, gaps in existing records are tracked on the scorecards
-rather than treated as breaches.
+charter. Existing records are brought into line domain by domain, in the order
+the [roadmap](roadmap.md) sets. Until then, gaps in existing records are
+tracked on the scorecards rather than treated as breaches.
 
 ## Ownership
 
@@ -126,3 +126,4 @@ Autonomy levels:
 | 0.4 | 2026-10-23 | R-12 covers any third party, so it outlives the vendor; R-18 limits agents to observing and proposing until the unified app is live |
 | 0.5 | 2026-10-24 | The framework now covers non-SAP master data and confidential data such as formulas, recipes, prices and margins. R-01, R-02, R-16 and R-21 apply everywhere from the start. Added R-21 for trade secrets, kept with the privacy rules so existing IDs don't change. R-16 lists Confidential and Restricted fields as each data owner decides. R-08 covers any governed system. R-18 covers Confidential data and asks the data protection officer only about personal data. |
 | 0.6 | 2026-10-24 | Dates moved to the roadmap, so the rules don't change when a date does. R-06 and R-13 use one steward per part of a domain, named by its owner; the vendor processes requests until the unified app takes over. R-18 split: the new R-22 covers AI tools and data, for people as well as agents, and applies everywhere from the start. |
+| 0.7 | 2026-10-24 | Existing records are cleaned up in the order the roadmap sets, replacing a reference to a pilot that no longer exists. No rule changed. |

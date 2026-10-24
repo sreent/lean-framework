@@ -20,9 +20,7 @@ protection and internal controls] to master data. It doesn't replace them.
 The framework covers three kinds of data, across four domains, one per GPDO
 (see below):
 
-- **SAP master data,** governed in full from the start. Requests are raised in
-  the current app and processed by the master data vendor until the unified
-  master data app takes over, as the [roadmap](roadmap.md) sets out.
+- **SAP master data,** governed in full from the start.
 - **Non-SAP master data,** such as data in CRM, PLM or e-commerce systems:
   owned and protected now, and brought under the other rules one system at a
   time, when its GPDO proposes it.
@@ -47,29 +45,27 @@ rules apply everywhere from the start.
 ## Who owns what
 
 The data owners are the four GPDOs (global process and data owners):
-Commercial, Manufacturing, Finance and Procurement. Each owns their own
-domain in every system that holds its data, SAP or not, including confidential
-data such as formulas and recipes. Each proposes how their domain breaks down:
-the data it covers, and who owns each part, by subdomain, business unit or
-group of fields (attribute owners). Where
-data is shared between domains, such as the material master, the GPDOs agree
-who owns which part.
+Commercial, Manufacturing, Finance and Procurement. Each owns their domain in
+every system that holds its data, SAP or not, including confidential data such
+as formulas and recipes.
 
-The GPDOs agree the proposals together at the monthly owner review and record
-them in the domain profiles, because the apps and the vendor need to know who
-approves what. Every piece of data has exactly one owner (R-02). The data
-governance specialist provides the [profile template](domains/template.md) and
-flags anything with no owner or more than one, but doesn't propose the
-breakdown.
+Each GPDO proposes how their domain breaks down: the data it covers, and who
+owns each part, by subdomain, business unit or group of fields (attribute
+owners). Where data is shared between domains, such as the material master,
+the GPDOs agree who owns which part. They agree the proposals together at the
+monthly owner review and record them in the domain profiles, so that every
+piece of data has exactly one owner (R-02). The data governance specialist
+provides the [profile template](domains/template.md) and flags gaps and
+overlaps, but doesn't propose the breakdown.
 
 ## Who decides what
 
 | Role | Held by [TBC] | Decides or does |
 | --- | --- | --- |
-| Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Decides how their data is classified and its validation and quality rules (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in the domain profiles), exceptions in their domains, which request types the app approves automatically, and what agents may do there. Proposes how their domain breaks down, delegates attribute owners, and names a steward for each part they keep. |
-| Attribute owner | Whoever a GPDO delegates part of their domain to, by subdomain, business unit or group of fields | Decides for that part, within the domain's conventions and checks: exceptions, automatic approvals and what agents may do. Names the steward for that part. An owner of a group of fields also sets its conventions and checks. |
+| Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Decides, in their domain profile, how their data is classified, its validation and quality rules (conventions, checks, critical fields, duplicate rules and thresholds), which request types the app approves automatically, and what agents may do. Approves exceptions. Proposes how their domain breaks down, delegates attribute owners, and names the stewards for the parts they keep. |
+| Attribute owner | Whoever a GPDO delegates part of their domain to, by subdomain, business unit or group of fields | Decides for that part, within the domain's conventions and checks: exceptions, automatic approvals and what agents may do. Names its steward. An owner of a group of fields also sets its conventions and checks. |
 | Head of Data, AI & Development | [TBC: name] | Approves the rulebook, operating model, roadmap, controls catalogue and vendor requirements. Accountable for the data team's delivery: the app, the agents, the vendor and running this framework. |
-| Data steward | One person or team for each part of a domain, named by its owner from their own team | Answers questions from the vendor and requesters, decides likely duplicates, and confirms sensitive changes. Once the unified app takes over, also approves the requests it can't approve automatically. |
+| Data steward | A person or team named by each part's owner from their own team. One steward can cover several parts, or a whole domain. | Answers questions from the vendor and requesters, decides likely duplicates, confirms sensitive changes, and approves the requests the unified app can't approve automatically. |
 | Master data vendor | A third party, until the unified app takes over | Processes requests raised in the current app, and approves routine ones within the rules. Sets no rules, approves no exceptions and confirms no sensitive changes. |
 | Data governance specialist | The data team | Runs the framework, keeps the roadmap and owns the agents. Provides the profile template and flags gaps and overlaps in ownership. Decides nothing about data content. |
 | Platform team | The data team (the apps and the data platform) and the SAP team | Runs the data platform and the current app [TBC], builds the unified app, and runs the controls and the agent infrastructure. Decides nothing about data content. |
@@ -80,8 +76,10 @@ breakdown.
 | --- | --- |
 | This charter | The four GPDOs and the Head of Data, AI & Development |
 | Rulebook | The Head of Data, AI & Development. Every change goes in the change log and to the next monthly owner review. |
-| Controls catalogue, vendor requirements, operating model and roadmap | The Head of Data, AI & Development. The operating model summarises this charter and the rulebook; where they differ, they win. |
+| Controls catalogue, vendor requirements, operating model and roadmap | The Head of Data, AI & Development |
 | Domain profiles | Proposed by each GPDO for their own domain, and agreed by the GPDOs together. After that, each GPDO maintains theirs, and attribute owners approve changes to their part. |
+
+Where documents differ, this charter wins, then the rulebook.
 
 ## Controls we never switch off
 
@@ -114,6 +112,6 @@ These can't be waived by exception, and changing them needs every signatory:
 | --- | --- | --- |
 | Commercial GPDO | | |
 | Manufacturing GPDO | | |
-| Procurement GPDO | | |
 | Finance GPDO | | |
+| Procurement GPDO | | |
 | Head of Data, AI & Development | | |
