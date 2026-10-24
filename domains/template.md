@@ -57,6 +57,6 @@ The settings the rulebook refers to, for each subdomain:
 | Inactivity period, block and exclusions | R-11 | |
 | Sensitive fields, and who confirms changes to them | R-13, R-14 | |
 | One-time accounts and payee in document | R-13 | |
-| Personal data and payment data fields | R-16 | |
+| Personal data, payment data and trade secret fields | R-16, R-21 | |
 | Request types approved automatically | R-06 | |
 | Agent changes approved at level 2 | R-18 | |

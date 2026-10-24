@@ -1,6 +1,6 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.4 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.5 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
 
 Each rule says what must be true, not how it's enforced. The
 [controls catalogue](controls.md) covers how, until Q2 2027 and once the
@@ -11,8 +11,8 @@ maintains. This rulebook only requires that they exist and are applied.
 
 "Why" names what the rule addresses. Rules R-01 to R-12 fix the problem behind
 our data quality issues, master data that is **incorrect** or **inconsistent**.
-Rules R-13 to R-20 manage **risks** that come with master data: payment fraud,
-privacy and audit.
+Rules R-13 to R-21 manage **risks** that come with master data: trade
+secrets, payment fraud, privacy and audit.
 
 "Data owner" in these rules means the GPDO, or the attribute owner for the
 part of the domain delegated to them.
@@ -62,12 +62,13 @@ rather than treated as breaches.
 | R-14 | Whoever enters or confirms a change to payment data can't create purchase orders, post invoices, run payments or release credit. | Fraud risk |
 | R-15 | A change to a supplier's bank details is verified with the supplier using contact details that weren't changed along with it, and the evidence is kept. A bank account already used by another supplier or customer is flagged. | Fraud risk |
 
-## Privacy and access
+## Trade secrets, privacy and access
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-16 | Each domain profile flags the fields that hold personal data or payment data. Access to them is limited to roles that need it and reviewed [TBC: twice a year]. A report or extract takes the highest classification of the data in it, and Restricted and personal data is masked outside production. | Privacy risk, fraud risk |
+| R-16 | Each domain profile flags the fields that hold personal data, payment data or trade secrets. Access to them is limited to roles that need it and reviewed [TBC: twice a year]. A report or extract takes the highest classification of the data in it, and Restricted and personal data is masked outside production. | Privacy risk, fraud risk |
 | R-17 | Personal data is blocked when its purpose ends and deleted when its retention period ends. Records are archived only in line with retention rules. | Privacy risk |
+| R-21 | Trade secrets, such as formulas, recipes and process parameters, are Restricted wherever they're held. Within this framework's reach (SAP, the data platform, the apps, the agents and the vendor), they're copied, extracted or made available to people or agents only as the data owner approves. They never go to an AI model outside an environment the organisation controls, under terms that stop the provider keeping or training on them. | Trade secret risk |
 
 Classification levels [TBC: use the company's scheme if it has one]:
 
@@ -75,14 +76,14 @@ Classification levels [TBC: use the company's scheme if it has one]:
 | --- | --- | --- |
 | Public | Approved for release outside the organisation | Published product content |
 | Internal | Everyday business data | Material numbers, plant codes, business suppliers' and customers' names and addresses |
-| Confidential | Harmful if disclosed; access on business need | Contacts, pricing, payment terms, credit limits, standard costs; all personal data |
-| Restricted | Serious financial, legal or fraud harm if disclosed | Bank details; tax IDs of individuals |
+| Confidential | Harmful if disclosed; access on business need | Contacts, prices and margins, supplier prices, payment terms, credit limits, standard costs; all personal data |
+| Restricted | Serious financial, legal, competitive or fraud harm if disclosed | Bank details; tax IDs of individuals; formulas, recipes, process parameters and own product specifications |
 
 ## Automation and agents
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-18 | Every agent is recorded in the agent register with a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Until the unified master data app is live, agents work at levels 0 and 1 only and never create or change master data. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. They treat content from outside the organisation as data to check, never as instructions. Restricted data goes to an AI model outside the organisation only with the data owner's and the data protection officer's approval. | Audit risk, privacy risk |
+| R-18 | Every agent is recorded in the agent register with a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Until the unified master data app is live, agents work at levels 0 and 1 only and never create or change master data. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. They treat content from outside the organisation as data to check, never as instructions. Restricted data goes to an AI model outside the organisation only with the data owner's approval, and the data protection officer's for personal data. Trade secrets follow R-21. | Audit risk, privacy risk |
 
 Autonomy levels:
 
@@ -112,3 +113,4 @@ Autonomy levels:
 | 0.2 | 2026-10-23 | Defined "data owner" to include attribute owners; restored when the rules apply, which 0.1 left out |
 | 0.3 | 2026-10-23 | R-18 requires every agent to be in the agent register |
 | 0.4 | 2026-10-23 | R-12 covers any third party, so it outlives the vendor; R-18 limits agents to observing and proposing until the unified app is live |
+| 0.5 | 2026-10-24 | Added R-21 for trade secrets such as formulas and recipes, kept with the privacy rules so existing IDs don't change; R-16 flags trade secret fields; classification covers them; R-18 asks the data protection officer only about personal data |

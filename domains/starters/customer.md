@@ -23,5 +23,6 @@ their domain profile. [TBC]
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
 | Personal data fields (R-16) | Contact names, emails and phone numbers; names and addresses of consumers |
 | Payment data fields (R-16) | Bank details, payment terms, credit limit |
+| Trade secret fields (R-16, R-21) | None |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |

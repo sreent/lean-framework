@@ -21,7 +21,9 @@ non-SAP systems that hold copies of it. SAP comes first. Until Q2 2027,
 requests are raised in the current app and the master data vendor makes the
 changes in SAP; after that, the unified master data app takes over. Non-SAP
 copies are checked against SAP until the unified app can take requests from
-those systems.
+those systems. Formulas and recipes held outside SAP aren't governed by this
+charter yet, but the trade secret rule (R-21) applies whenever their data
+reaches SAP, the data platform, the apps, the agents or the vendor.
 
 ## Principles
 
@@ -79,6 +81,8 @@ These can't be waived by exception, and changing them needs every signatory:
   verified with the supplier (R-14, R-15).
 - Agents never approve requests or exceptions, change sensitive fields, delete
   records or grant access (R-18).
+- Trade secrets, such as formulas and recipes, never go to an AI model outside
+  an environment the organisation controls (R-21).
 - The data team can't change master data outside the governed process, except
   through emergency access that someone outside the team reviews. Every SAP
   change can be traced to an approved request (R-08, R-19).

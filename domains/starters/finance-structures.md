@@ -23,5 +23,6 @@ their domain profile. [TBC]
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Personal data fields (R-16) | Person responsible for a cost centre or profit centre |
 | Payment data fields (R-16) | None |
+| Trade secret fields (R-16, R-21) | None |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |

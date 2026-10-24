@@ -77,8 +77,10 @@ This is the agent register (R-18). Every agent has a named agent owner from
 the data team, starts at a low autonomy level, and moves up only on evidence
 from an independent sample. Data owners approve how far an agent may act in
 their domain, in their domain profiles. Agents that don't touch master data
-are approved by the Head of Data, AI & Development. The autonomy levels are
-defined in the rulebook.
+are approved by the Head of Data, AI & Development. Agents work with trade
+secrets only where the data owner approves, and only on AI models in an
+environment the organisation controls (R-21). The autonomy levels are defined
+in the rulebook.
 
 | Agent | What it does | Rules | Starts at | When | Agent owner |
 | --- | --- | --- | --- | --- | --- |

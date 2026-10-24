@@ -37,6 +37,9 @@ requirements belong in the contract, including how the vendor hands over.
   payable work, use separate teams and separate access]
 - Personal data is handled under a data processing agreement. Any work done
   outside [TBC: country or region] is agreed in advance.
+- Trade secrets, such as formulas and recipes, are seen only by named
+  individuals under a confidentiality agreement, and never from outside
+  [TBC: country or region] unless agreed in advance (R-21).
 
 ## Evidence and audit
 
