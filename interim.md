@@ -1,6 +1,6 @@
 # Interim Arrangements
 
-**Status:** Draft v0.1 · **Approved by:** the Head of Data, AI & Development · **Ends:** when the last request type has moved to the unified master data app and the master data vendor has left (see the [roadmap](roadmap.md)). Then delete this document.
+**Status:** Draft v0.1 · **Approved by:** the Head of Data, AI & Development · **Ends:** when the master data vendor has left and nothing is raised in the current app (see the [roadmap](roadmap.md)). Then archive this document, as the record of how the rules were applied until then.
 
 Until a request type moves to the unified master data app, it's raised in the
 current app [TBC: its name, and who runs it] and processed in SAP by the master
@@ -29,23 +29,25 @@ the data governance specialist owns it like the others:
 ## How the rules are enforced until then
 
 Rules not listed here are enforced as in the
-[controls catalogue](controls.md), without the unified app's part.
+[controls catalogue](controls.md). Where a control there relies on the unified
+app, ownership and settings are recorded in the domain profiles instead.
 
 | Rule | Until the request type moves | Evidence |
 | --- | --- | --- |
 | R-03 Governed process | Requests are raised in the current app; requests by email or spreadsheet are turned away | Request log |
-| R-05 Checks before approval | The vendor's checklist and SAP mandatory fields. The quality agent flags likely duplicates, and the request assistant reviews requests in the current app [TBC]. | Check results stored with each request |
+| R-05 Checks before approval | The vendor's checklist and SAP's mandatory fields, with likely duplicates flagged by the quality agent | Check results with each request |
 | R-06 Approval | The vendor's maker-checker; turnaround in the vendor's reports | Vendor reports |
-| R-07 Mass changes | The data owner signs off by email [TBC]; tested in a non-production system first | Sign-off and test evidence |
-| R-08 Traceability | Each month, a report matches SAP change documents to requests in the current app, the change reconciler agent matches those with a missing or unclear reference, and [TBC: the internal controls team] reviews any change left without one | Reconciliation report |
+| R-07 Mass changes | The data owner signs off, and the change is tested before it's made | Sign-off and test evidence |
+| R-08 Traceability | Each month, SAP changes are matched to requests in the current app, with the change reconciler agent's help. Internal controls reviews any change left unmatched, and a sample of the agent's matches. | Reconciliation report |
 | R-09 Conventions and quality checks | The data platform runs the checks each domain profile defines on SAP data and publishes the scorecards monthly | Scorecards |
 | R-10 Fix at source, fix the cause | The quality agent groups failing records by cause and proposes new checks; the vendor fixes the records in SAP | Issue log; checks added to the profile |
 | R-11 Stale records | As in the target, except that the vendor blocks the records | Approved list |
-| R-12 Third parties | The vendor's contract and the requirements below; a monthly performance review by the data governance specialist, from the governance coordinator's report | Performance report, exit records |
-| R-13 Sensitive changes | SAP sensitive-field settings block payment until the steward confirms the change, for example with FK08/FK09 for suppliers and FD08/FD09 for customers [TBC: confirm for your release]. Other sensitive changes, including credit limits and unblocking, are confirmed before the vendor enters them. SAP settings limit one-time accounts and payee in document [TBC]. | Confirmation log |
-| R-14 Payment data kept apart from paying | The platform team reviews the SAP roles of vendor staff and confirmers each quarter for conflicting rights [TBC: rule set] | Access review |
-| R-15 Bank detail verification | The steward calls the supplier back on details already on file and records the call-back on the request; a report flags shared bank accounts | Call-back evidence, flag report |
-| R-20 Exceptions | Exceptions are recorded in [TBC: location], and the governance coordinator reminds owners before they expire | Register |
+| R-12 Third parties | The vendor's contract and the requirements below, with a monthly performance review by the data governance specialist | Performance report, exit records |
+| R-13 Sensitive changes | SAP's settings block payment after a bank-detail change until the owner or their delegate confirms it. Other sensitive changes are confirmed before the vendor enters them, and the monthly matching checks what was entered. | Confirmation log |
+| R-14 Payment data kept apart from paying | The platform team checks each quarter that vendor staff and confirmers hold no buying or payment rights | Access review |
+| R-15 Bank detail verification | The owner or their delegate calls the supplier back on contact details already on file, and records it on the request. A report flags bank accounts already used by another supplier or customer. | Call-back record, flag report |
+| R-16 Classified fields and access | As in the target, with access to the current app reviewed alongside SAP's | Access reviews |
+| R-20 Exceptions | Exceptions are recorded in a register [TBC: where], and the governance coordinator reminds owners before they expire | Register |
 
 ## The master data vendor's requirements
 
@@ -64,7 +66,8 @@ data. These requirements belong in its contract, including how it hands over.
   entered by one person and checked by another; nobody checks their own work
   (R-06).
 - Never set rules, approve exceptions or confirm sensitive changes (R-12).
-  Pass questions and sensitive changes to the steward (R-13).
+  Pass questions and sensitive changes to the data owner or their delegate
+  (R-13).
 - Fix issues in SAP, never in a downstream copy, and report the cause (R-10).
 
 ### Service levels
