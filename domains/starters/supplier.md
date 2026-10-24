@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current app and the vendor until Q2 2027; then the unified master data app |
+| Governed process (R-03) | The current app and the master data vendor until the unified app takes over (see the roadmap); then the unified master data app |
 | System of record (R-04) | SAP: business partner (supplier role) or vendor master. Onboarding data from a procurement platform or supplier portal arrives as create requests. In S/4HANA, central data is shared with the customer role (R-02). |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
 | Critical fields (R-09) | Legal name, address, tax ID, bank details, payment terms, payment methods, reconciliation account, purchasing organisation data |
@@ -19,7 +19,7 @@ their domain profile. [TBC]
 | Inactivity period and block (R-11) | No purchase orders or invoices for 24 months: purchasing and posting block |
 | Excluded from inactivity blocking (R-11) | Suppliers with open items, open purchase orders or contracts |
 | Sensitive fields (R-13) | Bank details, alternative payee, payment terms, payment methods, tax IDs, name and address, and the phone numbers and email addresses used to verify changes (R-15) |
-| Sensitive changes confirmed by (R-13, R-14) | The field's owner or someone in their team, without rights to create purchase orders, post invoices or run payments (R-14) |
+| Sensitive changes confirmed by (R-13, R-14) | The steward, who holds no rights to create purchase orders, post invoices or run payments (R-14) |
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: contact names, emails and phone numbers, and names and addresses of sole traders (personal data); payment terms and methods (payment data). Restricted: bank details and alternative payee (payment data); tax IDs of sole traders (personal data). |
 | Request types approved automatically (R-06) | None yet |

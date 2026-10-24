@@ -15,48 +15,52 @@ R = responsible, A = accountable, C = consulted, I = informed.
 - **Head of Data:** the Head of Data, AI & Development.
 - **Specialist:** the data governance specialist.
 - **Platform:** the platform team.
-- **Steward:** the master data vendor until Q2 2027; after that, a person each
-  owner names, for what the unified app and agents can't handle.
+- **Steward:** the person or team each owner names for a part of their domain.
+- **Vendor:** the master data vendor, until the unified app takes over.
 - **Agent:** agents do part of the work, but are never accountable.
 
-| Activity | Owner | Head of Data | Specialist | Platform | Steward | Requester | Agent |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Propose and agree domain profiles | A/R | I | C | C | I | – | – |
-| Set conventions, checks and quality thresholds | A/R | I | C | C | C | – | – |
-| Raise a create or change request | – | – | – | – | I | A/R | – |
-| Pre-check a request | – | – | A | – | I | I | R |
-| Decide on a likely duplicate | C | – | – | – | A/R | I | C |
-| Approve a routine request | – | – | – | – | A/R | I | – |
-| Approve request types for automatic approval | A/R | C | C | C | – | – | – |
-| Confirm a sensitive change | A/R | – | – | – | I | I | C |
-| Approve a mass change | A/R | – | C | C | C | – | – |
-| Approve access to Confidential or Restricted data | A/R | – | – | R | – | – | – |
-| Build checks into the app, SAP and interfaces | I | A | C | R | – | – | – |
-| Reconcile SAP changes to approved requests | I | – | A | – | – | – | R |
-| Triage data quality issues | – | – | A | – | I | – | R |
-| Fix data quality issues at source | A | – | C | – | R | – | C |
-| Approve blocking inactive records, as a list | A | – | C | – | R | – | R |
-| Supervise agents (agent owner) | I | I | A/R | C | C | – | – |
-| Approve an agent's autonomy level | A/R | C | C | C | – | – | – |
-| Approve an exception | A/R | – | C | – | – | I | – |
-| Track exceptions to expiry | I | – | A/R | – | – | – | – |
-| Manage the vendor against its requirements | I | A | R | – | C | – | – |
-| Maintain the rulebook, controls catalogue and this operating model | C | A | R | C | – | – | – |
+| Activity | Owner | Steward | Head of Data | Specialist | Platform | Vendor | Requester | Agent |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Propose and agree domain profiles | A/R | C | I | C | C | – | – | – |
+| Set conventions, checks and quality thresholds | A/R | C | I | C | C | C | – | – |
+| Raise a create or change request | – | I | – | – | – | I | A/R | – |
+| Pre-check a request | – | I | – | A | – | I | I | R |
+| Decide on a likely duplicate | C | A/R | – | – | – | I | I | C |
+| Approve a routine request, before the unified app | – | C | – | – | – | A/R | I | – |
+| Approve a request the unified app can't approve automatically | – | A/R | – | – | – | – | I | – |
+| Approve request types for automatic approval | A/R | C | C | C | C | – | – | – |
+| Confirm a sensitive change | A | R | – | – | – | I | I | C |
+| Approve a mass change | A/R | C | – | C | C | C | – | – |
+| Approve access to Confidential or Restricted data | A/R | – | – | – | R | – | – | – |
+| Build checks into the app, SAP and interfaces | I | – | A | C | R | – | – | – |
+| Reconcile SAP changes to approved requests | I | – | – | A | – | – | – | R |
+| Triage data quality issues | – | I | – | A | – | I | – | R |
+| Fix data quality issues at source | A | R | – | C | – | R | – | C |
+| Clean up existing data before a domain moves | A | C | – | R | – | R | – | C |
+| Approve blocking inactive records, as a list | A | R | – | C | – | R | – | R |
+| Supervise agents (agent owner) | I | C | I | A/R | C | – | – | – |
+| Approve an agent's autonomy level | A/R | C | C | C | C | – | – | – |
+| Approve an exception | A/R | C | – | C | – | – | I | – |
+| Track exceptions to expiry | I | – | – | A/R | – | – | – | – |
+| Train and support requesters | I | C | – | A/R | C | – | I | C |
+| Manage the vendor against its requirements | I | – | A | R | – | C | – | – |
+| Maintain the rulebook, controls catalogue, operating model and roadmap | C | – | A | R | C | – | – | – |
 
 ## The platform
 
-Three systems enforce the rules. The [controls catalogue](controls.md) shows
-how each rule is enforced, until Q2 2027 and once the unified app takes over.
+Four systems enforce the rules. The [controls catalogue](controls.md) shows
+how each rule is enforced, before and after the unified app takes over.
 
 | System | Its job in governance |
 | --- | --- |
-| Current app | Where requests are raised until Q2 2027. The vendor then makes the changes in SAP. [TBC: its name, and who runs it] |
-| Unified master data app | From Q2 2027, the front door for SAP master data, built by the data team. It checks every request on entry, routes approvals, approves owner-approved request types automatically, and holds sensitive changes until they're confirmed before posting them to SAP. It covers SAP master data for now; later it can take requests from non-SAP systems. [TBC: go-live dates] |
-| SAP | The system of record. Until Q2 2027, only the vendor's stewards can change master data; after that, only the unified app. Its sensitive-field settings act as a second line, and its change documents feed the reconciliation (R-08). |
-| Data platform | Runs the checks on stored data, builds the scorecards, compares non-SAP copies with SAP, and holds the data agents read. It does all this before Q2 2027 too. |
+| Current app | Where requests are raised until the unified app takes over. The master data vendor then makes the changes in SAP. [TBC: its name, and who runs it] |
+| Unified master data app | Once it takes over, the front door for SAP master data, built by the data team. It checks every request on entry, routes approvals, approves owner-approved request types automatically, and holds sensitive changes until they're confirmed before posting them to SAP. It covers SAP master data for now; later it can take requests from non-SAP systems. |
+| SAP | The system of record. Until the unified app takes over, only the master data vendor's staff can change master data; after that, only the unified app. Its sensitive-field settings act as a second line, and its change documents feed the reconciliation (R-08). |
+| Data platform | Runs the checks on stored data, builds the scorecards, compares non-SAP copies with SAP, and holds the data agents read. It does all this from now on. |
 
-Until Q2 2027, requests are raised in the current app and the vendor makes the
-changes in SAP; the first column of the controls catalogue covers that period.
+Until the unified app takes over (see the [roadmap](roadmap.md)), requests are
+raised in the current app and the master data vendor makes the changes in SAP;
+the first column of the controls catalogue covers that period.
 Only creating and changing master data waits for the unified app: the data
 platform and agents check, measure and propose from now on.
 
@@ -80,7 +84,8 @@ list.
 | Spreadsheets and local files | Price lists, recipes, local copies of master data | None; they should take data from the systems of record | Owned and protected now; replaced over time |
 
 "Owned and protected now" means ownership, classification, access and the
-trade secret rule apply from the start (R-01, R-02, R-16, R-21).
+trade secret and AI rules apply from the start (R-01, R-02, R-16, R-21,
+R-22).
 
 To bring a system in:
 
@@ -104,7 +109,7 @@ Until the unified app is live, agents don't create or change master data: they
 work at levels 0 and 1 only, on requests in the current app and on the data
 platform, and the vendor makes every change. After that, they can also prepare
 requests in the unified app and make the non-sensitive change types owners
-approve (level 2).
+approve (level 2). The [roadmap](roadmap.md) says when each agent starts.
 
 This is the agent register (R-18). Every agent has a named agent owner from
 the data team, starts at a low autonomy level, and moves up only on evidence
@@ -115,14 +120,29 @@ secrets only where the data owner approves, and only on AI models in an
 environment the organisation controls (R-21). The autonomy levels are defined
 in the rulebook.
 
-| Agent | What it does | Rules | Starts at | When | Agent owner |
+| Agent | What it does | Rules | Starts at | Works on | Agent owner |
 | --- | --- | --- | --- | --- | --- |
-| Duplicate finder | Finds likely duplicates among existing records, including near matches on names and addresses, and proposes which to keep | R-05, R-10 | 1. Propose | Pilot | [TBC] |
-| Change reconciler | Matches SAP master data changes to approved requests in the current app, including those without a clear reference, and reports changes without one. Once the unified app records the request on every change, a fixed report takes over. | R-08 | 0. Observe | Pilot | [TBC] |
-| Request pre-check | Reviews each request before it's processed: reads attachments, spots likely duplicates, and flags values that pass the checks but look wrong | R-05 | 1. Propose | Before Q2 2027, in the current app [TBC] | [TBC] |
-| Quality triage | Groups failing records by cause, raises fix requests and proposes new checks to the owner | R-09, R-10 | 1. Propose | Before Q2 2027, on the data platform | [TBC] |
-| Consistency checker | Works out which differences between non-SAP copies and SAP matter, and which side is right | R-04 | 0. Observe | Before Q2 2027, on the data platform | [TBC] |
-| Inactive records | Prepares the monthly list of records to block, and flags those that may still be needed, such as seasonal suppliers | R-11 | 1. Propose | Before Q2 2027, on the data platform | [TBC] |
+| Duplicate finder | Finds likely duplicates among existing records, including near matches on names and addresses, and proposes which to keep | R-05, R-10 | 1. Propose | SAP data, on the data platform | [TBC] |
+| Change reconciler | Matches SAP master data changes to approved requests in the current app, including those without a clear reference, and reports changes without one. Once the unified app records the request on every change, a fixed report takes over. | R-08 | 0. Observe | SAP change documents and the requests behind them | [TBC] |
+| Request pre-check | Reviews each request before it's processed: reads attachments, spots likely duplicates, and flags values that pass the checks but look wrong | R-05 | 1. Propose | Requests in the current app [TBC], then in the unified app | [TBC] |
+| Quality triage | Groups failing records by cause, raises fix requests and proposes new checks to the owner | R-09, R-10 | 1. Propose | The scorecards on the data platform | [TBC] |
+| Consistency checker | Works out which differences between non-SAP copies and SAP matter, and which side is right | R-04 | 0. Observe | Non-SAP copies and SAP, on the data platform | [TBC] |
+| Inactive records | Prepares the monthly list of records to block, and flags those that may still be needed, such as seasonal suppliers | R-11 | 1. Propose | SAP data, on the data platform | [TBC] |
+
+## Requesters
+
+Requesters raise requests in the current app today. Once the unified app takes
+over, they enter the data themselves, so data quality at entry depends on them.
+Four things support them:
+
+- **Guidance at entry.** The unified app shows each field's conventions, from
+  the domain profile, as it's filled in.
+- **Instant feedback.** The request pre-check agent flags what looks wrong
+  before the request goes any further.
+- **Training before the move.** Requesters are trained before their request
+  types move to the unified app.
+- **Measured by team.** First-time-right is measured for each requesting team
+  and shared monthly with its GPDO, so the teams that struggle get help.
 
 ## Rhythm
 
@@ -140,7 +160,7 @@ Baseline each one in the first month, then set targets. [TBC]
   data)
 - Downstream issues traced back to master data, such as blocked invoices,
   failed deliveries and report corrections
-- Request turnaround and first-time-right rate
+- Request turnaround, and first-time-right by requesting team
 - Share of requests approved automatically
 - SAP changes without an approved request
 - Agents: work handled, proposal acceptance and review time. Almost no

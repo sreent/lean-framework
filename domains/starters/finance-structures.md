@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current app and the vendor until Q2 2027; then the unified master data app |
+| Governed process (R-03) | The current app and the master data vendor until the unified app takes over (see the roadmap); then the unified master data app |
 | System of record (R-04) | SAP: chart of accounts, cost centres, profit centres, and cost elements on ECC [TBC: group reporting structure in a consolidation tool] |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
 | Critical fields (R-09) | Account type, account group, reconciliation account setting, tax category, cost centre category, person responsible, hierarchy assignment, validity dates |
@@ -19,7 +19,7 @@ their domain profile. [TBC]
 | Inactivity period and block (R-11) | No postings for 24 months: posting block |
 | Excluded from inactivity blocking (R-11) | Accounts used only at year-end or for rare events, such as impairments |
 | Sensitive fields (R-13) | Account type, reconciliation account setting, posting controls |
-| Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, other than the person who entered the change |
+| Sensitive changes confirmed by (R-13) | The steward |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: the person responsible for a cost centre or profit centre (personal data) [TBC]. Restricted: none. |
 | Request types approved automatically (R-06) | None yet |
