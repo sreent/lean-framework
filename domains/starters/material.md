@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current app and the vendor until Q2 2027; then the unified master data app |
+| Governed process (R-03) | The current app and the master data vendor until the unified app takes over (see the roadmap); then the unified master data app |
 | System of record (R-04) | SAP material master; PLM for engineering attributes; PIM or e-commerce for marketing content |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
 | Critical fields (R-09) | Material type, base unit of measure and conversions, description, material group, valuation class, plant planning (MRP) data, weight and volume, GTIN where used |
@@ -19,7 +19,7 @@ their domain profile. [TBC]
 | Inactivity period and block (R-11) | No stock, movements or open orders for 24 months: blocked material status (cross-plant or plant-specific) |
 | Excluded from inactivity blocking (R-11) | Materials in active bills of materials, and spare parts held for maintenance |
 | Sensitive fields (R-13) | Standard price, valuation class, price control |
-| Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, other than the person who entered the change |
+| Sensitive changes confirmed by (R-13) | The steward |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard price and valuation data. Restricted: specifications that reveal a product's formulation (trade secrets) [TBC]. |
 | Request types approved automatically (R-06) | None yet |

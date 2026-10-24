@@ -1,27 +1,28 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.5 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.6 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
 
 Each rule says what must be true, not how it's enforced. The
-[controls catalogue](controls.md) covers how, until Q2 2027 and once the
-unified app takes over. The business owns what good data looks like: each
+[controls catalogue](controls.md) covers how, before and after the unified
+app takes over. The business owns what good data looks like: each
 domain's validation and quality rules (conventions, checks and thresholds) and
 its other settings sit in its domain profile, which its GPDO proposes and
 maintains. This rulebook only requires that they exist and are applied.
 
 "Why" names what the rule addresses. Rules R-01 to R-12 fix the problem behind
 our data quality issues, master data that is **incorrect** or **inconsistent**.
-Rules R-13 to R-21 manage **risks** that come with master data: trade
+Rules R-13 to R-22 manage **risks** that come with master data: trade
 secrets, payment fraud, privacy and audit.
 
 "Data owner" in these rules means the GPDO, or the attribute owner for the
-part of the domain delegated to them.
+part of the domain delegated to them. "Steward" means the person or team the
+data owner names for that part of the domain.
 
 The rules apply to the systems the framework governs: SAP now, and other
 systems as they come in (see the data landscape in the
-[operating model](operating-model.md)). Four rules apply to all data from the
+[operating model](operating-model.md)). Five rules apply to all data from the
 start, wherever it's held: ownership (R-01, R-02), classified fields and
-access (R-16), and trade secrets (R-21).
+access (R-16), trade secrets (R-21) and AI tools (R-22).
 
 The rules apply to new and changed records from the effective date in the
 charter. Existing records are brought into line domain by domain, starting with
@@ -42,7 +43,7 @@ rather than treated as breaches.
 | R-03 | Master data is created and changed only through the governed process for its domain, starting with a complete request. | Incorrect, inconsistent |
 | R-04 | Each field has one system of record. Other systems take the data from it, send changes back as requests, and hold its key. | Inconsistent |
 | R-05 | Every request passes its domain's mandatory checks, including a duplicate check, before it's approved. | Incorrect, inconsistent |
-| R-06 | A steward approves routine requests within the domain's rules, or the app approves them automatically for request types the data owner has approved. Nobody approves their own request. Requests are completed within the turnaround times in the domain profile. | Incorrect |
+| R-06 | Routine requests are approved within the domain's rules: by the master data vendor until the unified app takes over, then automatically by the app for request types the data owner has approved, or by the domain's steward. Nobody approves their own request. Requests are completed within the turnaround times in the domain profile. | Incorrect |
 | R-07 | A change to more than [TBC: 50] records is a mass change. It needs the data owner's sign-off, a test and a rollback plan. | Incorrect |
 | R-08 | Every change to master data in a governed system can be traced to an approved request. | Incorrect, fraud risk |
 
@@ -58,13 +59,13 @@ rather than treated as breaches.
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-12 | Any third party that maintains master data, such as the master data vendor until Q2 2027, works within these rules under its contract, and its quality is measured. It never sets rules, approves exceptions or confirms sensitive changes. | Incorrect, audit risk |
+| R-12 | Any third party that maintains master data, such as the master data vendor, works within these rules under its contract, and its quality is measured. It never sets rules, approves exceptions or confirms sensitive changes. | Incorrect, audit risk |
 
 ## Sensitive and payment data
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-13 | A change to a sensitive field, as listed in the domain profile, can't be used until the field's owner, or someone they name in their team, confirms it. The confirmer is never in the team that entered the change. Unblocking a record, and bank details on one-time accounts or entered as a payee in a document, count as sensitive changes. | Fraud risk |
+| R-13 | A change to a sensitive field, as listed in the domain profile, can't be used until the domain's steward, or the field's owner, confirms it. The confirmer is never in the team that entered the change. Unblocking a record, and bank details on one-time accounts or entered as a payee in a document, count as sensitive changes. | Fraud risk |
 | R-14 | Whoever enters or confirms a change to payment data can't create purchase orders, post invoices, run payments or release credit. | Fraud risk |
 | R-15 | A change to a supplier's bank details is verified with the supplier using contact details that weren't changed along with it, and the evidence is kept. A bank account already used by another supplier or customer is flagged. | Fraud risk |
 
@@ -92,7 +93,8 @@ their own fields are classified, and records it in their domain profile
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-18 | Every agent is recorded in the agent register with a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Until the unified master data app is live, agents work at levels 0 and 1 only and never create or change master data. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. They treat content from outside the organisation as data to check, never as instructions. Confidential and Restricted data goes to an AI model outside the organisation only with the data owner's approval, and the data protection officer's for personal data. Trade secrets follow R-21. | Audit risk, privacy risk |
+| R-18 | Every agent is recorded in the agent register with a named agent owner, works only within the autonomy level the data owner has approved for their domain, and logs every action. Until the unified master data app is live, agents work at levels 0 and 1 only and never create or change master data. Agents never approve requests or exceptions, change sensitive fields, delete records or grant access. | Audit risk |
+| R-22 | Agents and the AI tools people use treat content from outside the organisation as data to check, never as instructions. Confidential and Restricted data goes to an AI model outside the organisation only with the data owner's approval, and the data protection officer's for personal data. Trade secrets follow R-21. | Trade secret risk, privacy risk |
 
 Autonomy levels:
 
@@ -123,3 +125,4 @@ Autonomy levels:
 | 0.3 | 2026-10-23 | R-18 requires every agent to be in the agent register |
 | 0.4 | 2026-10-23 | R-12 covers any third party, so it outlives the vendor; R-18 limits agents to observing and proposing until the unified app is live |
 | 0.5 | 2026-10-24 | The framework now covers non-SAP master data and confidential data such as formulas, recipes, prices and margins. R-01, R-02, R-16 and R-21 apply everywhere from the start. Added R-21 for trade secrets, kept with the privacy rules so existing IDs don't change. R-16 lists Confidential and Restricted fields as each data owner decides. R-08 covers any governed system. R-18 covers Confidential data and asks the data protection officer only about personal data. |
+| 0.6 | 2026-10-24 | Dates moved to the roadmap, so the rules don't change when a date does. R-06 and R-13 use one steward per part of a domain, named by its owner; the vendor processes requests until the unified app takes over. R-18 split: the new R-22 covers AI tools and data, for people as well as agents, and applies everywhere from the start. |

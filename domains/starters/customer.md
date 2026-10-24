@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current app and the vendor until Q2 2027; then the unified master data app |
+| Governed process (R-03) | The current app and the master data vendor until the unified app takes over (see the roadmap); then the unified master data app |
 | System of record (R-04) | SAP for legal, financial and logistics fields; CRM for sales contacts and segmentation. In S/4HANA, central data is shared with the supplier role (R-02). |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
 | Critical fields (R-09) | Legal name; addresses for each partner function (sold-to, ship-to, bill-to, payer); tax ID; payment terms; credit limit; sales area data |
@@ -19,7 +19,7 @@ their domain profile. [TBC]
 | Inactivity period and block (R-11) | No orders or invoices for 24 months: sales and posting block |
 | Excluded from inactivity blocking (R-11) | Customers with open items or open orders |
 | Sensitive fields (R-13) | Bank details, credit limit and risk category, payment terms, tax IDs |
-| Sensitive changes confirmed by (R-13, R-14) | The field's owner or someone in their team, without credit release or payment rights (R-14). Credit limits are never confirmed by sales. |
+| Sensitive changes confirmed by (R-13, R-14) | The steward, who holds no credit release or payment rights (R-14). Credit limits are never confirmed by sales. |
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: contact names, emails and phone numbers, and names and addresses of consumers (personal data); credit limit and payment terms (payment data). Restricted: bank details (payment data). |
 | Request types approved automatically (R-06) | None yet |

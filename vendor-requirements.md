@@ -1,9 +1,9 @@
 # Master Data Vendor Requirements
 
-**Status:** Draft v0.1 · **Approved by:** [TBC: Head of Data, AI & Development] · **Applies through:** the vendor contract, until the vendor leaves in Q2 2027 [TBC: date]
+**Status:** Draft v0.1 · **Approved by:** [TBC: Head of Data, AI & Development] · **Applies through:** the vendor contract, until the vendor leaves on the dates in the [roadmap](roadmap.md)
 
-The master data vendor holds the data steward role until it leaves in
-Q2 2027, so the quality of its work is the quality of our master data. These
+The master data vendor processes SAP master data requests until the unified app
+takes over, so the quality of its work is the quality of our master data. These
 requirements belong in the contract, including how the vendor hands over.
 
 ## The work
@@ -18,7 +18,7 @@ requirements belong in the contract, including how the vendor hands over.
   entered by one person and checked by another; nobody checks their own work
   (R-06).
 - Never set rules, approve exceptions or confirm sensitive changes (R-12).
-  Pass sensitive changes to the confirmer named in the domain profile (R-13).
+  Pass questions and sensitive changes to the domain's steward (R-13).
 - Fix issues in SAP, never in a downstream copy, and report the cause (R-10).
 
 ## Service levels
@@ -46,11 +46,14 @@ requirements belong in the contract, including how the vendor hands over.
 - Every change is linked to its approved request (R-08).
 - The organisation and its auditors can review the vendor's work and records.
 
-## Exit by Q2 2027
+## Exit
 
-- Request types move to the unified master data app one at a time, each once
-  the app handles it and requesters are trained. The vendor keeps full service
-  for every request type until it has moved.
+- Request types move to the unified master data app one at a time, on the
+  dates in the [roadmap](roadmap.md), each once the app handles it and
+  requesters are trained. The vendor keeps full service for every request type
+  until it has moved.
+- Before each domain moves, the vendor's remaining capacity goes into cleaning
+  up its worst existing data, as mass changes the data owner signs off (R-07).
 - Before each request type moves, write down the working rules and checks the
   team uses for it, so they can become the unified app's checks and agent
   instructions.

@@ -8,7 +8,7 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current engineering change process until Q2 2027 [TBC: or the current app]; then the unified master data app, if it covers production data [TBC] |
+| Governed process (R-03) | The current engineering change process [TBC: or the current app] until the unified app takes over; then the unified master data app, if it covers production data [TBC] |
 | System of record (R-04) | SAP bills of materials, routings or master recipes, work centres and production versions [TBC: PLM for engineering bills of materials] |
 | Turnaround times (R-06) | [TBC] |
 | Critical fields (R-09) | Bill of materials components, quantities, usage and validity; routing operations, work centres and standard values; production version validity and lot sizes; work centre capacity and cost centre |
@@ -18,8 +18,8 @@ their domain profile. [TBC]
 | Duplicate match rules (R-05) | Two bills of materials or routings for the same material, plant and usage with overlapping validity |
 | Inactivity period and block (R-11) | Bills of materials and routings for materials that are blocked or unused for 24 months |
 | Excluded from inactivity blocking (R-11) | Bills of materials for spare parts held for maintenance [TBC] |
-| Sensitive fields (R-13) | Formula and recipe components, quantities and process parameters |
-| Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, such as R&D or quality, other than the person who entered the change |
+| Sensitive fields (R-13) | None by default. Formula and recipe changes follow the existing change control, not a second check here. |
+| Sensitive changes confirmed by (R-13) | Not applicable |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard values and work centre costs [TBC]. Restricted: formula and recipe components, quantities and process parameters in master recipes and bills of materials (trade secrets). |
 | Request types approved automatically (R-06) | None yet |
