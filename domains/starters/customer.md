@@ -21,8 +21,6 @@ their domain profile. [TBC]
 | Sensitive fields (R-13) | Bank details, credit limit and risk category, payment terms, tax IDs |
 | Sensitive changes confirmed by (R-13, R-14) | The field's owner or someone in their team, without credit release or payment rights (R-14). Credit limits are never confirmed by sales. |
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
-| Personal data fields (R-16) | Contact names, emails and phone numbers; names and addresses of consumers |
-| Payment data fields (R-16) | Bank details, payment terms, credit limit |
-| Trade secret fields (R-16, R-21) | None |
+| Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: contact names, emails and phone numbers, and names and addresses of consumers (personal data); credit limit and payment terms (payment data). Restricted: bank details (payment data). |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |

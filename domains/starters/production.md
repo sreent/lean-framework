@@ -21,8 +21,6 @@ their domain profile. [TBC]
 | Sensitive fields (R-13) | Formula and recipe components, quantities and process parameters |
 | Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, such as R&D or quality, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
-| Personal data fields (R-16) | None |
-| Payment data fields (R-16) | None |
-| Trade secret fields (R-16, R-21) | Formula and recipe components, quantities and process parameters in master recipes and bills of materials |
+| Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard values and work centre costs [TBC]. Restricted: formula and recipe components, quantities and process parameters in master recipes and bills of materials (trade secrets). |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |

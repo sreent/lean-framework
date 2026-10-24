@@ -23,6 +23,10 @@ unit, by group of fields, or a mix. Two things keep any split working:
   across subdomains and business units unless the GPDO agrees a difference
   (R-09). Otherwise, splitting ownership brings back the inconsistency we're
   fixing.
+- **Include data outside SAP.** List every system that holds your domain's
+  data, such as recipe systems, PLM or spreadsheets, even if it comes into the
+  framework later. Ownership, classification and access apply to it now
+  (R-01, R-02, R-16, R-21).
 
 ---
 
@@ -32,10 +36,11 @@ unit, by group of fields, or a mix. Two things keep any split working:
 
 ## Breakdown
 
-| Part of the domain (subdomain, business unit or field group) | Master data covered | Owner | In scope from |
-| --- | --- | --- | --- |
-| [e.g. customer general data] | [e.g. name, address, tax numbers] | [the GPDO, or a named attribute owner] | [now, or a later date] |
-| [e.g. customer sales data, business unit A] | [e.g. sales area data for its sales organisations] | [a named attribute owner] | [now, or a later date] |
+| Part of the domain (subdomain, business unit or field group) | Data covered | System | Owner | In scope from |
+| --- | --- | --- | --- | --- |
+| [e.g. customer general data] | [e.g. name, address, tax numbers] | [e.g. SAP] | [the GPDO, or a named attribute owner] | [now, or a later date] |
+| [e.g. customer sales data, business unit A] | [e.g. sales area data for its sales organisations] | [e.g. SAP] | [a named attribute owner] | [now, or a later date] |
+| [e.g. recipes] | [e.g. formulas and process parameters] | [e.g. the recipe system] | [a named attribute owner] | [e.g. owned and protected now; the other rules later] |
 
 Shared with other domains: [data split with another GPDO's domain, such as
 views of the material master, and the agreed split]
@@ -57,6 +62,6 @@ The settings the rulebook refers to, for each subdomain:
 | Inactivity period, block and exclusions | R-11 | |
 | Sensitive fields, and who confirms changes to them | R-13, R-14 | |
 | One-time accounts and payee in document | R-13 | |
-| Personal data, payment data and trade secret fields | R-16, R-21 | |
+| Confidential and Restricted fields, marking personal data, payment data and trade secrets | R-14, R-16, R-21 | |
 | Request types approved automatically | R-06 | |
 | Agent changes approved at level 2 | R-18 | |

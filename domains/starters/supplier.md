@@ -21,8 +21,6 @@ their domain profile. [TBC]
 | Sensitive fields (R-13) | Bank details, alternative payee, payment terms, payment methods, tax IDs, name and address, and the phone numbers and email addresses used to verify changes (R-15) |
 | Sensitive changes confirmed by (R-13, R-14) | The field's owner or someone in their team, without rights to create purchase orders, post invoices or run payments (R-14) |
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
-| Personal data fields (R-16) | Contact names, emails and phone numbers; names, addresses and tax IDs of sole traders |
-| Payment data fields (R-16) | Bank details, alternative payee, payment terms and methods |
-| Trade secret fields (R-16, R-21) | None |
+| Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: contact names, emails and phone numbers, and names and addresses of sole traders (personal data); payment terms and methods (payment data). Restricted: bank details and alternative payee (payment data); tax IDs of sole traders (personal data). |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |

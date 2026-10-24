@@ -28,14 +28,20 @@ privacy and audit.
 ## Scope
 
 Four domains, one per GPDO (global process and data owner): Commercial,
-Manufacturing, Finance and Procurement. Each GPDO proposes what master data
-their domain covers, such as customers, pricing, materials, production data,
-suppliers or finance structures, and how it breaks down by subdomain, business
-unit or group of fields (see the [charter](charter.md)). SAP comes first,
-and non-SAP copies are checked against SAP until the unified master data app
-can take requests from those systems. Formulas and recipes held outside SAP
-aren't governed here yet, but the trade secret rule (R-21) applies whenever
-their data reaches SAP, the data platform, the apps, the agents or the vendor.
+Manufacturing, Finance and Procurement. Each GPDO proposes what their domain
+covers and how it breaks down by subdomain, business unit or group of fields
+(see the [charter](charter.md)). The framework covers three kinds of data:
+
+- **SAP master data,** governed in full from the start
+- **Non-SAP master data,** such as data in CRM, PLM or e-commerce systems,
+  owned and protected now and brought under the other rules one system at a
+  time
+- **Confidential and commercially sensitive data,** such as formulas, recipes,
+  prices, margins and supplier terms, owned, classified and protected now, in
+  SAP or not
+
+The [operating model](operating-model.md) lists the systems involved and when
+each comes in.
 
 ## Where we're heading
 
@@ -63,7 +69,7 @@ Q2 2027. [TBC: the unified app's go-live plan]
 | --- | --- | --- |
 | [Charter](charter.md) | Who owns what, who decides what, and the controls we never switch off | The four GPDOs and the Head of Data, AI & Development, once |
 | [Rulebook](rulebook.md) | 21 rules: what must be true, and why | Head of Data, AI & Development |
-| [Operating model](operating-model.md) | Who does what (RACI), the platform, the agent register, rhythm and measures | Head of Data, AI & Development |
+| [Operating model](operating-model.md) | Who does what (RACI), the platform, the data landscape, the agent register, rhythm and measures | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced until Q2 2027 and once the unified app takes over. Doubles as the unified app's backlog. | Head of Data, AI & Development |
 | [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver until it leaves in Q2 2027, and how it hands over | Head of Data, AI & Development, through the contract |
 | Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | Proposed by each GPDO, agreed by the GPDOs together |

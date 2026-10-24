@@ -21,8 +21,6 @@ their domain profile. [TBC]
 | Sensitive fields (R-13) | Account type, reconciliation account setting, posting controls |
 | Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
-| Personal data fields (R-16) | Person responsible for a cost centre or profit centre |
-| Payment data fields (R-16) | None |
-| Trade secret fields (R-16, R-21) | None |
+| Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: the person responsible for a cost centre or profit centre (personal data) [TBC]. Restricted: none. |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |
