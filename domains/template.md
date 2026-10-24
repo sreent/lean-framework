@@ -12,7 +12,7 @@ data. Use, change or ignore it: the breakdown is the GPDO's call.
 ## How to break a domain down
 
 A domain can be split by subdomain (such as customer and pricing), by business
-unit, by group of fields, or a mix. Two things keep any split working:
+unit, by group of fields, or a mix. Four things keep any split working:
 
 - **One owner for each piece of data.** For any field on any record, it must
   be clear who owns it (R-02). In SAP, a common split is that general data,
@@ -23,10 +23,9 @@ unit, by group of fields, or a mix. Two things keep any split working:
   across subdomains and business units unless the GPDO agrees a difference
   (R-09). Otherwise, splitting ownership brings back the inconsistency we're
   fixing.
-- **One steward for each part.** Each part has an owner, and a steward from
-  the owner's team who answers questions, confirms sensitive changes and, once
-  the unified app takes over, approves the requests it can't approve
-  automatically.
+- **A steward for each part.** Each part's owner names a steward from their
+  own team; the [charter](../charter.md) says what stewards do. One steward can
+  cover several parts, or the whole domain.
 - **Include data outside SAP.** List every system that holds your domain's
   data, such as recipe systems, PLM or spreadsheets, even if it comes into the
   framework later. Ownership, classification and access apply to it now
@@ -56,6 +55,7 @@ The settings the rulebook refers to, for each subdomain:
 | Setting | Rule | [Subdomain] |
 | --- | --- | --- |
 | Governed process | R-03 | |
+| Request types | R-03 | |
 | System of record | R-04 | |
 | Turnaround times | R-06 | |
 | Critical fields and their conventions | R-09 | |

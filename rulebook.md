@@ -1,13 +1,13 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.6 · **Approved by:** [TBC: Head of Data, AI & Development] · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.8 · **Approved by:** the Head of Data, AI & Development · **Under:** [Master data governance charter](charter.md)
 
-Each rule says what must be true, not how it's enforced. The
-[controls catalogue](controls.md) covers how, before and after the unified
-app takes over. The business owns what good data looks like: each
-domain's validation and quality rules (conventions, checks and thresholds) and
-its other settings sit in its domain profile, which its GPDO proposes and
-maintains. This rulebook only requires that they exist and are applied.
+Each rule says what must be true, not how it's enforced; the
+[controls catalogue](controls.md) covers how. The business owns what good data
+looks like: each domain's validation and quality rules (conventions, checks and
+thresholds) and its other settings sit in its domain profile, which its GPDO
+proposes and maintains. This rulebook only requires that they exist and are
+applied.
 
 "Why" names what the rule addresses. Rules R-01 to R-12 fix the problem behind
 our data quality issues, master data that is **incorrect** or **inconsistent**.
@@ -25,9 +25,9 @@ start, wherever it's held: ownership (R-01, R-02), classified fields and
 access (R-16), trade secrets (R-21) and AI tools (R-22).
 
 The rules apply to new and changed records from the effective date in the
-charter. Existing records are brought into line domain by domain, starting with
-the pilot. Until then, gaps in existing records are tracked on the scorecards
-rather than treated as breaches.
+charter. Existing records are brought into line domain by domain, in the order
+the [roadmap](roadmap.md) sets. Until then, gaps in existing records are
+tracked on the scorecards rather than treated as breaches.
 
 ## Ownership
 
@@ -42,8 +42,8 @@ rather than treated as breaches.
 | --- | --- | --- |
 | R-03 | Master data is created and changed only through the governed process for its domain, starting with a complete request. | Incorrect, inconsistent |
 | R-04 | Each field has one system of record. Other systems take the data from it, send changes back as requests, and hold its key. | Inconsistent |
-| R-05 | Every request passes its domain's mandatory checks, including a duplicate check, before it's approved. | Incorrect, inconsistent |
-| R-06 | Routine requests are approved within the domain's rules: by the master data vendor until the unified app takes over, then automatically by the app for request types the data owner has approved, or by the domain's steward. Nobody approves their own request. Requests are completed within the turnaround times in the domain profile. | Incorrect |
+| R-05 | Every request passes its domain's mandatory checks, including a duplicate check, before it's approved. A change to an existing record must pass the checks on the fields it changes and on the record's critical fields. | Incorrect, inconsistent |
+| R-06 | Requests other than mass changes (R-07) are approved within the domain's rules: by the master data vendor until the unified app takes over, then automatically by the app for request types the data owner has approved, or by the steward for each part of the domain the request touches. Nobody approves their own request. Requests are completed within the turnaround times in the domain profile. | Incorrect |
 | R-07 | A change to more than [TBC: 50] records is a mass change. It needs the data owner's sign-off, a test and a rollback plan. | Incorrect |
 | R-08 | Every change to master data in a governed system can be traced to an approved request. | Incorrect, fraud risk |
 
@@ -65,15 +65,15 @@ rather than treated as breaches.
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-13 | A change to a sensitive field, as listed in the domain profile, can't be used until the domain's steward, or the field's owner, confirms it. The confirmer is never in the team that entered the change. Unblocking a record, and bank details on one-time accounts or entered as a payee in a document, count as sensitive changes. | Fraud risk |
-| R-14 | Whoever enters or confirms a change to payment data can't create purchase orders, post invoices, run payments or release credit. | Fraud risk |
+| R-13 | A change to a sensitive field, as listed in the domain profile, can't be used until the steward for that part of the domain, or the field's owner, confirms it. Nobody confirms a change they requested or entered. Unblocking a record, and bank details on one-time accounts or entered as a payee in a document, count as sensitive changes. | Fraud risk |
+| R-14 | Payment data fields, as marked in the domain profile, are always sensitive fields (R-13). Whoever confirms a change to them, or can change them directly in SAP, can't create purchase orders, post invoices, run payments or release credit. Requesters may hold those rights, because their changes can't be used until confirmed. | Fraud risk |
 | R-15 | A change to a supplier's bank details is verified with the supplier using contact details that weren't changed along with it, and the evidence is kept. A bank account already used by another supplier or customer is flagged. | Fraud risk |
 
 ## Trade secrets, privacy and access
 
 | ID | Rule | Why |
 | --- | --- | --- |
-| R-16 | Each domain profile lists the fields that are Confidential or Restricted, as its data owner decides, and marks those that hold personal data, payment data or trade secrets. Access to them is limited to roles that need it and reviewed [TBC: twice a year], in every system that holds them. A report or extract takes the highest classification of the data in it, and Restricted and personal data is masked outside production. | Trade secret risk, privacy risk, fraud risk |
+| R-16 | Each domain profile lists the fields that are Confidential or Restricted, as its data owner decides, and marks those that hold personal data, payment data or trade secrets. Access to them is limited to roles that need it, as the data owner approves, and reviewed [TBC: twice a year], in every system that holds them. A report or extract takes the highest classification of the data in it, and Restricted and personal data is masked outside production. | Trade secret risk, privacy risk, fraud risk |
 | R-17 | Personal data is blocked when its purpose ends and deleted when its retention period ends. Records are archived only in line with retention rules. | Privacy risk |
 | R-21 | Trade secrets, such as formulas, recipes and process parameters, are Restricted wherever they're held, in SAP or not. They're copied, extracted or made available to people or agents only as the data owner approves, and never go to an AI model outside an environment the organisation controls, under terms that stop the provider keeping or training on them. | Trade secret risk |
 
@@ -126,3 +126,5 @@ Autonomy levels:
 | 0.4 | 2026-10-23 | R-12 covers any third party, so it outlives the vendor; R-18 limits agents to observing and proposing until the unified app is live |
 | 0.5 | 2026-10-24 | The framework now covers non-SAP master data and confidential data such as formulas, recipes, prices and margins. R-01, R-02, R-16 and R-21 apply everywhere from the start. Added R-21 for trade secrets, kept with the privacy rules so existing IDs don't change. R-16 lists Confidential and Restricted fields as each data owner decides. R-08 covers any governed system. R-18 covers Confidential data and asks the data protection officer only about personal data. |
 | 0.6 | 2026-10-24 | Dates moved to the roadmap, so the rules don't change when a date does. R-06 and R-13 use one steward per part of a domain, named by its owner; the vendor processes requests until the unified app takes over. R-18 split: the new R-22 covers AI tools and data, for people as well as agents, and applies everywhere from the start. |
+| 0.7 | 2026-10-24 | Existing records are cleaned up in the order the roadmap sets, replacing a reference to a pilot that no longer exists. No rule changed. |
+| 0.8 | 2026-10-24 | Rules now work once requesters enter data themselves. R-05 covers changes to existing records. R-06 covers every request except mass changes and routes it to the steward for each part it touches. R-13: nobody confirms a change they requested or entered, instead of a rule about teams. R-14 covers whoever confirms payment data or can change it directly in SAP, so requesters can raise changes. R-16: the data owner approves the roles that can see classified fields. |

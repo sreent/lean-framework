@@ -8,7 +8,8 @@ their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The current app and the master data vendor until the unified app takes over (see the roadmap); then the unified master data app |
+| Governed process (R-03) | The current app, then the unified master data app (see the roadmap) |
+| Request types (R-03) | Create; extend to a plant, sales organisation or warehouse; change; block or flag for deletion |
 | System of record (R-04) | SAP material master; PLM for engineering attributes; PIM or e-commerce for marketing content |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
 | Critical fields (R-09) | Material type, base unit of measure and conversions, description, material group, valuation class, plant planning (MRP) data, weight and volume, GTIN where used |
@@ -22,5 +23,5 @@ their domain profile. [TBC]
 | Sensitive changes confirmed by (R-13) | The steward |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard price and valuation data. Restricted: specifications that reveal a product's formulation (trade secrets) [TBC]. |
-| Request types approved automatically (R-06) | None yet |
+| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the steward. |
 | Agent changes approved at level 2 (R-18) | None yet |

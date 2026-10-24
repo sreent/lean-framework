@@ -1,10 +1,10 @@
 # Master Data Vendor Requirements
 
-**Status:** Draft v0.1 · **Approved by:** [TBC: Head of Data, AI & Development] · **Applies through:** the vendor contract, until the vendor leaves on the dates in the [roadmap](roadmap.md)
+**Status:** Draft v0.1 · **Approved by:** the Head of Data, AI & Development · **Applies through:** the vendor contract, until the vendor leaves (see the [roadmap](roadmap.md))
 
-The master data vendor processes SAP master data requests until the unified app
-takes over, so the quality of its work is the quality of our master data. These
-requirements belong in the contract, including how the vendor hands over.
+Until the master data vendor leaves, the quality of its work is the quality of
+our master data. These requirements belong in its contract, including how it
+hands over.
 
 ## The work
 
@@ -18,7 +18,8 @@ requirements belong in the contract, including how the vendor hands over.
   entered by one person and checked by another; nobody checks their own work
   (R-06).
 - Never set rules, approve exceptions or confirm sensitive changes (R-12).
-  Pass questions and sensitive changes to the domain's steward (R-13).
+  Pass questions and sensitive changes to the steward for the part they touch
+  (R-13).
 - Fix issues in SAP, never in a downstream copy, and report the cause (R-10).
 
 ## Service levels
@@ -48,10 +49,8 @@ requirements belong in the contract, including how the vendor hands over.
 
 ## Exit
 
-- Request types move to the unified master data app one at a time, on the
-  dates in the [roadmap](roadmap.md), each once the app handles it and
-  requesters are trained. The vendor keeps full service for every request type
-  until it has moved.
+- The vendor keeps full service for every request type until it moves to the
+  unified app, as the [roadmap](roadmap.md) sets out.
 - Before each domain moves, the vendor's remaining capacity goes into cleaning
   up its worst existing data, as mass changes the data owner signs off (R-07).
 - Before each request type moves, write down the working rules and checks the
@@ -59,6 +58,7 @@ requirements belong in the contract, including how the vendor hands over.
   instructions.
 - Hand over all tickets and approval evidence before exit. They are the audit
   trail for R-08, R-13 and R-15.
-- Vendor staff lose SAP access the day their work ends.
+- As each request type moves, vendor staff lose the SAP rights to change it,
+  and they lose all SAP access the day their work ends.
 - [TBC: a fallback for any request type the unified app isn't ready for, such
   as a short extension, and a pricing model that doesn't penalise the move]
