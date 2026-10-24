@@ -74,7 +74,7 @@ applied.
 | --- | --- | --- |
 | R-13 | A change to a sensitive field, as listed in the domain profile, can't be used until its data owner, or their delegate, confirms it. Nobody confirms a change they requested or entered. Unblocking a record, and bank details on one-time accounts or entered as a payee in a document, count as sensitive changes. | Fraud risk |
 | R-14 | Payment data fields, as marked in the domain profile, are always sensitive fields (R-13). Whoever confirms a change to them, or can change them directly in SAP, can't create purchase orders, post invoices, run payments or release credit. Requesters may hold those rights, because their changes can't be used until confirmed. | Fraud risk |
-| R-15 | A change to a supplier's bank details is verified with the supplier using contact details that weren't changed along with it, and the evidence is kept. A new supplier's bank details are verified the same way, using contact details from a source other than the request [TBC: such as its registered website]. A bank account already used by another supplier or customer is flagged. | Fraud risk |
+| R-15 | A change to a supplier's bank details is verified with the supplier using contact details that weren't changed along with it, and the evidence is kept. A bank account already used by another supplier or customer is flagged. | Fraud risk |
 
 ## Trade secrets, privacy and access
 
