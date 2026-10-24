@@ -18,10 +18,9 @@ their domain profile. [TBC]
 | Duplicate match rules (R-05) | Two bills of materials or routings for the same material, plant and usage with overlapping validity |
 | Inactivity period and block (R-11) | Bills of materials and routings for materials that are blocked or unused for 24 months |
 | Excluded from inactivity blocking (R-11) | Bills of materials for spare parts held for maintenance [TBC] |
-| Sensitive fields (R-13) | None by default [TBC] |
-| Sensitive changes confirmed by (R-13) | Not applicable unless sensitive fields are added |
+| Sensitive fields (R-13) | Formula and recipe components, quantities and process parameters |
+| Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, such as R&D or quality, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
-| Personal data fields (R-16) | None |
-| Payment data fields (R-16) | None |
+| Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard values and work centre costs [TBC]. Restricted: formula and recipe components, quantities and process parameters in master recipes and bills of materials (trade secrets). |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |

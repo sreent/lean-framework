@@ -21,7 +21,6 @@ their domain profile. [TBC]
 | Sensitive fields (R-13) | Standard price, valuation class, price control |
 | Sensitive changes confirmed by (R-13) | The field's owner or someone in their team, other than the person who entered the change |
 | One-time accounts and payee in document (R-13) | Not applicable |
-| Personal data fields (R-16) | None |
-| Payment data fields (R-16) | None |
+| Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard price and valuation data. Restricted: specifications that reveal a product's formulation (trade secrets) [TBC]. |
 | Request types approved automatically (R-06) | None yet |
 | Agent changes approved at level 2 (R-18) | None yet |

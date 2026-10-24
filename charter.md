@@ -16,12 +16,22 @@ protection and internal controls] to master data. It doesn't replace them.
 
 ## Scope
 
-Master data in SAP across four domains, one per GPDO (see below), and the
-non-SAP systems that hold copies of it. SAP comes first. Until Q2 2027,
-requests are raised in the current app and the master data vendor makes the
-changes in SAP; after that, the unified master data app takes over. Non-SAP
-copies are checked against SAP until the unified app can take requests from
-those systems.
+The framework covers three kinds of data, across four domains, one per GPDO
+(see below):
+
+- **SAP master data,** governed in full from the start. Until Q2 2027,
+  requests are raised in the current app and the master data vendor makes the
+  changes in SAP; after that, the unified master data app takes over.
+- **Non-SAP master data,** such as data in CRM, PLM or e-commerce systems:
+  owned and protected now, and brought under the other rules one system at a
+  time, when its GPDO proposes it.
+- **Confidential and commercially sensitive data,** such as formulas,
+  recipes, prices, margins and supplier terms, in SAP or not: owned,
+  classified and protected now.
+
+The [operating model](operating-model.md) lists the systems involved and when
+each comes in, and the rulebook says which rules apply everywhere from the
+start.
 
 ## Principles
 
@@ -36,9 +46,11 @@ those systems.
 ## Who owns what
 
 The data owners are the four GPDOs (global process and data owners):
-Commercial, Manufacturing, Finance and Procurement. Each owns their own domain
-and proposes how it breaks down: the master data it covers, and who owns each
-part, by subdomain, business unit or group of fields (attribute owners). Where
+Commercial, Manufacturing, Finance and Procurement. Each owns their own
+domain in every system that holds its data, SAP or not, including confidential
+data such as formulas and recipes. Each proposes how their domain breaks down:
+the data it covers, and who owns each part, by subdomain, business unit or
+group of fields (attribute owners). Where
 data is shared between domains, such as the material master, the GPDOs agree
 who owns which part.
 
@@ -53,7 +65,7 @@ breakdown.
 
 | Role | Held by [TBC] | Decides or does |
 | --- | --- | --- |
-| Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Decides the validation and quality rules for their data (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in the domain profiles), exceptions in their domains, which request types the app approves automatically, and what agents may do there. Proposes how their domain breaks down, and delegates attribute owners. Their team confirms sensitive changes to their fields. |
+| Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Decides how their data is classified and its validation and quality rules (conventions, mandatory checks, critical fields, duplicate rules and thresholds, held in the domain profiles), exceptions in their domains, which request types the app approves automatically, and what agents may do there. Proposes how their domain breaks down, and delegates attribute owners. Their team confirms sensitive changes to their fields. |
 | Attribute owner | Whoever a GPDO delegates part of their domain to, by subdomain, business unit or group of fields | Decides for that part, within the domain's conventions and checks: exceptions, automatic approvals and what agents may do. An owner of a group of fields also sets its conventions and checks. They, or someone in their team, confirm sensitive changes to it. |
 | Head of Data, AI & Development | [TBC: name] | Approves the rulebook, the controls catalogue and the vendor requirements. Accountable for the data team's delivery: the app, the agents, the vendor and running this framework. |
 | Data steward | The master data vendor until Q2 2027. After that, the unified app and agents do the routine work, and a person each owner names in their team decides the rest. | Decides routine requests, within the rules |
@@ -79,6 +91,8 @@ These can't be waived by exception, and changing them needs every signatory:
   verified with the supplier (R-14, R-15).
 - Agents never approve requests or exceptions, change sensitive fields, delete
   records or grant access (R-18).
+- Trade secrets, such as formulas and recipes, never go to an AI model outside
+  an environment the organisation controls (R-21).
 - The data team can't change master data outside the governed process, except
   through emergency access that someone outside the team reviews. Every SAP
   change can be traced to an approved request (R-08, R-19).

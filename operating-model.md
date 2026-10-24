@@ -60,6 +60,39 @@ changes in SAP; the first column of the controls catalogue covers that period.
 Only creating and changing master data waits for the unified app: the data
 platform and agents check, measure and propose from now on.
 
+## The data landscape
+
+Every system that holds master data or confidential data, and when it comes
+into the framework. The rows are examples to start from: the GPDOs confirm the
+systems that hold their data, and the data governance specialist keeps the
+list.
+
+| System | What it holds | Relationship to SAP | In the framework |
+| --- | --- | --- | --- |
+| SAP [TBC: release] | Customer, pricing, material, production, supplier and finance master data | The system of record | Now, in full |
+| Current app, then the unified app | Requests for SAP master data | The front door to SAP | Now, in full |
+| Data platform | Copies of master data, for checks and scorecards | Takes data from SAP | Now, in full |
+| Recipe and formulation systems [TBC: names] | Formulas, recipes, process parameters | Masters the recipes that aren't in SAP | Owned and protected now; the other rules later |
+| PLM [TBC] | Engineering data and specifications | Masters engineering attributes | Owned and protected now; the other rules later |
+| CRM [TBC] | Customer contacts and segmentation, and copies of SAP customers | Masters sales contacts; takes customers from SAP | Owned and protected now; the other rules later |
+| E-commerce or PIM [TBC] | Product content, and copies of SAP customers and materials | Masters marketing content; takes the rest from SAP | Owned and protected now; the other rules later |
+| Procurement platform or supplier portal [TBC] | Supplier onboarding data | Sends create requests to SAP | Owned and protected now; the other rules later |
+| Spreadsheets and local files | Price lists, recipes, local copies of master data | None; they should take data from the systems of record | Owned and protected now; replaced over time |
+
+"Owned and protected now" means ownership, classification, access and the
+trade secret rule apply from the start (R-01, R-02, R-16, R-21).
+
+To bring a system in:
+
+1. The GPDO who owns its data proposes it, and updates their domain profile
+   with the fields it masters and their checks.
+2. The GPDOs settle how it relates to SAP: it either masters some fields
+   itself, or takes them from SAP and sends changes back as requests (R-04).
+3. Checks start on the data platform, with the consistency checker comparing
+   it with SAP. Checks at entry follow, through the system's own workflow or
+   the unified app's request interface.
+4. The other rules apply from the date the GPDOs agree.
+
 ## Agents
 
 Agents are for work that needs judgement. A check with a fixed answer, such as
@@ -77,8 +110,10 @@ This is the agent register (R-18). Every agent has a named agent owner from
 the data team, starts at a low autonomy level, and moves up only on evidence
 from an independent sample. Data owners approve how far an agent may act in
 their domain, in their domain profiles. Agents that don't touch master data
-are approved by the Head of Data, AI & Development. The autonomy levels are
-defined in the rulebook.
+are approved by the Head of Data, AI & Development. Agents work with trade
+secrets only where the data owner approves, and only on AI models in an
+environment the organisation controls (R-21). The autonomy levels are defined
+in the rulebook.
 
 | Agent | What it does | Rules | Starts at | When | Agent owner |
 | --- | --- | --- | --- | --- | --- |
