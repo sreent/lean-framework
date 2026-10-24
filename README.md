@@ -33,15 +33,14 @@ request type moves to the unified master data app.
 
 | Layer | Who or what | Does |
 | --- | --- | --- |
-| Decide | The four GPDOs, and attribute owners where a GPDO delegates | Own their data and set its rules as settings in the unified app |
+| Own | The four GPDOs, and the attribute owners they delegate each part of their domain to | GPDOs set the domain's breakdown and conventions. Attribute owners set their part's rules as settings in the unified app, and decide what the app can't, themselves or through delegates. |
 | Enforce | The unified app, SAP and the data platform | Check every request, approve what passes, hold sensitive changes, measure quality and log the evidence |
-| Coordinate | AI agents | Prepare, chase, route, draft and propose, and make the judgement calls the app can't |
-| Exceptions | One steward per domain | Decide what the app can't: sensitive changes, likely duplicates and unusual requests |
+| Coordinate | AI agents | Prepare, chase, route, draft and propose, and flag what needs a person's judgement |
 | Run | The data team, under the Head of Data, AI & Development | Build and run the app, the data platform and the agents, and run the framework |
 | Assure | Internal controls | Review emergency access and any change made without a request |
 
 A routine change involves one person, the requester. A sensitive change
-involves two: the requester and the steward.
+involves two: the requester, and the owner or their delegate who confirms it.
 
 ## Scope
 
@@ -57,28 +56,31 @@ and the [roadmap](roadmap.md) says how and when we get there.
 | --- | --- | --- |
 | [Charter](charter.md) | Who owns what, who decides what, and the controls we never switch off | The four GPDOs and the Head of Data, AI & Development, once |
 | [Rulebook](rulebook.md) | 22 rules: what must be true, and why | Head of Data, AI & Development |
-| [Operating model](operating-model.md) | Who does what, the platform, the agents, the data landscape, requesters, rhythm and measures | Head of Data, AI & Development |
+| [Operating model](operating-model.md) | Who does what and how often, the platform, the agents, the data landscape, requesters, rhythm and measures | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced, and the evidence each control logs | Head of Data, AI & Development |
 | [Roadmap](roadmap.md) | The one document with dates: how and when we get to the target | Head of Data, AI & Development |
-| [Interim arrangements](interim.md) | What the master data vendor and the current app do until each request type moves, and the vendor's requirements. Deleted when the vendor leaves. | Head of Data, AI & Development |
-| Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | Each GPDO, for their own domain |
+| [Interim arrangements](interim.md) | What the master data vendor and the current app do until each request type moves, and the vendor's requirements. Archived when the vendor leaves. | Head of Data, AI & Development |
+| Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | The GPDO approves the breakdown, and each attribute owner their part's settings |
 
 ## Open decisions
 
 `[TBC]` marks a default to confirm or a gap to fill. They come down to these:
 
 - **The signatories:** when the charter takes effect, which company policies
-  it applies, and who holds each role.
-- **Each GPDO:** their domain profile, starting from the starters, and the
-  systems outside SAP that hold their data. Commercial and Procurement also
-  agree who owns the business partner data they share.
+  it applies, who holds each role, and the internal controls team that reviews
+  the data team.
+- **Each GPDO:** their domain's breakdown and attribute owners, and the systems
+  outside SAP that hold their data. Commercial and Procurement also agree who
+  owns the business partner data they share.
+- **Each attribute owner:** their part's settings, starting from the starters,
+  and their delegates.
 - **The Head of Data, AI & Development:** the numbers in the rulebook, the
   classification scheme, the approved AI tools, the vendor's targets, scope and
-  location, who reviews emergency access and SAP changes without a request,
-  and the roadmap's later dates, including the fallback if the vendor's exit
-  slips.
+  location, and the roadmap's later dates, including the fallback if the
+  vendor's exit slips.
 - **The data team:** how each control works in practice, such as whether SAP's
   own confirmation of bank changes stays on, and the masking tool; when
   profiles move into the unified app; the current app's name and who runs it;
-  and how requesters are trained.
+  how requesters and delegates are trained; and the expected effort for each
+  role.
 - **This page:** a recent example and a rough cost of each problem.

@@ -1,10 +1,12 @@
 # Domain Profile Template
 
-Each GPDO approves a profile for their own domain, using this template, and
-agrees any data shared with another domain with that domain's GPDO. The
-governance coordinator agent can draft it from the starters and the data as it
-stands. Once the unified app holds profiles as settings, the profile lives
-there, and owners approve changes to it in the app.
+Each GPDO approves their domain's breakdown, who owns each part and the
+conventions across it, and agrees any data shared with another domain with
+that domain's GPDO. Each attribute owner approves their part's settings. The
+governance coordinator agent can draft the profile from the starters and the
+data as it stands. Once the unified app holds profiles as settings, the
+profile lives there: owners approve changes in the app, which logs each one
+and keeps the history.
 
 The [starter material](starters/) has common SAP checks, conventions and
 settings for customer, pricing, material, production, supplier and finance
@@ -24,9 +26,11 @@ unit, by group of fields, or a mix. Four things keep any split working:
   across subdomains and business units unless the GPDO agrees a difference
   (R-09). Otherwise, splitting ownership brings back the inconsistency we're
   fixing.
-- **One steward, unless volume needs more.** The GPDO names one steward for
-  the domain from their own team, or one for each part where volume needs it.
-  The [charter](../charter.md) says what stewards do.
+- **An attribute owner for each part.** The GPDO names one for each part, or
+  keeps the part. Each attribute owner decides the daily cases or names at
+  least two delegates from their own team; anyone confirming payment data
+  holds no rights to raise purchase orders, post invoices, run payments or
+  release credit (R-14). The [charter](../charter.md) says what delegates do.
 - **Include data outside SAP.** List every system that holds your domain's
   data, such as recipe systems, PLM or spreadsheets, even if it comes into the
   framework later. Ownership, classification and access apply to it now
@@ -36,15 +40,15 @@ unit, by group of fields, or a mix. Four things keep any split working:
 
 # [Domain] Profile
 
-**Status:** Approved by the [domain] GPDO on [date] · **Rules:** [Rulebook](../rulebook.md)
+**Status:** Breakdown approved by the [domain] GPDO on [date], and each part's settings by its attribute owner · **Version:** [n] · **Rules:** [Rulebook](../rulebook.md)
 
 ## Breakdown
 
-| Part of the domain (subdomain, business unit or field group) | Data covered | System | Owner | Steward | In scope from |
+| Part of the domain (subdomain, business unit or field group) | Data covered | System | Attribute owner | Delegates | In scope from |
 | --- | --- | --- | --- | --- | --- |
-| [e.g. customer general data] | [e.g. name, address, tax numbers] | [e.g. SAP] | [the GPDO, or a named attribute owner] | [a named person or team] | [now, or a later date] |
-| [e.g. customer sales data, business unit A] | [e.g. sales area data for its sales organisations] | [e.g. SAP] | [a named attribute owner] | [a named person or team] | [now, or a later date] |
-| [e.g. recipes] | [e.g. formulas and process parameters] | [e.g. the recipe system] | [a named attribute owner] | [a named person or team] | [e.g. owned and protected now; the other rules later] |
+| [e.g. customer general data] | [e.g. name, address, tax numbers] | [e.g. SAP] | [a named attribute owner, or the GPDO] | [at least two named people] | [now, or a later date] |
+| [e.g. customer sales data, business unit A] | [e.g. sales area data for its sales organisations] | [e.g. SAP] | [a named attribute owner] | [at least two named people] | [now, or a later date] |
+| [e.g. recipes] | [e.g. formulas and process parameters] | [e.g. the recipe system] | [a named attribute owner] | [at least two named people] | [e.g. owned and protected now; the other rules later] |
 
 Shared with other domains: [data split with another GPDO's domain, such as
 views of the material master, and the split agreed with that GPDO]
@@ -65,7 +69,9 @@ The settings the rulebook refers to, for each subdomain:
 | Duplicate match rules | R-05 | |
 | Inactivity period, block and exclusions | R-11 | |
 | Sensitive fields | R-13, R-14 | |
+| Who confirms sensitive changes | R-13, R-14 | |
 | One-time accounts and payee in document | R-13 | |
 | Confidential and Restricted fields, marking personal data, payment data and trade secrets | R-14, R-16, R-21 | |
+| Roles that can see Confidential and Restricted fields | R-16 | |
 | Request types approved automatically | R-06 | |
 | Agent changes approved at level 2 | R-18 | |

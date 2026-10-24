@@ -2,9 +2,8 @@
 
 **Status:** Starter v0.1 · **Use:** input to a GPDO's [domain profile](../template.md) · **Rules:** [Rulebook](../../rulebook.md)
 
-Starter material, not a decision: common SAP settings for production data data.
-The GPDO who owns this data can use, change or drop any of it when proposing
-their domain profile. [TBC]
+Starter material, not a decision: common SAP settings for production data.
+Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
@@ -23,5 +22,5 @@ their domain profile. [TBC]
 | Sensitive changes confirmed by (R-13) | Not applicable |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard values and work centre costs [TBC]. Restricted: formula and recipe components, quantities and process parameters in master recipes and bills of materials (trade secrets). |
-| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the steward. |
+| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the data owner or their delegates. |
 | Agent changes approved at level 2 (R-18) | None yet |

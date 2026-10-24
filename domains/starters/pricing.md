@@ -3,8 +3,7 @@
 **Status:** Starter v0.1 · **Use:** input to a GPDO's [domain profile](../template.md) · **Rules:** [Rulebook](../../rulebook.md)
 
 Starter material, not a decision: common SAP settings for pricing data.
-The GPDO who owns this data can use, change or drop any of it when proposing
-their domain profile. [TBC]
+Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
@@ -20,8 +19,8 @@ their domain profile. [TBC]
 | Inactivity period and block (R-11) | Not applicable: condition records end on their validity date |
 | Excluded from inactivity blocking (R-11) | Not applicable |
 | Sensitive fields (R-13) | Prices and discounts that change by more than [TBC]% |
-| Sensitive changes confirmed by (R-13) | The steward |
+| Sensitive changes confirmed by (R-13) | The data owner or their delegates |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: prices, discounts, surcharges and margins. Restricted: none by default [TBC]. |
-| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the steward. |
+| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the data owner or their delegates. |
 | Agent changes approved at level 2 (R-18) | None yet |
