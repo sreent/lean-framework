@@ -41,7 +41,7 @@ and the [roadmap](roadmap.md) says how and when we get there.
 | [Rulebook](rulebook.md) | 22 rules: what must be true, and why | Head of Data, AI & Development |
 | [Operating model](operating-model.md) | Who does what (RACI), the platform, the data landscape, the agent register, requesters, rhythm and measures | Head of Data, AI & Development |
 | [Roadmap](roadmap.md) | The one document with dates, and the one place that describes the move to the unified app: the timeline, the critical path and clean-up | Head of Data, AI & Development |
-| [Controls catalogue](controls.md) | How each rule is enforced. Doubles as the unified app's backlog. | Head of Data, AI & Development |
+| [Controls catalogue](controls.md) | How each rule is enforced, including what the unified app must do | Head of Data, AI & Development |
 | [Vendor requirements](vendor-requirements.md) | What the master data vendor must deliver until it leaves, and how it hands over | Head of Data, AI & Development, through the contract |
 | Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | Proposed by each GPDO, agreed by the GPDOs together |
 
@@ -57,13 +57,14 @@ and the [roadmap](roadmap.md) says how and when we get there.
 - **Quality is built in at entry, and causes get fixed.** Checks run when data
   is entered, not weeks later in a report. When the same issue keeps coming
   back, the fix is a new check, not another clean-up.
-- **A steward for every part of a domain.** Named by the part's owner, the
-  steward answers questions, decides likely duplicates and confirms sensitive
-  changes. One steward can cover several parts.
+- **A steward for every part of a domain.** Named by the part's owner from
+  their own team, the steward does the day-to-day work, from answering
+  questions to confirming sensitive changes; the charter lists it. One steward
+  can cover several parts.
 - **App rules and AI agents are treated differently.** The app's fixed rules
-  behave the same way every time and can be tested, so they may approve
-  routine requests. AI agents' judgements vary, so they only check, propose or
-  make small approved fixes, and a person decides (R-18).
+  behave the same way every time and can be tested, so they may approve the
+  request types owners choose. AI agents' judgements vary, so they only check,
+  propose or make small approved fixes, and a person decides (R-18).
 - **The checks on the data team come from outside it.** The data team manages
   the vendor, builds the app and runs the agents, but the business owns the
   data, stewards confirm sensitive changes, every SAP change is traced to an
@@ -76,12 +77,14 @@ and the [roadmap](roadmap.md) says how and when we get there.
 - **The signatories:** when the charter takes effect, which company policies
   it applies, and who holds each role.
 - **Each GPDO:** their domain profile, starting from the starters, and the
-  systems outside SAP that hold their data.
+  systems outside SAP that hold their data. Commercial and Procurement also
+  agree who owns the business partner data they share.
 - **The Head of Data, AI & Development:** the numbers in the rulebook, the
   classification scheme, the approved AI tools, the vendor's targets, scope and
-  location, who reviews emergency access, and the roadmap's later dates,
-  including the fallback if the vendor's exit slips.
-- **The data team:** how each control works in practice, such as the SAP
-  settings and the masking tool; the current app's name and who runs it; and
-  how requesters are trained.
+  location, who reviews emergency access and SAP changes without a request,
+  and the roadmap's later dates, including the fallback if the vendor's exit
+  slips.
+- **The data team:** how each control works in practice, such as whether SAP's
+  own confirmation of bank changes stays on, and the masking tool; the current
+  app's name and who runs it; and how requesters are trained.
 - **This page:** a recent example and a rough cost of each problem.

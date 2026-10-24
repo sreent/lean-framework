@@ -9,6 +9,7 @@ their domain profile. [TBC]
 | Setting | Starter value |
 | --- | --- |
 | Governed process (R-03) | The current pricing request process [TBC: or the current app], then the unified master data app if it covers pricing [TBC] |
+| Request types (R-03) | Create or change condition records; mass price updates (R-07) |
 | System of record (R-04) | SAP condition records for prices, discounts and surcharges [TBC: any pricing or quoting tool outside SAP] |
 | Turnaround times (R-06) | [TBC] |
 | Critical fields (R-09) | Condition type, price, currency, unit of measure, validity dates, customer or price list, material, sales area, scales |
@@ -22,5 +23,5 @@ their domain profile. [TBC]
 | Sensitive changes confirmed by (R-13) | The steward |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: prices, discounts, surcharges and margins. Restricted: none by default [TBC]. |
-| Request types approved automatically (R-06) | None yet |
+| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the steward. |
 | Agent changes approved at level 2 (R-18) | None yet |

@@ -18,7 +18,8 @@ hands over.
   entered by one person and checked by another; nobody checks their own work
   (R-06).
 - Never set rules, approve exceptions or confirm sensitive changes (R-12).
-  Pass questions and sensitive changes to the domain's steward (R-13).
+  Pass questions and sensitive changes to the steward for the part they touch
+  (R-13).
 - Fix issues in SAP, never in a downstream copy, and report the cause (R-10).
 
 ## Service levels
@@ -57,6 +58,7 @@ hands over.
   instructions.
 - Hand over all tickets and approval evidence before exit. They are the audit
   trail for R-08, R-13 and R-15.
-- Vendor staff lose SAP access the day their work ends.
+- As each request type moves, vendor staff lose the SAP rights to change it,
+  and they lose all SAP access the day their work ends.
 - [TBC: a fallback for any request type the unified app isn't ready for, such
   as a short extension, and a pricing model that doesn't penalise the move]

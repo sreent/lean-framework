@@ -9,6 +9,7 @@ their domain profile. [TBC]
 | Setting | Starter value |
 | --- | --- |
 | Governed process (R-03) | The current engineering change process [TBC: or the current app], then the unified master data app if it covers production data [TBC] |
+| Request types (R-03) | Create or change bills of materials, routings, master recipes, work centres and production versions |
 | System of record (R-04) | SAP bills of materials, routings or master recipes, work centres and production versions [TBC: PLM for engineering bills of materials] |
 | Turnaround times (R-06) | [TBC] |
 | Critical fields (R-09) | Bill of materials components, quantities, usage and validity; routing operations, work centres and standard values; production version validity and lot sizes; work centre capacity and cost centre |
@@ -22,5 +23,5 @@ their domain profile. [TBC]
 | Sensitive changes confirmed by (R-13) | Not applicable |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard values and work centre costs [TBC]. Restricted: formula and recipe components, quantities and process parameters in master recipes and bills of materials (trade secrets). |
-| Request types approved automatically (R-06) | None yet |
+| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the steward. |
 | Agent changes approved at level 2 (R-18) | None yet |

@@ -25,10 +25,10 @@ R = responsible, A = accountable, C = consulted, I = informed.
 | Confirm a sensitive change | A | R | – | – | – | I | I |
 | Approve a mass change, including a list of records to block | A/R | C | – | C | C | C | – |
 | Approve an exception | A/R | C | – | C | – | – | I |
-| Approve access to Confidential or Restricted data | A/R | – | – | – | R | – | – |
+| Approve which roles can see Confidential or Restricted data | A/R | – | – | – | R | – | – |
 | Fix data quality issues at source | A | R | – | C | – | R | – |
 | Build checks into the apps, SAP and interfaces | I | – | A | C | R | – | – |
-| Own and supervise the agents | I | C | I | A/R | C | – | – |
+| Own and supervise the agents | I | C | A | R | C | – | – |
 | Train and support requesters | I | C | – | A/R | C | – | I |
 | Manage the vendor against its requirements | I | – | A | R | – | C | – |
 
@@ -84,16 +84,16 @@ platform instead (see the [controls catalogue](controls.md)). Until the
 unified app is live, agents only observe and propose (R-18). The
 [roadmap](roadmap.md) says when each one starts.
 
-This is the agent register (R-18). The data governance specialist owns the
-agents. Data owners approve how far an agent may act in their domain, in their
-domain profiles; agents that don't touch master data are approved by the Head
-of Data, AI & Development. The autonomy levels are in the
-[rulebook](rulebook.md).
+This is the agent register (R-18). The agent owner for every agent is the
+data governance specialist, [TBC: name]. Data owners approve how far an agent
+may act in their domain, in their domain profiles; agents that don't touch
+master data are approved by the Head of Data, AI & Development. The autonomy
+levels are in the [rulebook](rulebook.md).
 
 | Agent | What it does | Rules | Starts at | Works on |
 | --- | --- | --- | --- | --- |
 | Duplicate finder | Finds likely duplicates among existing records, including near matches on names and addresses, and proposes which to keep | R-05, R-10 | 1. Propose | SAP data, on the data platform |
-| Change reconciler | Matches SAP master data changes to approved requests in the current app, including those without a clear reference, and reports changes without one. A fixed report takes over once the unified app records the request on every change. | R-08 | 0. Observe | SAP change documents and the requests behind them |
+| Change reconciler | Matches the SAP changes that the monthly report can't match to a request in the current app, because the reference is missing or unclear. Not needed once the unified app records the request on every change. | R-08 | 0. Observe | SAP change documents and the requests behind them |
 | Request pre-check | Reviews each request before it's processed: reads attachments, spots likely duplicates, and flags values that pass the checks but look wrong | R-05 | 1. Propose | Requests in the current app [TBC], then in the unified app |
 | Quality triage | Groups failing records by cause, raises fix requests and proposes new checks to the owner | R-09, R-10 | 1. Propose | The scorecards on the data platform |
 
@@ -107,8 +107,9 @@ themselves, so quality at entry depends on them. Four things support them:
 
 - **Guidance at entry.** The unified app shows each field's conventions, from
   the domain profile, as it's filled in.
-- **Instant feedback.** The request pre-check agent flags what looks wrong
-  before the request goes any further.
+- **Instant feedback.** The app's checks reject what's wrong as it's entered.
+  Later, the request pre-check agent also flags what passes them but looks
+  wrong.
 - **Training before the move.** Requesters are trained [TBC: format] before
   their request types move.
 - **Measured by team.** First-time-right is measured for each requesting team

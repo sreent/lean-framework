@@ -55,6 +55,7 @@ The settings the rulebook refers to, for each subdomain:
 | Setting | Rule | [Subdomain] |
 | --- | --- | --- |
 | Governed process | R-03 | |
+| Request types | R-03 | |
 | System of record | R-04 | |
 | Turnaround times | R-06 | |
 | Critical fields and their conventions | R-09 | |
