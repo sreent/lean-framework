@@ -28,13 +28,9 @@ start, wherever it's held: ownership (R-01, R-02), classified fields and
 access (R-16), trade secrets (R-21) and AI tools (R-22).
 
 The rules apply to new and changed records, access and copies from the
-effective date in the charter. Existing ones are brought into line domain by
-domain, as the [interim arrangements](interim.md) set out. Until then, gaps are
-tracked on the scorecards rather than treated as breaches.
-
-The rules describe the target setup. Until a request type moves to the unified
-master data app, the [interim arrangements](interim.md) say how its rules are
-applied.
+effective date in the charter. Each domain is brought into line as its requests
+move into the unified master data app, and until then, gaps are tracked on the
+scorecards rather than treated as breaches.
 
 ## Ownership
 

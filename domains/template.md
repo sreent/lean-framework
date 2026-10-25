@@ -4,9 +4,8 @@ Each GPDO approves their domain's breakdown, who owns each part and the
 conventions across it, and agrees any data shared with another domain with
 that domain's GPDO. Each attribute owner approves their part's settings. The
 governance coordinator agent can draft the profile from the starters and the
-data as it stands. Once the unified app holds profiles as settings, the
-profile lives there: owners approve changes in the app, which logs each one
-and keeps the history.
+data as it stands. The profile lives in the unified app as settings: owners
+approve changes there, and the app logs each one and keeps the history.
 
 The [starter material](starters/) has common SAP checks, conventions and
 settings for customer, pricing, material, production, supplier and finance

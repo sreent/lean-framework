@@ -7,7 +7,7 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The unified master data app (until then, see the interim arrangements) |
+| Governed process (R-03) | The unified master data app |
 | Request types (R-03) | Create, change or block a G/L account, cost centre or profit centre |
 | System of record (R-04) | SAP: chart of accounts, cost centres, profit centres, and cost elements on ECC [TBC: group reporting structure in a consolidation tool] |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |

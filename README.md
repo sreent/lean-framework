@@ -27,9 +27,7 @@ privacy and audit.
 
 ## The target setup
 
-Technology runs governance, and people decide. The documents describe this
-setup. The [interim arrangements](interim.md) cover the time until each
-request type moves to the unified master data app.
+Technology runs governance, and people decide.
 
 | Layer | Who or what | Does |
 | --- | --- | --- |
@@ -39,18 +37,17 @@ request type moves to the unified master data app.
 | Run | The data team, under the Head of Data, AI & Development | Build and run the app, the data platform and the agents, and run the framework |
 | Assure | Internal controls | Review emergency access and any change made without a request |
 
-Requesters enter the data themselves, in place of the master data vendor. A
-routine change involves one person, the requester. A sensitive change involves
-two: the requester, and the attribute owner or their delegate who confirms it.
+Requesters enter the data themselves. A routine change involves one person,
+the requester. A sensitive change involves two: the requester, and the
+attribute owner or their delegate who confirms it.
 
 ## Scope
 
 Four domains, one per GPDO (global process and data owner): Commercial,
 Manufacturing, Finance and Procurement. The framework covers SAP master data,
 non-SAP master data, and confidential data such as formulas, recipes, prices
-and margins. The [charter](charter.md) says who owns what, the
-[template](domains/template.md) suggests which data each domain starts with,
-and the [interim arrangements](interim.md) cover the move from today's setup.
+and margins. The [charter](charter.md) says who owns what, and the
+[template](domains/template.md) suggests which data each domain starts with.
 
 ## Documents
 
@@ -60,7 +57,6 @@ and the [interim arrangements](interim.md) cover the move from today's setup.
 | [Rulebook](rulebook.md) | 22 rules: what must be true, and why | Head of Data, AI & Development |
 | [Operating model](operating-model.md) | Who does what and how often, the platform, the agents, the data landscape, requesters, rhythm and measures | Head of Data, AI & Development |
 | [Controls catalogue](controls.md) | How each rule is enforced, and the evidence each control logs | Head of Data, AI & Development |
-| [Interim arrangements](interim.md) | What's different until each request type moves to the unified app, how each one moves, and the master data vendor's requirements. Archived when the vendor leaves. | Head of Data, AI & Development |
 | Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | The GPDO approves the breakdown, and each attribute owner their part's settings |
 
 ## Open decisions
@@ -76,12 +72,9 @@ and the [interim arrangements](interim.md) cover the move from today's setup.
 - **Each attribute owner:** their part's settings, starting from the starters,
   and their delegates.
 - **The Head of Data, AI & Development:** the numbers in the rulebook, the
-  classification scheme, the approved AI tools, the vendor's targets, scope and
-  location, and the programme plan's dates, including the fallback if the
-  vendor's exit slips.
+  classification scheme and the approved AI tools.
 - **The data team:** how each control works in practice, such as whether SAP's
-  own confirmation of bank changes stays on, and the masking tool; when
-  profiles move into the unified app; the current app's name and who runs it;
-  how requesters, owners and delegates are trained; and each role's expected
+  own confirmation of bank changes stays on, and the masking tool; how
+  requesters, owners and delegates are trained; and each role's expected
   effort, before the charter is signed.
 - **This page:** a recent example and a rough cost of each problem.

@@ -2,11 +2,9 @@
 
 **Status:** Draft v0.4 · **Approved by:** the Head of Data, AI & Development · **Rules:** [Rulebook](rulebook.md)
 
-How each rule is enforced in the target setup, and the evidence it leaves.
-Until a request type moves to the unified master data app, the
-[interim arrangements](interim.md) apply. The detail of each control belongs
-in the app's design and the domain profiles; controls change here as the app
-grows, and the rules don't.
+How each rule is enforced, and the evidence it leaves. The detail of each
+control belongs in the app's design and the domain profiles; controls change
+here as the app grows, and the rules don't.
 
 Every setting in the unified app changes only with its owner's approval, which
 the app logs, and each domain profile keeps its version history.

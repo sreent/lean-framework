@@ -7,7 +7,7 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The unified master data app (until then, see the interim arrangements) |
+| Governed process (R-03) | The unified master data app |
 | Request types (R-03) | Create; extend to a company code or sales area; change general, company code or sales data; change bank details or credit limit; block or unblock |
 | System of record (R-04) | SAP for legal, financial and logistics fields; CRM for sales contacts and segmentation. In S/4HANA, central data is shared with the supplier role (R-02), so its owner and its sensitive fields are a joint decision for the Commercial and Procurement GPDOs. The supplier starter treats name and address as sensitive and this one doesn't, so they need to choose. |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |

@@ -1,12 +1,12 @@
-# Interim Arrangements
+# Transition Notes
 
-**Status:** Draft v0.2 · **Approved by:** the Head of Data, AI & Development · **Ends:** when the master data vendor has left and nothing is raised in the current app. Then archive this document, as the record of how the rules were applied until then.
+**Status:** Working notes for the data team, outside the governance framework · **Owner:** the data governance specialist · **Ends:** when the master data vendor has left and nothing is raised in the current app. Then archive them, as the record of how the rules were applied until then.
 
 Until a request type moves to the unified master data app, it's raised in the
 current app [TBC: its name, and who runs it] and processed in SAP by the master
-data vendor. The rules still apply. This document says what's different until
-then, how each request type moves, and what the vendor must do. The other
-documents describe the target, so they don't change when the vendor leaves.
+data vendor. The rules still apply. These notes say what's different until
+then, how each request type moves, and what the vendor must do. The framework
+itself describes only the target, so it doesn't change when the vendor leaves.
 
 Customer and supplier requests move first, in December 2026, once their
 profiles are approved in early November. The rest, including the material
@@ -26,13 +26,6 @@ The programme plan [TBC: where it's kept] has the detailed dates.
 - **Agents** coordinate, check and propose, but never create or change master
   data (R-18). Until the request assistant and the owner assistant start,
   attribute owners and their delegates prepare their own cases.
-
-One agent works only during this period. It's part of the agent register, and
-the data governance specialist owns it like the others:
-
-| Agent | Works for | Does | Rules |
-| --- | --- | --- | --- |
-| Change reconciler | Internal controls | Matches the SAP changes that the monthly report can't match to a request in the current app, because the reference is missing or unclear | R-08 |
 
 ## How a request type moves
 
@@ -69,8 +62,9 @@ up domain by domain, in the order their request types move.
 ## How the rules are enforced until then
 
 Rules not listed here are enforced as in the
-[controls catalogue](controls.md). Where a control there relies on the unified
-app, ownership and settings are recorded in the domain profiles instead.
+[controls catalogue](../controls.md). Where a control there relies on the
+unified app, ownership and settings are recorded in the domain profiles
+instead.
 
 | Rule | Until the request type moves | Evidence |
 | --- | --- | --- |
@@ -97,7 +91,7 @@ data. These requirements belong in its contract, including how it hands over.
 ### The work
 
 - Process create and change requests for SAP master data in the domains in
-  scope, following the [rulebook](rulebook.md) and each domain's profile.
+  scope, following the [rulebook](../rulebook.md) and each domain's profile.
 - Work only from complete requests raised in the current app, and turn away
   requests by email or spreadsheet (R-03).
 - Act on what the agents flag, such as likely duplicates, before processing a

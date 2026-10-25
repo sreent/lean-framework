@@ -7,7 +7,7 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The engineering change process [TBC: its name], which also governs formula and recipe changes. The unified app may cover production data later [TBC]. |
+| Governed process (R-03) | The engineering change process [TBC: its name], which also governs formula and recipe changes |
 | Request types (R-03) | Create or change bills of materials, routings, master recipes, work centres and production versions |
 | System of record (R-04) | SAP bills of materials, routings or master recipes, work centres and production versions [TBC: PLM for engineering bills of materials] |
 | Turnaround times (R-06) | [TBC] |
@@ -23,5 +23,5 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 | Sensitive changes confirmed by (R-13) | The attribute owner or their delegates, for unblocking records |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard values and work centre costs [TBC]. Restricted: formula and recipe components, quantities and process parameters in master recipes and bills of materials (trade secrets). Restricted data stays off the data platform unless the owner approves (R-21), so checks on it run where it's held. |
-| Request types approved automatically (R-06) | Not applicable while production data follows the engineering change process |
+| Request types approved automatically (R-06) | Not applicable: the engineering change process approves changes |
 | Agent changes approved at level 2 (R-18) | None yet |

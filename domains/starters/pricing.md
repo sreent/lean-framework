@@ -7,7 +7,7 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The pricing request process [TBC: its name, or the current app]. The unified app may cover pricing later [TBC]. |
+| Governed process (R-03) | The pricing request process [TBC: its name] |
 | Request types (R-03) | Create or change condition records; mass price updates (R-07) |
 | System of record (R-04) | SAP condition records for prices, discounts and surcharges [TBC: any pricing or quoting tool outside SAP] |
 | Turnaround times (R-06) | [TBC] |
@@ -22,5 +22,5 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 | Sensitive changes confirmed by (R-13) | The attribute owner or their delegates |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: prices, discounts, surcharges and margins. Restricted: none by default [TBC]. |
-| Request types approved automatically (R-06) | Not applicable while pricing follows its own process; then, changes that touch no sensitive field and pass every check |
+| Request types approved automatically (R-06) | Not applicable: the pricing process approves changes |
 | Agent changes approved at level 2 (R-18) | None yet |
