@@ -1,6 +1,6 @@
 # Master Data Governance Charter
 
-**Status:** Draft v0.4 · **Signed by:** the four GPDOs and the Head of Data, AI & Development · **Effective from:** [TBC] · **Review:** yearly, and whenever a signatory changes
+**Status:** Draft v0.4 · **Signed by:** the four GPDOs and the platform owner · **Effective from:** [TBC] · **Review:** yearly, and whenever a signatory changes
 
 ## Purpose
 
@@ -69,8 +69,8 @@ field with no owner or more than one.
 | --- | --- | --- |
 | Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Accountable for their whole domain. Approves its breakdown, who owns each part, the conventions that apply across it, and data shared with other domains. Decides what's escalated to them. |
 | Attribute owner | Named by the GPDO for each part of their domain | Decides for their part: its settings in the domain profile (classification, checks, critical fields, duplicate rules, thresholds, which request types the app approves automatically, and what agents may do), its exceptions and mass changes, and who can see its classified data. An owner of a group of fields also sets its conventions. Decides the cases the app can't, or names delegates to decide them. |
-| Head of Data, AI & Development | [TBC: name] | The platform owner: accountable for the unified app, the data platform and the agents, for the data team that builds and runs them, and for running this framework. Approves the rulebook, operating model and controls catalogue. Decides nothing about data content. |
-| Data team | The Head of Data, AI & Development's team | Builds and runs the unified app, the data platform and the agents, and runs the framework, as listed below. Decides nothing about data content. |
+| Platform owner | The Head of Data, AI & Development [TBC: name] | Accountable for the unified app, the data platform and the agents, for the data team that builds and runs them, and for running this framework. Approves the rulebook, operating model and controls catalogue. Decides nothing about data content. |
+| Data team | The platform owner's team | Builds and runs the unified app, the data platform and the agents, and runs the framework, as listed below. Decides nothing about data content. |
 | Internal controls | The internal controls team [TBC: name] | Reviews emergency access, any change made without a request, and a sample of the change reconciler's matches (R-08, R-19). |
 
 **Delegates.** An attribute owner can name delegates, from their own team or
@@ -94,10 +94,10 @@ What the data team does for governance. The governance coordinator agent
 prepares and chases; the data team:
 
 - owns and supervises the agents: keeps the register, checks their accuracy
-  and handles what they escalate (R-18). The Head of Data, AI & Development
-  names the agent owner and a deputy;
+  and handles what they escalate (R-18). The platform owner names the agent
+  owner and a deputy;
 - runs the owner review, and keeps the rulebook, operating model and controls
-  catalogue up to date, for the Head of Data, AI & Development to approve;
+  catalogue up to date, for the platform owner to approve;
 - provides the profile template and starters, and makes sure requesters,
   attribute owners and delegates are trained.
 
@@ -105,9 +105,9 @@ prepares and chases; the data team:
 
 | Document | Approved by |
 | --- | --- |
-| This charter | The four GPDOs and the Head of Data, AI & Development |
-| Rulebook | The Head of Data, AI & Development. Every change goes in the change log, and a change that adds work for owners or delegates goes to the owner review before it takes effect. |
-| Operating model and controls catalogue | The Head of Data, AI & Development |
+| This charter | The four GPDOs and the platform owner |
+| Rulebook | The platform owner. Every change goes in the change log, and a change that adds work for owners or delegates goes to the owner review before it takes effect. |
+| Operating model and controls catalogue | The platform owner |
 | Domain profiles | The GPDO approves the breakdown and the conventions across the domain, and each attribute owner their part's settings. Data two domains share needs both GPDOs. |
 
 Where documents differ, this charter wins, then the rulebook.
@@ -135,7 +135,7 @@ These can't be waived by exception, and changing them needs every signatory:
 
 - Questions go to the request assistant first, then the attribute owner or
   their delegate, then the GPDO. If GPDOs disagree with each other or with the
-  Head of Data, AI & Development, the executive they both report to decides.
+  platform owner, the executive they both report to decides.
 - The GPDOs meet at the owner review: monthly at first, then quarterly.
 - A one-page scorecard goes to the executive team every quarter.
 
@@ -147,4 +147,4 @@ These can't be waived by exception, and changing them needs every signatory:
 | Manufacturing GPDO | | |
 | Finance GPDO | | |
 | Procurement GPDO | | |
-| Head of Data, AI & Development | | |
+| Platform owner | | |

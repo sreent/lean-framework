@@ -1,6 +1,6 @@
 # Controls Catalogue
 
-**Status:** Draft v0.4 · **Approved by:** the Head of Data, AI & Development · **Rules:** [Rulebook](rulebook.md)
+**Status:** Draft v0.4 · **Approved by:** the platform owner · **Rules:** [Rulebook](rulebook.md)
 
 How each rule is enforced, and the evidence it leaves. The detail of each
 control belongs in the app's design and the domain profiles; controls change
