@@ -1,11 +1,10 @@
 # Operating Model
 
-**Status:** Draft v0.3 · **Approved by:** the Head of Data, AI & Development · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.4 · **Approved by:** the Head of Data, AI & Development · **Under:** [Master data governance charter](charter.md)
 
-How the target setup runs day to day: who does what, the systems that enforce
-the rules, the agents that coordinate the work, and the rhythm and measures
-that keep it on track. Until each request type moves to the unified master
-data app, the [interim arrangements](interim.md) apply.
+How the framework runs day to day: who does what, the systems that enforce the
+rules, the agents that coordinate the work, and the rhythm and measures that
+keep it on track.
 
 ## Who does what
 
@@ -29,10 +28,10 @@ work but are never accountable, so they aren't in the table; the
 | Review a sample of automatic approvals \* | – | A/R | – | – | Monthly |
 | Build and run the app, the data platform and the agents | I | – | R | A | Ongoing |
 | Supervise the agents | I | I | R | A | Ongoing |
-| Keep the rulebook, operating model, controls catalogue and roadmap up to date | C | C | R | A | As they change |
+| Keep the rulebook, operating model and controls catalogue up to date | C | C | R | A | As they change |
 
-Expected effort: [TBC: hours a week for GPDOs, attribute owners and delegates,
-estimated from the vendor's current volumes].
+Expected effort: [TBC: rough hours a week for GPDOs, attribute owners, delegates
+and requesters, from current request volumes, before the charter is signed].
 
 ## The platform
 
@@ -42,7 +41,7 @@ shows how.
 | System | Its job in governance |
 | --- | --- |
 | Unified master data app | The front door for SAP master data, built by the data team. It holds each domain's settings, checks every request on entry, approves the request types owners have approved, routes the rest to the part's owner or their delegates, holds sensitive changes until they're confirmed, and records the request behind every change. Later, it can take requests from non-SAP systems. |
-| SAP | The system of record. Only the unified app's service identity changes its master data, and its change documents record every change (R-08). |
+| SAP | The system of record. Only the unified app's service identity changes the master data the app handles; data with its own governed process, such as engineering changes, changes only through that process. Its change documents record every change (R-08). |
 | Data platform | Runs the checks on stored data, builds the scorecards, compares non-SAP copies with SAP, finds changes without a request, and holds the data agents read. |
 
 ## Agents
@@ -54,15 +53,15 @@ A check with a fixed answer belongs in the app, and a decision belongs to a
 person.
 
 This is the agent register (R-18). The agent owner for every agent is the data
-governance specialist, [TBC: name]. All four start at level 1: they propose,
-and a person decides. At any level they can remind, chase and route, because
-that changes no data. Attribute owners approve how far an agent may act in
-their part, including each move up a level, in the domain profile; agents that
-don't touch master data, such as the governance coordinator, are approved by
-the Head of Data, AI & Development. The autonomy levels are in the
-[rulebook](rulebook.md), and the [roadmap](roadmap.md) says when each agent
-starts. One temporary agent, the change reconciler, is listed in the
-[interim arrangements](interim.md).
+governance specialist, [TBC: name], with a named deputy [TBC: name]. Each agent
+starts at level 1, where it proposes and a person decides, apart from the
+change reconciler, which only reports. At any level, agents can remind, chase
+and route, because that changes no data. Attribute owners approve how far an
+agent may act in their part, including each move up a level, in the domain
+profile. Agents that don't touch master data, such as the governance
+coordinator, are approved by the GPDOs at the owner review, because the data
+team owns them. Before any agent starts, its AI model is approved under R-21
+and R-22. The autonomy levels are in the [rulebook](rulebook.md).
 
 | Agent | Works for | Does | Rules |
 | --- | --- | --- | --- |
@@ -70,6 +69,7 @@ starts. One temporary agent, the change reconciler, is listed in the
 | Owner assistant | Attribute owners and their delegates | Prepares each case: duplicate comparisons, bank-detail call-backs, and the evidence. Chases anything overdue, and prepares the monthly sample of automatic approvals. | R-05, R-06, R-13, R-15 |
 | Quality agent | Attribute owners | Finds duplicates in existing data, groups failures by cause, raises fix requests and proposes new checks. Runs the clean-up, sorts differences between non-SAP copies and SAP, and asks whether inactive records are still needed. | R-04, R-09, R-10, R-11 |
 | Governance coordinator | GPDOs and the Head of Data, AI & Development | Prepares the owner review and the quarterly scorecard. Tracks decisions, exceptions and ownership gaps, and reminds owners. Drafts changes to profiles and documents, keeps the list of systems in the data landscape, and assembles audit evidence. | R-02, R-20 |
+| Change reconciler | Internal controls | Matches SAP changes to the approved requests or change records behind them where the daily report can't, and reports any without one. | R-08 |
 
 ## The data landscape
 
@@ -119,9 +119,9 @@ depends on them. Three things support them:
   decide there, prompted by the agents.
 - **Owner review,** run by the data governance specialist for the GPDOs, with
   attribute owners joining for their own items, from the pack the governance
-  coordinator prepares. It's monthly while request types are moving, then
-  quarterly, and covers scorecards, exceptions, ownership gaps, profile
-  changes, agent performance and rule changes.
+  coordinator prepares. It's monthly at first, then quarterly, and covers
+  scorecards, exceptions, ownership gaps, profile changes, agent performance
+  and rule changes.
 - **Quarterly:** a one-page scorecard to the executive team.
 
 ## Measures

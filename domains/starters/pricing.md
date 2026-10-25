@@ -7,7 +7,7 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The unified master data app, if it covers pricing [TBC]; until then, the current pricing request process [TBC: or the current app] |
+| Governed process (R-03) | The pricing request process [TBC: its name] |
 | Request types (R-03) | Create or change condition records; mass price updates (R-07) |
 | System of record (R-04) | SAP condition records for prices, discounts and surcharges [TBC: any pricing or quoting tool outside SAP] |
 | Turnaround times (R-06) | [TBC] |
@@ -19,8 +19,8 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 | Inactivity period and block (R-11) | Not applicable: condition records end on their validity date |
 | Excluded from inactivity blocking (R-11) | Not applicable |
 | Sensitive fields (R-13) | Prices and discounts that change by more than [TBC]% |
-| Sensitive changes confirmed by (R-13) | The data owner or their delegates |
+| Sensitive changes confirmed by (R-13) | The attribute owner or their delegates |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: prices, discounts, surcharges and margins. Restricted: none by default [TBC]. |
-| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the data owner or their delegates. |
+| Request types approved automatically (R-06) | Not applicable: the pricing process approves changes |
 | Agent changes approved at level 2 (R-18) | None yet |

@@ -1,6 +1,6 @@
 # Master Data Governance Charter
 
-**Status:** Draft v0.3 · **Signed by:** the four GPDOs and the Head of Data, AI & Development · **Effective from:** [TBC] · **Review:** yearly, and whenever a signatory changes
+**Status:** Draft v0.4 · **Signed by:** the four GPDOs and the Head of Data, AI & Development · **Effective from:** [TBC] · **Review:** yearly, and whenever a signatory changes
 
 ## Purpose
 
@@ -9,8 +9,7 @@ incorrect or inconsistent. This charter is our agreement on who owns master
 data, who decides what, and the few controls we never switch off. The
 [rulebook](rulebook.md) holds the rules, the [controls catalogue](controls.md)
 says how each one is enforced, the [operating model](operating-model.md) shows
-who does what day to day, each domain's profile holds its settings, and the
-[roadmap](roadmap.md) says how and when we get there.
+who does what day to day, and each domain's profile holds its settings.
 
 It applies the company's existing policies on [TBC: information security, data
 protection and internal controls] to master data. It doesn't replace them.
@@ -27,9 +26,9 @@ The framework covers three kinds of data, across four domains, one per GPDO
 - **Confidential data,** such as formulas, recipes, prices, margins and
   supplier terms, in SAP or not: owned, classified and protected now.
 
-The [operating model](operating-model.md) lists the systems involved, the
-[roadmap](roadmap.md) says when each comes in, and the rulebook says which
-rules apply everywhere from the start.
+The [operating model](operating-model.md) lists the systems involved and how
+each comes in, and the rulebook says which rules apply everywhere from the
+start.
 
 ## Principles
 
@@ -44,9 +43,6 @@ rules apply everywhere from the start.
    accountable.
 4. **Named ownership.** Every piece of data has one named business owner, who
    sets its rules as settings in the app.
-
-This charter describes the target setup. Until each request type moves to the
-unified app, the [interim arrangements](interim.md) say how the rules apply.
 
 ## Who owns what
 
@@ -73,13 +69,13 @@ field with no owner or more than one.
 | --- | --- | --- |
 | Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Accountable for their whole domain. Approves its breakdown, who owns each part, the conventions that apply across it, and data shared with other domains. Decides what's escalated to them. |
 | Attribute owner | Named by the GPDO for each part of their domain | Decides for their part: its settings in the domain profile (classification, checks, critical fields, duplicate rules, thresholds, which request types the app approves automatically, and what agents may do), its exceptions and mass changes, and who can see its classified data. An owner of a group of fields also sets its conventions. Decides the cases the app can't, or names delegates to decide them. |
-| Head of Data, AI & Development | [TBC: name] | Approves the rulebook, operating model, controls catalogue, roadmap and interim arrangements. Accountable for the data team's delivery: the app, the data platform, the agents, the move to the target, and running this framework. |
+| Head of Data, AI & Development | [TBC: name] | Approves the rulebook, operating model and controls catalogue. Accountable for the data team's delivery: the app, the data platform, the agents, the move to the target, and running this framework. |
 | Data team | The data governance specialist, and the platform team, which includes the SAP team | The platform team builds and runs the unified app, the data platform and the agents. The specialist runs the framework, listed below. Decides nothing about data content. |
-| Internal controls | The internal controls team [TBC: name] | Reviews emergency access, any change made without a request, and a sample of the change reconciler's matches (R-08, R-19). |
+| Internal controls | The internal controls team [TBC: name, once it agrees to this role] | Reviews emergency access, any change made without a request, and a sample of the change reconciler's matches (R-08, R-19). |
 
-**Delegates.** An attribute owner can name delegates from their own team, at
-least two so that someone is always available, to decide the cases the app
-can't:
+**Delegates.** An attribute owner can name delegates, from their own team or
+another, at least two so that someone is always available, to decide the cases
+the app can't:
 
 - confirming sensitive changes, after calling the supplier back for bank
   details (R-13, R-15);
@@ -99,19 +95,18 @@ prepares and chases; the specialist:
 
 - supervises the agents as their owner: keeps the register, checks their
   accuracy and handles what they escalate (R-18);
-- runs the owner review, and keeps the rulebook, operating model, controls
-  catalogue and roadmap up to date, for the Head of Data, AI & Development to
-  approve;
-- provides the profile template and starters, and makes sure requesters and
-  delegates are trained.
+- runs the owner review, and keeps the rulebook, operating model and controls
+  catalogue up to date, for the Head of Data, AI & Development to approve;
+- provides the profile template and starters, and makes sure requesters,
+  attribute owners and delegates are trained.
 
 ## How documents are approved
 
 | Document | Approved by |
 | --- | --- |
 | This charter | The four GPDOs and the Head of Data, AI & Development |
-| Rulebook | The Head of Data, AI & Development. Every change goes in the change log and to the next owner review. |
-| Operating model, controls catalogue, roadmap and interim arrangements | The Head of Data, AI & Development |
+| Rulebook | The Head of Data, AI & Development. Every change goes in the change log, and a change that adds work for owners or delegates goes to the owner review before it takes effect. |
+| Operating model and controls catalogue | The Head of Data, AI & Development |
 | Domain profiles | The GPDO approves the breakdown and the conventions across the domain, and each attribute owner their part's settings. Data two domains share needs both GPDOs. |
 
 Where documents differ, this charter wins, then the rulebook.
@@ -127,7 +122,9 @@ These can't be waived by exception, and changing them needs every signatory:
 - Agents never approve requests or exceptions, confirm sensitive changes,
   change sensitive fields, delete records or grant access (R-18).
 - Trade secrets, such as formulas and recipes, never go to an AI model outside
-  an environment the organisation controls (R-21).
+  an environment the organisation controls: its own systems, or a provider's
+  service under a contract that stops the provider keeping or training on the
+  data (R-21).
 - The data team can't change master data outside the governed process, except
   through emergency access that internal controls reviews. Every change can be
   traced to an approved request (R-08, R-19).
@@ -138,6 +135,7 @@ These can't be waived by exception, and changing them needs every signatory:
 - Questions go to the request assistant first, then the attribute owner or
   their delegate, then the GPDO. If GPDOs disagree with each other or with the
   Head of Data, AI & Development, the executive they both report to decides.
+- The GPDOs meet at the owner review: monthly at first, then quarterly.
 - A one-page scorecard goes to the executive team every quarter.
 
 ## Signatures

@@ -7,7 +7,7 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 
 | Setting | Starter value |
 | --- | --- |
-| Governed process (R-03) | The unified master data app (until then, see the interim arrangements) |
+| Governed process (R-03) | The unified master data app |
 | Request types (R-03) | Create; extend to a plant, sales organisation or warehouse; change; block or flag for deletion |
 | System of record (R-04) | SAP material master; PLM for engineering attributes; PIM or e-commerce for marketing content |
 | Turnaround times (R-06) | 2 business days for standard requests; 4 business hours for urgent ones |
@@ -19,8 +19,8 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 | Inactivity period and block (R-11) | No stock, movements or open orders for 24 months: blocked material status (cross-plant or plant-specific) |
 | Excluded from inactivity blocking (R-11) | Materials in active bills of materials, and spare parts held for maintenance |
 | Sensitive fields (R-13) | Standard price, valuation class, price control |
-| Sensitive changes confirmed by (R-13) | The data owner or their delegates |
+| Sensitive changes confirmed by (R-13) | The attribute owner or their delegates |
 | One-time accounts and payee in document (R-13) | Not applicable |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: standard price and valuation data. Restricted: specifications that reveal a product's formulation (trade secrets) [TBC]. |
-| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the data owner or their delegates. |
+| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the attribute owner or their delegates. |
 | Agent changes approved at level 2 (R-18) | None yet |
