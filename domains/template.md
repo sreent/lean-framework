@@ -10,7 +10,11 @@ and keeps the history.
 
 The [starter material](starters/) has common SAP checks, conventions and
 settings for customer, pricing, material, production, supplier and finance
-data. Use, change or ignore it: the breakdown is the GPDO's call.
+data. Use, change or ignore it: the breakdown is the GPDO's call. As a
+starting point, the starters assume customer and pricing data for Commercial,
+supplier data for Procurement, material and production data for Manufacturing,
+and finance structures for Finance. The material master's sales, purchasing
+and accounting views are shared, and agreed by the GPDOs concerned.
 
 ## How to break a domain down
 
@@ -27,10 +31,12 @@ unit, by group of fields, or a mix. Four things keep any split working:
   (R-09). Otherwise, splitting ownership brings back the inconsistency we're
   fixing.
 - **An attribute owner for each part.** The GPDO names one for each part, or
-  keeps the part. Each attribute owner decides the daily cases or names at
-  least two delegates from their own team; anyone confirming payment data
-  holds no rights to raise purchase orders, post invoices, run payments or
-  release credit (R-14). The [charter](../charter.md) says what delegates do.
+  keeps the part. A part can start as a whole subdomain, such as all customer
+  data, and be split later. Each attribute owner decides the daily cases or
+  names at least two delegates, from their own team or another; anyone
+  confirming payment data holds no rights to raise purchase orders, post
+  invoices, run payments or release credit (R-14). The
+  [charter](../charter.md) says what delegates do.
 - **Include data outside SAP.** List every system that holds your domain's
   data, such as recipe systems, PLM or spreadsheets, even if it comes into the
   framework later. Ownership, classification and access apply to it now
@@ -55,9 +61,11 @@ views of the material master, and the split agreed with that GPDO]
 
 ## Settings
 
-The settings the rulebook refers to, for each subdomain:
+The settings the rulebook refers to, for each part. The GPDO approves the
+conventions that apply across the domain, and the owner of a group of fields
+those for its fields; the attribute owner approves the rest for their part:
 
-| Setting | Rule | [Subdomain] |
+| Setting | Rule | [Part] |
 | --- | --- | --- |
 | Governed process | R-03 | |
 | Request types | R-03 | |
@@ -68,6 +76,7 @@ The settings the rulebook refers to, for each subdomain:
 | Quality thresholds | R-09 | |
 | Duplicate match rules | R-05 | |
 | Inactivity period, block and exclusions | R-11 | |
+| Mass-change size, if different from the rulebook's | R-07 | |
 | Sensitive fields | R-13, R-14 | |
 | Who confirms sensitive changes | R-13, R-14 | |
 | One-time accounts and payee in document | R-13 | |

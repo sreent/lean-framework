@@ -1,23 +1,31 @@
 # Interim Arrangements
 
-**Status:** Draft v0.1 · **Approved by:** the Head of Data, AI & Development · **Ends:** when the master data vendor has left and nothing is raised in the current app (see the [roadmap](roadmap.md)). Then archive this document, as the record of how the rules were applied until then.
+**Status:** Draft v0.2 · **Approved by:** the Head of Data, AI & Development · **Ends:** when the master data vendor has left and nothing is raised in the current app. Then archive this document, as the record of how the rules were applied until then.
 
 Until a request type moves to the unified master data app, it's raised in the
 current app [TBC: its name, and who runs it] and processed in SAP by the master
 data vendor. The rules still apply. This document says what's different until
-then, and what the vendor must do. The other documents describe the target, so
-they don't change when the vendor leaves.
+then, how each request type moves, and what the vendor must do. The other
+documents describe the target, so they don't change when the vendor leaves.
+
+Customer and supplier requests move first, in December 2026, once their
+profiles are approved in early November. The rest, including the material
+master, follow one request type at a time, and the vendor leaves by Q2 2027.
+The programme plan [TBC: where it's kept] has the detailed dates.
 
 ## What's different until then
 
 - **Requests** are raised in the current app, and the vendor makes the changes
-  in SAP. Only the vendor's staff hold SAP change rights, and they lose them for
-  each request type as it moves.
+  in SAP. For the request types it handles, only the vendor's staff hold SAP
+  change rights, and they lose them for each request type as it moves. Data
+  with its own governed process, such as engineering changes or pricing [TBC],
+  keeps that process (R-03).
 - **Approvals:** the vendor approves requests within the rules, with one person
   entering each change and another checking it. It never approves mass changes
   or exceptions, and never confirms sensitive changes (R-06, R-12).
 - **Agents** coordinate, check and propose, but never create or change master
-  data (R-18).
+  data (R-18). Until the request assistant and the owner assistant start,
+  attribute owners and their delegates prepare their own cases.
 
 One agent works only during this period. It's part of the agent register, and
 the data governance specialist owns it like the others:
@@ -25,6 +33,38 @@ the data governance specialist owns it like the others:
 | Agent | Works for | Does | Rules |
 | --- | --- | --- | --- |
 | Change reconciler | Internal controls | Matches the SAP changes that the monthly report can't match to a request in the current app, because the reference is missing or unclear | R-08 |
+
+## How a request type moves
+
+Each request type follows the same steps, because the unified app's checks come
+from the domain profiles:
+
+1. Its owners approve the domain profile: the GPDO the breakdown and any shared
+   data, and the attribute owner the settings and request types.
+2. The platform team builds and tests what the unified app needs for it: the
+   checks, routing to the attribute owner and their delegates, holding
+   sensitive changes until they're confirmed, recording the request behind
+   every change, and posting to SAP.
+3. Requesters, attribute owners and delegates are trained [TBC: format].
+4. The request type moves. The vendor stops processing it and loses the SAP
+   rights to change it.
+
+Nothing moves on a date alone. If a profile isn't approved, or the app fails
+its tests, the request type stays with the vendor until it's ready. [TBC: the
+fallback if that runs past the vendor's exit date]
+
+## Cleaning up existing data
+
+The rules apply to new and changed records, and existing records are cleaned
+up domain by domain, in the order their request types move.
+
+- Before each domain moves, its worst data is cleaned up first, using the
+  scorecards: duplicates and critical fields come first, because they break
+  transactions and trip the unified app's checks.
+- The vendor's remaining capacity goes into this clean-up before it leaves, as
+  mass changes the attribute owner signs off (R-07).
+- After the vendor leaves, the quality agent and the attribute owners handle
+  what remains.
 
 ## How the rules are enforced until then
 
@@ -37,15 +77,15 @@ app, ownership and settings are recorded in the domain profiles instead.
 | R-03 Governed process | Requests are raised in the current app; requests by email or spreadsheet are turned away | Request log |
 | R-05 Checks before approval | The vendor's checklist and SAP's mandatory fields, with likely duplicates flagged by the quality agent | Check results with each request |
 | R-06 Approval | The vendor's maker-checker; turnaround in the vendor's reports | Vendor reports |
-| R-07 Mass changes | The data owner signs off, and the change is tested before it's made | Sign-off and test evidence |
+| R-07 Mass changes | The attribute owner signs off, and the change is tested before it's made | Sign-off and test evidence |
 | R-08 Traceability | Each month, SAP changes are matched to requests in the current app, with the change reconciler agent's help. Internal controls reviews any change left unmatched, and a sample of the agent's matches. | Reconciliation report |
 | R-09 Conventions and quality checks | The data platform runs the checks each domain profile defines on SAP data and publishes the scorecards monthly | Scorecards |
 | R-10 Fix at source, fix the cause | The quality agent groups failing records by cause and proposes new checks; the vendor fixes the records in SAP | Issue log; checks added to the profile |
 | R-11 Stale records | As in the target, except that the vendor blocks the records | Approved list |
 | R-12 Third parties | The vendor's contract and the requirements below, with a monthly performance review by the data governance specialist | Performance report, exit records |
-| R-13 Sensitive changes | SAP's settings block payment after a bank-detail change until the owner or their delegate confirms it. Other sensitive changes are confirmed before the vendor enters them, and the monthly matching checks what was entered. | Confirmation log |
+| R-13 Sensitive changes | SAP's settings block payment after a bank-detail change until the attribute owner or their delegate confirms it, and limit one-time accounts and payees entered on invoices. Other sensitive changes are confirmed before the vendor enters them, and the monthly matching checks what was entered. | Confirmation log |
 | R-14 Payment data kept apart from paying | The platform team checks each quarter that vendor staff and confirmers hold no buying or payment rights | Access review |
-| R-15 Bank detail verification | The owner or their delegate calls the supplier back on contact details already on file, and records it on the request. A report flags bank accounts already used by another supplier or customer. | Call-back record, flag report |
+| R-15 Bank detail verification | The attribute owner or their delegate calls the supplier back on contact details already on file, and records it on the request. A report flags bank accounts already used by another supplier or customer. | Call-back record, flag report |
 | R-16 Classified fields and access | As in the target, with access to the current app reviewed alongside SAP's | Access reviews |
 | R-20 Exceptions | Exceptions are recorded in a register [TBC: where], and the governance coordinator reminds owners before they expire | Register |
 
@@ -66,8 +106,8 @@ data. These requirements belong in its contract, including how it hands over.
   entered by one person and checked by another; nobody checks their own work
   (R-06).
 - Never set rules, approve exceptions or confirm sensitive changes (R-12).
-  Pass questions and sensitive changes to the data owner or their delegate
-  (R-13).
+  Pass questions and sensitive changes to the attribute owner or their
+  delegate (R-13).
 - Fix issues in SAP, never in a downstream copy, and report the cause (R-10).
 
 ### Service levels
@@ -98,9 +138,9 @@ data. These requirements belong in its contract, including how it hands over.
 ### Exit
 
 - The vendor keeps full service for every request type until it moves to the
-  unified app, as the [roadmap](roadmap.md) sets out.
-- Before each domain moves, the vendor's remaining capacity goes into cleaning
-  up its worst existing data, as mass changes the data owner signs off (R-07).
+  unified app, as set out above.
+- Before each domain moves, the vendor's remaining capacity goes into the
+  clean-up above.
 - Before each request type moves, write down the working rules and checks the
   team uses for it, so they can become the unified app's checks and agent
   instructions.

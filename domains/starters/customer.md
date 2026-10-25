@@ -19,8 +19,8 @@ Its owners can use, change or drop any of it in their domain profile. [TBC]
 | Inactivity period and block (R-11) | No orders or invoices for 24 months: sales and posting block |
 | Excluded from inactivity blocking (R-11) | Customers with open items or open orders |
 | Sensitive fields (R-13) | Bank details, credit limit and risk category, payment terms, tax IDs |
-| Sensitive changes confirmed by (R-13, R-14) | The data owner or their delegates, who hold no payment rights (R-14). Credit limit and risk category belong to credit management [TBC] as their attribute owner, which confirms changes to them; sales never does. |
+| Sensitive changes confirmed by (R-13, R-14) | The attribute owner or their delegates, who hold no payment rights (R-14). Credit limit and risk category belong to credit management [TBC] as their attribute owner, which confirms changes to them; sales never does. |
 | One-time accounts and payee in document (R-13) | Allowed only for [TBC: named cases, below a set amount] |
 | Confidential and Restricted fields (R-14, R-16, R-21) | Confidential: contact names, emails and phone numbers, and names and addresses of consumers (personal data); payment terms (payment data); credit limit and risk category. Restricted: bank details (payment data). |
-| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the data owner or their delegates. |
+| Request types approved automatically (R-06) | Changes that touch no sensitive field, pass every check and raise no likely duplicate. New records and sensitive changes go to the attribute owner or their delegates. |
 | Agent changes approved at level 2 (R-18) | None yet |
