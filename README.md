@@ -34,7 +34,7 @@ Technology runs governance, and people decide.
 | Own | The four GPDOs, and the attribute owners they delegate each part of their domain to | GPDOs set the domain's breakdown and conventions. Attribute owners set their part's rules as settings in the unified app, and decide what the app can't, themselves or through delegates. |
 | Enforce | The unified app, SAP and the data platform | Check every request, approve what passes, hold sensitive changes, measure quality and log the evidence |
 | Coordinate | AI agents | Prepare, chase, route, draft and propose, and flag what needs a person's judgement |
-| Run | The data team, under the Head of Data, AI & Development | Build and run the app, the data platform and the agents, and run the framework |
+| Run | The data team, under the Head of Data, AI & Development as platform owner | Build and run the app, the data platform and the agents, and run the framework |
 | Assure | Internal controls | Review emergency access and any change made without a request |
 
 Requesters enter the data themselves. A routine change involves one person,
