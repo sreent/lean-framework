@@ -24,7 +24,7 @@ the app logs, and each domain profile keeps its version history.
 | R-11 Stale records | A monthly report lists inactive records, the owner approves the list, and the app blocks them | Approved list |
 | R-12 Third parties | A contract holds any third party to these rules, and the data governance specialist reviews its performance monthly | Contract, performance reports |
 | R-13 Sensitive changes | The unified app holds each sensitive change until the attribute owner or their delegate confirms it, and never lets anyone confirm their own change. SAP's settings limit one-time accounts and payees entered on invoices. | Confirmation log |
-| R-14 Payment data kept apart from paying | The platform team checks each quarter that confirmers, and the unified app, hold no buying or payment rights | Access review |
+| R-14 Payment data kept apart from paying | The data team checks each quarter that confirmers, and the unified app, hold no buying or payment rights | Access review |
 | R-15 Bank detail verification | The owner or their delegate calls the supplier back on contact details already on file, and records it on the request. The app flags bank accounts already used by another supplier or customer. | Call-back record, flag report |
 | R-16 Classified fields and access | The unified app limits who sees classified fields to the roles the owner approves. The owner reviews who has access and approves extracts of Restricted data, and Restricted and personal data is masked outside live systems. | Settings, access reviews, approvals |
 | R-17 Personal data lifecycle | SAP blocks personal data when its purpose ends and deletes it when its retention period ends [TBC: how] | Blocking and deletion log |

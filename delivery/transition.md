@@ -34,7 +34,7 @@ from the domain profiles:
 
 1. Its owners approve the domain profile: the GPDO the breakdown and any shared
    data, and the attribute owner the settings and request types.
-2. The platform team builds and tests what the unified app needs for it: the
+2. The data team builds and tests what the unified app needs for it: the
    checks, routing to the attribute owner and their delegates, holding
    sensitive changes until they're confirmed, recording the request behind
    every change, and posting to SAP.
@@ -78,7 +78,7 @@ instead.
 | R-11 Stale records | As in the target, except that the vendor blocks the records | Approved list |
 | R-12 Third parties | The vendor's contract and the requirements below, with a monthly performance review by the data governance specialist | Performance report, exit records |
 | R-13 Sensitive changes | SAP's settings block payment after a bank-detail change until the attribute owner or their delegate confirms it, and limit one-time accounts and payees entered on invoices. Other sensitive changes are confirmed before the vendor enters them, and the monthly matching checks what was entered. | Confirmation log |
-| R-14 Payment data kept apart from paying | The platform team checks each quarter that vendor staff and confirmers hold no buying or payment rights | Access review |
+| R-14 Payment data kept apart from paying | The data team checks each quarter that vendor staff and confirmers hold no buying or payment rights | Access review |
 | R-15 Bank detail verification | The attribute owner or their delegate calls the supplier back on contact details already on file, and records it on the request. A report flags bank accounts already used by another supplier or customer. | Call-back record, flag report |
 | R-16 Classified fields and access | As in the target, with access to the current app reviewed alongside SAP's | Access reviews |
 | R-20 Exceptions | Exceptions are recorded in a register [TBC: where], and the governance coordinator reminds owners before they expire | Register |

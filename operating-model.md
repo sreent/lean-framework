@@ -11,9 +11,10 @@ keep it on track.
 R = responsible, A = accountable, C = consulted, I = informed. The GPDO stays
 accountable for the whole domain (R-01); A below is who answers for each
 decision. An attribute owner can hand the rows marked \* to their delegates.
-The data team is the data governance specialist and the platform team. Agents
-do much of this work but are never accountable, so they aren't in the table;
-the [agent register](#agents) says what each does.
+The data team is the Head of Data, AI & Development's team, including the data
+governance specialist. Agents do much of this work but are never accountable,
+so they aren't in the table; the [agent register](#agents) says what each
+does.
 
 | Activity | GPDO | Attribute owner | Data team | Head of Data, AI & Development | How often |
 | --- | --- | --- | --- | --- | --- |
