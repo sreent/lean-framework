@@ -30,9 +30,6 @@ work but are never accountable, so they aren't in the table; the
 | Supervise the agents | I | I | R | A | Ongoing |
 | Keep the rulebook, operating model and controls catalogue up to date | C | C | R | A | As they change |
 
-Expected effort: [TBC: rough hours a week for GPDOs, attribute owners, delegates
-and requesters, from current request volumes, before the charter is signed].
-
 ## The platform
 
 Three systems enforce the rules, and the [controls catalogue](controls.md)

@@ -11,8 +11,8 @@ data, who decides what, and the few controls we never switch off. The
 says how each one is enforced, the [operating model](operating-model.md) shows
 who does what day to day, and each domain's profile holds its settings.
 
-It applies the company's existing policies on [TBC: information security, data
-protection and internal controls] to master data. It doesn't replace them.
+It applies the company's existing policies to master data, and doesn't replace
+them.
 
 ## Scope
 
@@ -71,7 +71,7 @@ field with no owner or more than one.
 | Attribute owner | Named by the GPDO for each part of their domain | Decides for their part: its settings in the domain profile (classification, checks, critical fields, duplicate rules, thresholds, which request types the app approves automatically, and what agents may do), its exceptions and mass changes, and who can see its classified data. An owner of a group of fields also sets its conventions. Decides the cases the app can't, or names delegates to decide them. |
 | Head of Data, AI & Development | [TBC: name] | Approves the rulebook, operating model and controls catalogue. Accountable for the data team's delivery: the app, the data platform, the agents, the move to the target, and running this framework. |
 | Data team | The data governance specialist, and the platform team, which includes the SAP team | The platform team builds and runs the unified app, the data platform and the agents. The specialist runs the framework, listed below. Decides nothing about data content. |
-| Internal controls | The internal controls team [TBC: name, once it agrees to this role] | Reviews emergency access, any change made without a request, and a sample of the change reconciler's matches (R-08, R-19). |
+| Internal controls | The internal controls team [TBC: name] | Reviews emergency access, any change made without a request, and a sample of the change reconciler's matches (R-08, R-19). |
 
 **Delegates.** An attribute owner can name delegates, from their own team or
 another, at least two so that someone is always available, to decide the cases
