@@ -1,6 +1,6 @@
 # Operating Model
 
-**Status:** Draft v0.4 · **Approved by:** the Head of Data, AI & Development · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.4 · **Approved by:** the platform owner · **Under:** [Master data governance charter](charter.md)
 
 How the framework runs day to day: who does what, the systems that enforce the
 rules, the agents that coordinate the work, and the rhythm and measures that
@@ -11,12 +11,11 @@ keep it on track.
 R = responsible, A = accountable, C = consulted, I = informed. The GPDO stays
 accountable for the whole domain (R-01); A below is who answers for each
 decision. An attribute owner can hand the rows marked \* to their delegates.
-The data team is the Head of Data, AI & Development's team, including the data
-governance specialist. Agents do much of this work but are never accountable,
-so they aren't in the table; the [agent register](#agents) says what each
-does.
+The data team is the platform owner's team. Agents do much of this work but
+are never accountable, so they aren't in the table; the
+[agent register](#agents) says what each does.
 
-| Activity | GPDO | Attribute owner | Data team | Head of Data, AI & Development | How often |
+| Activity | GPDO | Attribute owner | Data team | Platform owner | How often |
 | --- | --- | --- | --- | --- | --- |
 | Approve the domain's breakdown, who owns each part, and the conventions across it | A/R | C | C | I | Once, then when it changes |
 | Agree data shared with another domain, with its GPDO | A/R | C | C | – | Once, then when it changes |
@@ -49,9 +48,9 @@ needs a person's judgement, such as a likely duplicate, and propose an answer.
 A check with a fixed answer belongs in the app, and a decision belongs to a
 person.
 
-This is the agent register (R-18). The agent owner for every agent is the data
-governance specialist, [TBC: name], with a named deputy [TBC: name]. Each agent
-starts at level 1, where it proposes and a person decides, apart from the
+This is the agent register (R-18). The agent owner for every agent is a named
+person in the data team [TBC: name], with a named deputy [TBC: name]. Each
+agent starts at level 1, where it proposes and a person decides, apart from the
 change reconciler, which only reports. At any level, agents can remind, chase
 and route, because that changes no data. Attribute owners approve how far an
 agent may act in their part, including each move up a level, in the domain
@@ -65,7 +64,7 @@ and R-22. The autonomy levels are in the [rulebook](rulebook.md).
 | Request assistant | Requesters | Helps fill in requests, pre-filling them from documents such as a bank letter. Explains failed checks, answers questions from the domain profile, and flags values that pass the checks but look wrong. | R-03, R-05 |
 | Owner assistant | Attribute owners and their delegates | Prepares each case: duplicate comparisons, bank-detail call-backs, and the evidence. Chases anything overdue, and prepares the monthly sample of automatic approvals. | R-05, R-06, R-13, R-15 |
 | Quality agent | Attribute owners | Finds duplicates in existing data, groups failures by cause, raises fix requests and proposes new checks. Runs the clean-up, sorts differences between non-SAP copies and SAP, and asks whether inactive records are still needed. | R-04, R-09, R-10, R-11 |
-| Governance coordinator | GPDOs and the Head of Data, AI & Development | Prepares the owner review and the quarterly scorecard. Tracks decisions, exceptions and ownership gaps, and reminds owners. Drafts changes to profiles and documents, keeps the list of systems in the data landscape, and assembles audit evidence. | R-02, R-20 |
+| Governance coordinator | GPDOs and the platform owner | Prepares the owner review and the quarterly scorecard. Tracks decisions, exceptions and ownership gaps, and reminds owners. Drafts changes to profiles and documents, keeps the list of systems in the data landscape, and assembles audit evidence. | R-02, R-20 |
 | Change reconciler | Internal controls | Matches SAP changes to the approved requests or change records behind them where the daily report can't, and reports any without one. | R-08 |
 
 ## The data landscape
@@ -114,9 +113,9 @@ depends on them. Three things support them:
 
 - **Decisions happen in the app, not in meetings.** Owners and their delegates
   decide there, prompted by the agents.
-- **Owner review,** run by the data governance specialist for the GPDOs, with
-  attribute owners joining for their own items, from the pack the governance
-  coordinator prepares. It's monthly at first, then quarterly, and covers
+- **Owner review,** run by the data team for the GPDOs, with attribute owners
+  joining for their own items, from the pack the governance coordinator
+  prepares. It's monthly at first, then quarterly, and covers
   scorecards, exceptions, ownership gaps, profile changes, agent performance
   and rule changes.
 - **Quarterly:** a one-page scorecard to the executive team.

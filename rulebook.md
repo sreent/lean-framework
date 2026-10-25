@@ -1,6 +1,6 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.11 · **Approved by:** the Head of Data, AI & Development · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.11 · **Approved by:** the platform owner · **Under:** [Master data governance charter](charter.md)
 
 Each rule says what must be true, not how it's enforced; the
 [controls catalogue](controls.md) covers how. The business owns what good data

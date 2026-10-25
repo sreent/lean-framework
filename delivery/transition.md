@@ -1,6 +1,6 @@
 # Transition Notes
 
-**Status:** Working notes for the data team, outside the governance framework · **Owner:** the data governance specialist · **Ends:** when the master data vendor has left and nothing is raised in the current app. Then archive them, as the record of how the rules were applied until then.
+**Status:** Working notes for the data team, outside the governance framework · **Owner:** the data team · **Ends:** when the master data vendor has left and nothing is raised in the current app. Then archive them, as the record of how the rules were applied until then.
 
 Until a request type moves to the unified master data app, it's raised in the
 current app [TBC: its name, and who runs it] and processed in SAP by the master
@@ -76,7 +76,7 @@ instead.
 | R-09 Conventions and quality checks | The data platform runs the checks each domain profile defines on SAP data and publishes the scorecards monthly | Scorecards |
 | R-10 Fix at source, fix the cause | The quality agent groups failing records by cause and proposes new checks; the vendor fixes the records in SAP | Issue log; checks added to the profile |
 | R-11 Stale records | As in the target, except that the vendor blocks the records | Approved list |
-| R-12 Third parties | The vendor's contract and the requirements below, with a monthly performance review by the data governance specialist | Performance report, exit records |
+| R-12 Third parties | The vendor's contract and the requirements below, with a monthly performance review by the data team | Performance report, exit records |
 | R-13 Sensitive changes | SAP's settings block payment after a bank-detail change until the attribute owner or their delegate confirms it, and limit one-time accounts and payees entered on invoices. Other sensitive changes are confirmed before the vendor enters them, and the monthly matching checks what was entered. | Confirmation log |
 | R-14 Payment data kept apart from paying | The data team checks each quarter that vendor staff and confirmers hold no buying or payment rights | Access review |
 | R-15 Bank detail verification | The attribute owner or their delegate calls the supplier back on contact details already on file, and records it on the request. A report flags bank accounts already used by another supplier or customer. | Call-back record, flag report |
