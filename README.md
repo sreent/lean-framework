@@ -34,7 +34,7 @@ Technology runs governance, and people decide.
 | Own | The four GPDOs, and the attribute owners they delegate each part of their domain to | GPDOs set the domain's breakdown and conventions. Attribute owners set their part's rules as settings in the unified app, and decide what the app can't, themselves or through delegates. |
 | Enforce | The unified app, SAP and the data platform | Check every request, approve what passes, hold sensitive changes, measure quality and log the evidence |
 | Coordinate | AI agents | Prepare, chase, route, draft and propose, and flag what needs a person's judgement |
-| Run | The data team, under the Head of Data, AI & Development | Build and run the app, the data platform and the agents, and run the framework |
+| Run | The data team, under the Head of Data, AI & Development as platform owner | Build and run the app, the data platform and the agents, and run the framework |
 | Assure | Internal controls | Review emergency access and any change made without a request |
 
 Requesters enter the data themselves. A routine change involves one person,
@@ -61,20 +61,13 @@ and margins. The [charter](charter.md) says who owns what, and the
 
 ## Open decisions
 
-`[TBC]` marks a default to confirm or a gap to fill. They come down to these:
+`[TBC]` marks a default to confirm or a gap to fill. None of them needs
+settling before the charter is signed:
 
-- **The signatories:** when the charter takes effect, which company policies
-  it applies, who holds each role, and the internal controls team that reviews
-  the data team, once it agrees to the role.
-- **Each GPDO:** their domain's breakdown and attribute owners, and the systems
-  outside SAP that hold their data. Commercial and Procurement also agree who
-  owns the business partner data they share.
-- **Each attribute owner:** their part's settings, starting from the starters,
-  and their delegates.
-- **The Head of Data, AI & Development:** the numbers in the rulebook, the
-  classification scheme and the approved AI tools.
-- **The data team:** how each control works in practice, such as whether SAP's
-  own confirmation of bank changes stays on, and the masking tool; how
-  requesters, owners and delegates are trained; and each role's expected
-  effort, before the charter is signed.
+- **At signing:** who holds each role, and the date the charter takes effect.
+- **In the domain profiles, after signing:** each GPDO's breakdown and
+  attribute owners, each part's settings and delegates, and who owns the
+  business partner data that Commercial and Procurement share.
+- **As the setup is built:** the numbers and classification scheme in the
+  rulebook, the approved AI tools, and how each control works in practice.
 - **This page:** a recent example and a rough cost of each problem.

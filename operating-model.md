@@ -11,12 +11,12 @@ keep it on track.
 R = responsible, A = accountable, C = consulted, I = informed. The GPDO stays
 accountable for the whole domain (R-01); A below is who answers for each
 decision. An attribute owner can hand the rows marked \* to their delegates.
-The data team is the data governance specialist and the platform team, and
-Head of Data is the Head of Data, AI & Development. Agents do much of this
-work but are never accountable, so they aren't in the table; the
-[agent register](#agents) says what each does.
+The data team is the Head of Data, AI & Development's team, including the data
+governance specialist. Agents do much of this work but are never accountable,
+so they aren't in the table; the [agent register](#agents) says what each
+does.
 
-| Activity | GPDO | Attribute owner | Data team | Head of Data | How often |
+| Activity | GPDO | Attribute owner | Data team | Head of Data, AI & Development | How often |
 | --- | --- | --- | --- | --- | --- |
 | Approve the domain's breakdown, who owns each part, and the conventions across it | A/R | C | C | I | Once, then when it changes |
 | Agree data shared with another domain, with its GPDO | A/R | C | C | – | Once, then when it changes |
@@ -29,9 +29,6 @@ work but are never accountable, so they aren't in the table; the
 | Build and run the app, the data platform and the agents | I | – | R | A | Ongoing |
 | Supervise the agents | I | I | R | A | Ongoing |
 | Keep the rulebook, operating model and controls catalogue up to date | C | C | R | A | As they change |
-
-Expected effort: [TBC: rough hours a week for GPDOs, attribute owners, delegates
-and requesters, from current request volumes, before the charter is signed].
 
 ## The platform
 
