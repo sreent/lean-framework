@@ -22,7 +22,7 @@ the app logs, and each domain profile keeps its version history.
 | R-09 Conventions and quality checks | Checks run in the unified app at entry and on the data platform on stored data, and feed the scorecards | Scorecards |
 | R-10 Fix at source, fix the cause | The quality agent groups failures by cause and raises fix requests in the unified app; owners add checks for issues that recur | Issue log, profile changes |
 | R-11 Stale records | A monthly report lists inactive records, the owner approves the list, and the app blocks them | Approved list |
-| R-12 Third parties | A contract holds any third party to these rules, and the data governance specialist reviews its performance monthly | Contract, performance reports |
+| R-12 Third parties | A contract holds any third party to these rules, and the data team reviews its performance monthly | Contract, performance reports |
 | R-13 Sensitive changes | The unified app holds each sensitive change until the attribute owner or their delegate confirms it, and never lets anyone confirm their own change. SAP's settings limit one-time accounts and payees entered on invoices. | Confirmation log |
 | R-14 Payment data kept apart from paying | The data team checks each quarter that confirmers, and the unified app, hold no buying or payment rights | Access review |
 | R-15 Bank detail verification | The owner or their delegate calls the supplier back on contact details already on file, and records it on the request. The app flags bank accounts already used by another supplier or customer. | Call-back record, flag report |

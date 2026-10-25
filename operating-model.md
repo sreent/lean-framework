@@ -11,10 +11,9 @@ keep it on track.
 R = responsible, A = accountable, C = consulted, I = informed. The GPDO stays
 accountable for the whole domain (R-01); A below is who answers for each
 decision. An attribute owner can hand the rows marked \* to their delegates.
-The data team is the Head of Data, AI & Development's team, including the data
-governance specialist. Agents do much of this work but are never accountable,
-so they aren't in the table; the [agent register](#agents) says what each
-does.
+The data team is the Head of Data, AI & Development's team. Agents do much of
+this work but are never accountable, so they aren't in the table; the
+[agent register](#agents) says what each does.
 
 | Activity | GPDO | Attribute owner | Data team | Head of Data, AI & Development | How often |
 | --- | --- | --- | --- | --- | --- |
@@ -49,9 +48,9 @@ needs a person's judgement, such as a likely duplicate, and propose an answer.
 A check with a fixed answer belongs in the app, and a decision belongs to a
 person.
 
-This is the agent register (R-18). The agent owner for every agent is the data
-governance specialist, [TBC: name], with a named deputy [TBC: name]. Each agent
-starts at level 1, where it proposes and a person decides, apart from the
+This is the agent register (R-18). The agent owner for every agent is a named
+person in the data team [TBC: name], with a named deputy [TBC: name]. Each
+agent starts at level 1, where it proposes and a person decides, apart from the
 change reconciler, which only reports. At any level, agents can remind, chase
 and route, because that changes no data. Attribute owners approve how far an
 agent may act in their part, including each move up a level, in the domain
@@ -114,9 +113,9 @@ depends on them. Three things support them:
 
 - **Decisions happen in the app, not in meetings.** Owners and their delegates
   decide there, prompted by the agents.
-- **Owner review,** run by the data governance specialist for the GPDOs, with
-  attribute owners joining for their own items, from the pack the governance
-  coordinator prepares. It's monthly at first, then quarterly, and covers
+- **Owner review,** run by the data team for the GPDOs, with attribute owners
+  joining for their own items, from the pack the governance coordinator
+  prepares. It's monthly at first, then quarterly, and covers
   scorecards, exceptions, ownership gaps, profile changes, agent performance
   and rule changes.
 - **Quarterly:** a one-page scorecard to the executive team.

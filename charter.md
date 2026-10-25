@@ -70,7 +70,7 @@ field with no owner or more than one.
 | Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Accountable for their whole domain. Approves its breakdown, who owns each part, the conventions that apply across it, and data shared with other domains. Decides what's escalated to them. |
 | Attribute owner | Named by the GPDO for each part of their domain | Decides for their part: its settings in the domain profile (classification, checks, critical fields, duplicate rules, thresholds, which request types the app approves automatically, and what agents may do), its exceptions and mass changes, and who can see its classified data. An owner of a group of fields also sets its conventions. Decides the cases the app can't, or names delegates to decide them. |
 | Head of Data, AI & Development | [TBC: name] | The platform owner: accountable for the unified app, the data platform and the agents, for the data team that builds and runs them, and for running this framework. Approves the rulebook, operating model and controls catalogue. Decides nothing about data content. |
-| Data team | The Head of Data, AI & Development's team, including the data governance specialist | Builds and runs the unified app, the data platform and the agents. The specialist runs the framework, listed below. Decides nothing about data content. |
+| Data team | The Head of Data, AI & Development's team | Builds and runs the unified app, the data platform and the agents, and runs the framework, as listed below. Decides nothing about data content. |
 | Internal controls | The internal controls team [TBC: name] | Reviews emergency access, any change made without a request, and a sample of the change reconciler's matches (R-08, R-19). |
 
 **Delegates.** An attribute owner can name delegates, from their own team or
@@ -90,11 +90,12 @@ run payments or release credit (R-13, R-14). Agents prepare each case and
 chase what's overdue. The [operating model](operating-model.md) lists each
 role's tasks and how often they come up.
 
-What the data governance specialist does. The governance coordinator agent
-prepares and chases; the specialist:
+What the data team does for governance. The governance coordinator agent
+prepares and chases; the data team:
 
-- supervises the agents as their owner: keeps the register, checks their
-  accuracy and handles what they escalate (R-18);
+- owns and supervises the agents: keeps the register, checks their accuracy
+  and handles what they escalate (R-18). The Head of Data, AI & Development
+  names the agent owner and a deputy;
 - runs the owner review, and keeps the rulebook, operating model and controls
   catalogue up to date, for the Head of Data, AI & Development to approve;
 - provides the profile template and starters, and makes sure requesters,
