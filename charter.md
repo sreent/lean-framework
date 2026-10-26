@@ -69,7 +69,7 @@ field with no owner or more than one.
 | --- | --- | --- |
 | Data owner | The four GPDOs: Commercial, Manufacturing, Finance and Procurement | Accountable for their whole domain. Approves its breakdown, who owns each part, the conventions that apply across it, and data shared with other domains. Decides what's escalated to them. |
 | Attribute owner | Named by the GPDO for each part of their domain | Decides for their part: its settings in the domain profile (classification, checks, critical fields, duplicate rules, thresholds, which request types the app approves automatically, and what agents may do), its exceptions and mass changes, and who can see its classified data. An owner of a group of fields also sets its conventions. Decides the cases the app can't, or names delegates to decide them. |
-| Platform owner | The Head of Data, AI & Development [TBC: name] | Accountable for the unified app, the data platform and the agents, for the data team that builds and runs them, and for running this framework. Approves the rulebook, operating model and controls catalogue. Decides nothing about data content. |
+| Platform owner | The Head of Data, AI & Development [TBC: name] | Accountable for the unified app, the data platform and the agents, for the data team that builds and runs them, and for running this framework. Approves the rulebook, operating model and controls catalogue, and the AI models agents use. Decides nothing about data content. |
 | Data team | The platform owner's team | Builds and runs the unified app, the data platform and the agents, and runs the framework, as listed below. Decides nothing about data content. |
 | Internal controls | The internal controls team [TBC: name] | Reviews emergency access, any change made without a request, and a sample of the change reconciler's matches (R-08, R-19). |
 
@@ -107,7 +107,7 @@ prepares and chases; the data team:
 | --- | --- |
 | This charter | The four GPDOs and the platform owner |
 | Rulebook | The platform owner. Every change goes in the change log, and a change that adds work for owners or delegates goes to the owner review before it takes effect. |
-| Operating model and controls catalogue | The platform owner |
+| Operating model and controls catalogue | The platform owner. As with the rulebook, a change that adds work for owners or delegates goes to the owner review before it takes effect. |
 | Domain profiles | The GPDO approves the breakdown and the conventions across the domain, and each attribute owner their part's settings. Data two domains share needs both GPDOs. |
 
 Where documents differ, this charter wins, then the rulebook.

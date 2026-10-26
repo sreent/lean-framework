@@ -1,6 +1,6 @@
 # Master Data Rulebook
 
-**Status:** Draft v0.11 · **Approved by:** the platform owner · **Under:** [Master data governance charter](charter.md)
+**Status:** Draft v0.12 · **Approved by:** the platform owner · **Under:** [Master data governance charter](charter.md)
 
 Each rule says what must be true, not how it's enforced; the
 [controls catalogue](controls.md) covers how. The business owns what good data
@@ -118,3 +118,4 @@ Autonomy levels:
 | Version | Date | Change |
 | --- | --- | --- |
 | 0.11 | 2026-10-25 | Draft. Earlier drafts are in the repository history. |
+| 0.12 | 2026-10-26 | Rules regrouped into seven groups; no rule changed. |

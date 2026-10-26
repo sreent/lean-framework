@@ -1,6 +1,6 @@
-# LEAN Framework
+# LEAN Data Governance
 
-**Lean AI Data Governance, built on the LEAN framework.**
+**Master data governance, built on four pillars.**
 
 | Pillar | Principle |
 | --- | --- |
@@ -32,7 +32,7 @@ Technology runs governance, and people decide.
 | Layer | Who or what | Does |
 | --- | --- | --- |
 | Own | The four GPDOs, and the attribute owners they delegate each part of their domain to | GPDOs set the domain's breakdown and conventions. Attribute owners set their part's rules as settings in the unified app, and decide what the app can't, themselves or through delegates. |
-| Enforce | The unified app, SAP and the data platform | Check every request, approve what passes, hold sensitive changes, measure quality and log the evidence |
+| Enforce | The unified app, SAP and the data platform | Check every request, approve the routine requests owners allow, hold sensitive changes, measure quality and log the evidence |
 | Coordinate | AI agents | Prepare, chase, route, draft and propose, and flag what needs a person's judgement |
 | Run | The data team, under the platform owner | Build and run the app, the data platform and the agents, and run the framework |
 | Assure | Internal controls | Review emergency access and any change made without a request |
@@ -70,7 +70,7 @@ settling before the charter is signed:
 - **At signing:** who holds each role, and the date the charter takes effect.
 - **In the domain profiles, after signing:** each GPDO's breakdown and
   attribute owners, each part's settings and delegates, and who owns the
-  business partner data that Commercial and Procurement share.
+  data that domains share, such as business partner data.
 - **As the setup is built:** the numbers and classification scheme in the
   rulebook, the approved AI tools, and how each control works in practice.
 - **This page:** a recent example and a rough cost of each problem.

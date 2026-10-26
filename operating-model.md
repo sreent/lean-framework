@@ -29,6 +29,11 @@ are never accountable, so they aren't in the table; the
 | Supervise the agents | I | I | R | A | Ongoing |
 | Keep the rulebook, operating model and controls catalogue up to date | C | C | R | A | As they change |
 
+Internal controls checks the framework rather than running it, so it isn't in
+the table. It reviews each use of emergency access, the changes without a
+request that the daily report shows, and a sample of the change reconciler's
+matches [TBC: monthly].
+
 ## The platform
 
 Three systems enforce the rules, and the [controls catalogue](controls.md)
@@ -56,8 +61,9 @@ and route, because that changes no data. Attribute owners approve how far an
 agent may act in their part, including each move up a level, in the domain
 profile. Agents that don't touch master data, such as the governance
 coordinator, are approved by the GPDOs at the owner review, because the data
-team owns them. Before any agent starts, its AI model is approved under R-21
-and R-22. The autonomy levels are in the [rulebook](rulebook.md).
+team owns them. Before any agent starts, the platform owner approves its AI
+model, under R-21 and R-22. The [rulebook](rulebook.md) has the autonomy
+levels.
 
 | Agent | Works for | Does | Rules |
 | --- | --- | --- | --- |
