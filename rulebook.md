@@ -50,18 +50,13 @@ scorecards rather than treated as breaches.
 | R-07 | A change to more than [TBC: 50] records, or the number the domain profile sets, is a mass change. It needs the attribute owner's sign-off, a test and a rollback plan. | Incorrect |
 | R-08 | Every change to master data in a governed system can be traced to an approved request. | Incorrect, fraud risk |
 
-## Quality
+## Quality and third parties
 
 | ID | Rule | Why |
 | --- | --- | --- |
 | R-09 | Each domain profile defines its critical fields, the conventions they follow (format, naming and allowed values), the checks that enforce them, and a quality threshold for each. Conventions and checks are the same across the domain's subdomains and business units unless the GPDO agrees a difference. Results are published monthly. | Incorrect, inconsistent |
 | R-10 | Issues are fixed in the system of record, never only in a downstream copy or report. A recurring issue leads to a new or better check, which the attribute owner adds to the domain profile, so it doesn't come back. | Incorrect, inconsistent |
 | R-11 | Records unused for the period in the domain profile are blocked unless someone confirms they're still needed. Records with open items, orders or contracts are excluded. The attribute owner approves the list as a whole. | Incorrect |
-
-## Third parties
-
-| ID | Rule | Why |
-| --- | --- | --- |
 | R-12 | Any third party that maintains master data works within these rules under its contract, and its quality is measured. It never sets rules, approves exceptions or confirms sensitive changes. | Incorrect, audit risk |
 
 ## Sensitive and payment data
@@ -96,7 +91,7 @@ their own fields are classified, and records it in their domain profile
 | Confidential | Harmful if disclosed; access on business need | Contacts, prices and margins, supplier prices, payment terms, credit limits, standard costs; all personal data |
 | Restricted | Serious financial, legal, competitive or fraud harm if disclosed | Bank details; tax IDs of individuals; formulas, recipes, process parameters and own product specifications |
 
-## Automation and agents
+## Agents and AI
 
 | ID | Rule | Why |
 | --- | --- | --- |
@@ -111,16 +106,11 @@ Autonomy levels:
 | 1. Propose | Prepare a change or decision for a person to approve | The attribute owner or their delegate approves each one |
 | 2. Act and notify | Make changes of a type the attribute owner has approved, never to sensitive fields, through the unified app, in runs below the mass-change size | The agent owner reviews the log and can reverse any change |
 
-## The data team
+## Data team and exceptions
 
 | ID | Rule | Why |
 | --- | --- | --- |
 | R-19 | Nobody who builds or changes the app or the agents changes live master data outside the governed process, except through emergency access that internal controls reviews. Changes to the app and the agents are tested before release. | Audit risk |
-
-## Exceptions
-
-| ID | Rule | Why |
-| --- | --- | --- |
 | R-20 | An exception is permission, for a set time, to depart from a rule or a profile setting, such as accepting a record that fails a check. Exceptions are approved by the attribute owner, never by a delegate or by whoever asked for them. Each one is recorded with its rule, reason, approver and expiry, expires within [TBC: 90 days], and can be renewed once. The controls the charter lists can't be waived. | Audit risk |
 
 ## Change log
