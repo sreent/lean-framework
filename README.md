@@ -59,6 +59,9 @@ and margins. The [charter](charter.md) says who owns what, and the
 | [Controls catalogue](controls.md) | How each rule is enforced, and the evidence each control logs | Platform owner |
 | Domain profiles: one per GPDO, from the [template](domains/template.md), with [starter material](domains/starters/) for common SAP master data | Each domain's breakdown and owners, its validation and quality rules, and its other settings | The GPDO approves the breakdown, and each attribute owner their part's settings |
 
+The [slide deck](deck/lean-data-governance.pptx) summarises the framework in
+five slides, also as a [PDF](deck/lean-data-governance.pdf).
+
 ## Open decisions
 
 `[TBC]` marks a default to confirm or a gap to fill. None of them needs
